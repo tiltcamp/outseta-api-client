@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "types": [
+      "jasmine"
+    ],
+    "module": "CommonJS",
+    "sourceMap": true,
+    "target": "ES5"
+  }
+}

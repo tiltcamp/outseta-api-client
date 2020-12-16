@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "es5",
+    "module": "commonjs",
+    "lib": ["es2017", "es7", "es6", "dom"],
+    "outDir": "./dist",
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@src/*": ["src/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
