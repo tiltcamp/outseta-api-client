@@ -1,32 +1,15 @@
+import Credentials, { CredentialsParams } from '@src/util/credentials';
+
 export default class OutsetaApiClient {
+  readonly credentials: Credentials;
   readonly subdomain: string;
 
-  readonly accessToken?: string;
-
-  readonly apiKey?: string;
-  readonly secretKey?: string;
-
-  constructor({ subdomain, accessToken, apiKey, secretKey }: {
-    subdomain: string,
-    accessToken?: string,
-    apiKey?: string,
-    secretKey?: string
-  }) {
+  constructor({ subdomain, accessToken, apiKey, secretKey }: Params) {
     this.subdomain = subdomain;
-
-    if (accessToken) {
-      this.accessToken = accessToken;
-    } else if (apiKey && secretKey) {
-      this.apiKey = apiKey;
-      this.secretKey = secretKey;
-    } else {
-      throw 'Initializing outseta-api-client requires either an access token (for client-side usage) or ' +
-        'an API key and secret (for server-side usage).';
-    }
+    this.credentials = new Credentials({accessToken, apiKey, secretKey});
   }
+}
 
-  get authorizationHeader(): string {
-    if (this.accessToken) return `bearer ${this.accessToken}`;
-    else return `Outseta ${this.apiKey}:${this.secretKey}`;
-  }
+interface Params extends CredentialsParams {
+  subdomain: string;
 }
