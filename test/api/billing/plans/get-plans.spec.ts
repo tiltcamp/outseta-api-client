@@ -34,6 +34,7 @@ describe('api', () => {
       });
 
       afterAll(() => {
+        server.shutdown();
         Request.fetch = defaultFetch;
       });
 

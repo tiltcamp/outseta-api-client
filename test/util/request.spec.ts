@@ -33,6 +33,7 @@ describe('Request', () => {
   });
 
   afterAll(() => {
+    server.shutdown();
     Request.fetch = defaultFetch;
   });
 
