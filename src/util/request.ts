@@ -1,4 +1,3 @@
-import 'isomorphic-fetch';
 import Store from './store';
 
 export default class Request {
