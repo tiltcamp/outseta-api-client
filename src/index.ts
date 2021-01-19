@@ -1,6 +1,6 @@
-import { ServerCredentials, UserCredentials } from '@src/util/credentials';
-import Store from '@src/util/store';
-import Billing from '@src/api/billing';
+import { ServerCredentials, UserCredentials } from './util/credentials';
+import Store from './util/store';
+import Billing from './api/billing';
 
 export default class OutsetaApiClient {
   public readonly billing: Billing;

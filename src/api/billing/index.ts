@@ -1,5 +1,5 @@
-import Store from '@src/util/store';
-import Plans from '@src/api/billing/plans';
+import Store from '../../util/store';
+import Plans from './plans';
 
 export default class Billing {
   public readonly plans: Plans;

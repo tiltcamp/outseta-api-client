@@ -1,4 +1,4 @@
-import { ServerCredentials, UserCredentials } from '@src/util/credentials';
+import { ServerCredentials, UserCredentials } from './credentials';
 
 export default class Store {
   public readonly baseUrl: string;

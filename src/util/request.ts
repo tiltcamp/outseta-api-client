@@ -1,5 +1,5 @@
 import unfetch from 'isomorphic-unfetch';
-import Store from '@src/util/store';
+import Store from './store';
 
 export default class Request {
   public static fetch: (url: string, options: Options) => Promise<Response>;

@@ -1,5 +1,5 @@
 import Request from '../../util/request';
-import Store from '@src/util/store';
+import Store from '../../util/store';
 
 export default class Plans {
   private readonly store: Store;

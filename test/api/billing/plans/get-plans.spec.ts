@@ -1,7 +1,8 @@
+import Pretender, { ResponseHandler } from 'pretender';
+
 import Store from '@src/util/store';
 import { ServerCredentials, UserCredentials } from '@src/util/credentials';
 import Request from '@src/util/request';
-import Pretender, { ResponseHandler } from 'pretender';
 import Plans from '@src/api/billing/plans';
 
 describe('api', () => {
