@@ -1,115 +1,87 @@
-import Credentials from '@src/util/credentials';
+import { UserCredentials, ServerCredentials } from '@src/util/credentials';
 
-describe('Credentials', () => {
-  describe('constructor', () => {
-    it('succeeds with client-side access token', () => {
-      const credentials = new Credentials({
-        accessToken: 'example_token'
-      });
-
-      expect(credentials).toBeInstanceOf(Credentials);
-      expect(credentials.accessToken).toBe('example_token');
-      expect(credentials.apiKey).toBeUndefined();
-      expect(credentials.secretKey).toBeUndefined();
+describe('ServerCredentials', () => {
+  describe('authorizationHeader', () => {
+    it('returns header for server-side API keys', () => {
+      const credentials = new ServerCredentials('example_api_key', 'example_secret_key');
+      expect(credentials.authorizationHeader).toBe('Outseta example_api_key:example_secret_key');
     });
 
-    it('succeeds with server-side API key and secret key', () => {
-      const credentials = new Credentials({
-        apiKey: 'example_api_key',
-        secretKey: 'example_secret_key'
-      });
-
-      expect(credentials).toBeInstanceOf(Credentials);
-      expect(credentials.accessToken).toBeUndefined();
-      expect(credentials.apiKey).toBe('example_api_key');
-      expect(credentials.secretKey).toBe('example_secret_key');
-    });
-
-    it('prefers access token over API key and secret key', () => {
-      const credentials = new Credentials({
-        accessToken: 'example_token',
-        apiKey: 'example_api_key',
-        secretKey: 'example_secret_key'
-      });
-
-      expect(credentials).toBeInstanceOf(Credentials);
-      expect(credentials.accessToken).toBe('example_token');
-      expect(credentials.apiKey).toBeUndefined();
-      expect(credentials.secretKey).toBeUndefined();
-    });
-
-    it('fails without access token or api keys', () => {
+    it('throws an exception if there aren\'t any API keys', () => {
       let exception;
-      let credentials;
+      const credentials = new ServerCredentials();
 
       try {
-        credentials = new Credentials({});
+        credentials.authorizationHeader
       } catch (e) {
         exception = e;
       }
 
-      expect(credentials).toBeUndefined();
       expect(exception).toBe(
-        'Initializing outseta-api-client requires either an access token (for client-side usage) or ' +
-        'an API key and secret (for server-side usage).'
-      );
-    });
-
-    it('fails with API key and missing secret key', () => {
-      let exception;
-      let credentials;
-
-      try {
-        credentials = new Credentials({
-          apiKey: 'example_api_key'
-        });
-      } catch (e) {
-        exception = e;
-      }
-
-      expect(credentials).toBeUndefined();
-      expect(exception).toBe(
-        'Initializing outseta-api-client requires either an access token (for client-side usage) or ' +
-        'an API key and secret (for server-side usage).'
-      );
-    });
-
-    it('fails with secret key and missing API key', () => {
-      let exception;
-      let credentials;
-
-      try {
-        credentials = new Credentials({
-          secretKey: 'example_secret_key'
-        });
-      } catch (e) {
-        exception = e;
-      }
-
-      expect(credentials).toBeUndefined();
-      expect(exception).toBe(
-        'Initializing outseta-api-client requires either an access token (for client-side usage) or ' +
-        'an API key and secret (for server-side usage).'
+        'The API client was not initialized with API keys.'
       );
     });
   });
 
-  describe('credentialsorizationHeader', () => {
-    it('returns header for client-side access token', () => {
-      const credentials = new Credentials({
-        accessToken: 'example_token'
-      });
+  describe('isReady', () => {
+    it('returns true if API key is available', () => {
+      const credentials = new ServerCredentials('example_key', 'example_secret');
+      expect(credentials.isReady).toBeTrue();
+    });
 
+    it('returns false if API key is not provided', () => {
+      let credentials = new ServerCredentials();
+      expect(credentials.isReady).toBeFalse();
+
+      credentials = new ServerCredentials('example_api_key');
+      expect(credentials.isReady).toBeFalse();
+
+      credentials = new ServerCredentials('', 'example_secret_key');
+      expect(credentials.isReady).toBeFalse();
+    });
+  });
+});
+
+describe('UserCredentials', () => {
+  describe('authorizationHeader', () => {
+    it('returns header for client-side access token', () => {
+      const credentials = new UserCredentials('example_token');
       expect(credentials.authorizationHeader).toBe('bearer example_token');
     });
 
-    it('returns header for server-side API key and secret key', () => {
-      const credentials = new Credentials({
-        apiKey: 'example_api_key',
-        secretKey: 'example_secret_key'
-      });
+    it('throws an exception if there aren\'t any API keys', () => {
+      let exception;
+      const credentials = new UserCredentials();
 
-      expect(credentials.authorizationHeader).toBe('Outseta example_api_key:example_secret_key');
+      try {
+        credentials.authorizationHeader
+      } catch (e) {
+        exception = e;
+      }
+
+      expect(exception).toBe(
+        'The API client doesn\'t have a user token. Please initialize the client with one or ' +
+        'call profile.login() first.'
+      );
+    });
+  });
+
+  describe('isReady', () => {
+    it('returns true if access token is available', () => {
+      let credentials = new UserCredentials('example_token');
+      expect(credentials.isReady).toBeTrue();
+
+      credentials = new UserCredentials();
+      credentials.accessToken = 'example_token';
+      expect(credentials.isReady).toBeTrue();
+    });
+
+    it('returns false if access token is not provided', () => {
+      let credentials = new UserCredentials();
+      expect(credentials.isReady).toBeFalse();
+
+      credentials = new UserCredentials('');
+      expect(credentials.isReady).toBeFalse();
     });
   });
 });

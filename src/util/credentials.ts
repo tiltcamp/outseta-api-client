@@ -1,29 +1,45 @@
-export default class Credentials {
-  readonly accessToken?: string;
+interface Credentials {
+  authorizationHeader: string;
+  isReady: boolean;
+}
 
-  readonly apiKey?: string;
-  readonly secretKey?: string;
+export class ServerCredentials implements Credentials {
+  apiKey?: string;
+  secretKey?: string;
 
-  constructor({ accessToken, apiKey, secretKey }: CredentialsParams) {
-    if (accessToken) {
-      this.accessToken = accessToken;
-    } else if (apiKey && secretKey) {
-      this.apiKey = apiKey;
-      this.secretKey = secretKey;
-    } else {
-      throw 'Initializing outseta-api-client requires either an access token (for client-side usage) or ' +
-      'an API key and secret (for server-side usage).';
-    }
+  constructor(apiKey?: string, secretKey?: string) {
+    this.apiKey = apiKey;
+    this.secretKey = secretKey;
   }
 
   get authorizationHeader(): string {
-    if (this.accessToken) return `bearer ${this.accessToken}`;
-    else return `Outseta ${this.apiKey}:${this.secretKey}`;
+    if (!this.isReady)
+      throw 'The API client was not initialized with API keys.';
+
+    return `Outseta ${this.apiKey}:${this.secretKey}`;
+  }
+
+  get isReady(): boolean {
+    return !!(this.apiKey && this.secretKey);
   }
 }
 
-export interface CredentialsParams {
-  accessToken?: string;
-  apiKey?: string;
-  secretKey?: string;
+export class UserCredentials implements Credentials {
+  public accessToken?: string;
+
+  constructor(accessToken?: string) {
+    this.accessToken = accessToken;
+  }
+
+  get authorizationHeader(): string {
+    if (!this.isReady)
+      throw 'The API client doesn\'t have a user token. Please initialize the client with one or ' +
+      'call profile.login() first.';
+
+    return `bearer ${this.accessToken}`;
+  }
+
+  get isReady(): boolean {
+    return !!this.accessToken;
+  }
 }

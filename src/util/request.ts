@@ -1,11 +1,10 @@
 import unfetch from 'isomorphic-unfetch';
-import Credentials from '@src/util/credentials';
+import Store from '@src/util/store';
 
 export default class Request {
-  static credentials: Credentials;
-  static baseUrl: string;
+  public static fetch: (url: string, options: Options) => Promise<Response>;
 
-  private readonly fetch: (url: string, options: Options) => Promise<Response>;
+  private readonly store: Store;
   private _options: Options = {
     headers: {
       'Content-Type': 'application/json'
@@ -13,14 +12,35 @@ export default class Request {
   };
   private url: URL;
 
-  constructor(endpoint: string, fetch = unfetch.bind(window)) {
-    this.fetch = fetch;
+  constructor(store: Store, endpoint: string) {
+    if (!Request.fetch) Request.fetch = unfetch.bind(window);
+
+    this.store = store;
     while (endpoint.startsWith('/')) endpoint = endpoint.substring(1);
-    this.url = new URL(`${Request.baseUrl}${endpoint}`);
+    this.url = new URL(`${store.baseUrl}${endpoint}`);
   }
 
-  authenticated(): this {
-    this._options.headers['Authorization'] = Request.credentials.authorizationHeader;
+  authenticateAsUser(): this {
+    this._options.headers['Authorization'] = this.store.userAuth.authorizationHeader;
+    return this;
+  }
+
+  authenticateAsUserPreferred(): this {
+    if (this.store.userAuth.isReady) this.authenticateAsUser();
+    else if (this.store.serverAuth.isReady) this.authenticateAsServer();
+
+    return this;
+  }
+
+  authenticateAsServer(): this {
+    this._options.headers['Authorization'] = this.store.serverAuth.authorizationHeader;
+    return this;
+  }
+
+  authenticateAsServerPreferred(): this {
+    if (this.store.serverAuth.isReady) this.authenticateAsServer();
+    else if (this.store.userAuth.isReady) this.authenticateAsUser();
+
     return this;
   }
 
@@ -36,6 +56,11 @@ export default class Request {
     }
 
     this._options.body = JSON.stringify(body);
+    return this;
+  }
+
+  withContentType(contentType: string): this {
+    this._options.headers['Content-Type'] = contentType;
     return this;
   }
 
@@ -61,7 +86,7 @@ export default class Request {
 
   private execute(method: Method): Promise<Response> {
     this._options.method = method;
-    return this.fetch(this.url.toString(), this._options);
+    return Request.fetch(this.url.toString(), this._options);
   }
 }
 
