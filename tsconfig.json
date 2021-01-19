@@ -1,14 +1,15 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "target": "es5",
-    "module": "commonjs",
+    "target": "ES2015",
+    "module": "ES2020",
     "lib": ["es2017", "es7", "es6", "dom"],
     "outDir": "./dist",
     "declaration": true,
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
     "paths": {
       "@src/*": ["src/*"]
     }
