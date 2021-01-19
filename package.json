@@ -1,7 +1,7 @@
 {
   "name": "outseta-api-client",
   "version": "0.0.1",
-  "description": "A lightweight API client for Outseta.",
+  "description": "An API client for Outseta.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -11,10 +11,11 @@
     "lint": "npx eslint ./src ./test --ext .ts,.js --max-warnings 0",
     "build": "npx tsc --project tsconfig.lib.json",
     "build:docs": "npx typedoc src/index.ts",
-    "test": "npx karma start karma.conf.js --single-run",
+    "test": "npx karma start karma.conf.js --single-run --browsers=ChromeHeadless",
     "test:watch": "npx karma start karma.conf.js --auto-watch",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint"
+    "prepare": "rm -rf dist/ && npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "postpublish": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
