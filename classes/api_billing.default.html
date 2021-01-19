@@ -55,7 +55,10 @@
 					<a href="../modules.html">outseta-api-client</a>
 				</li>
 				<li>
-					<a href="default.html">default</a>
+					<a href="../modules/api_billing.html">api/billing</a>
+				</li>
+				<li>
+					<a href="api_billing.default.html">default</a>
 				</li>
 			</ul>
 			<h1>Class default</h1>
@@ -80,13 +83,13 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="default.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="api_billing.default.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="default.html#billing" class="tsd-kind-icon">billing</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="api_billing.default.html#plans" class="tsd-kind-icon">plans</a></li>
 							</ul>
 						</section>
 					</div>
@@ -98,36 +101,22 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new default<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">{ </span>accessToken<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>apiKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>secretKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>subdomain<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></li>
+						<li class="tsd-signature tsd-kind-icon">new default<span class="tsd-signature-symbol">(</span>store<span class="tsd-signature-symbol">: </span><a href="util_store.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="api_billing.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/7ca2f5d/src/index.ts#L6">index.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/4dd5640/src/api/billing/index.ts#L5">api/billing/index.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>__namedParameters: <span class="tsd-signature-symbol">{ </span>accessToken<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>apiKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>secretKey<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>subdomain<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span></h5>
-									<ul class="tsd-parameters">
-										<li class="tsd-parameter">
-											<h5><span class="tsd-flag ts-flagOptional">Optional</span> access<wbr>Token<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-										</li>
-										<li class="tsd-parameter">
-											<h5><span class="tsd-flag ts-flagOptional">Optional</span> api<wbr>Key<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-										</li>
-										<li class="tsd-parameter">
-											<h5><span class="tsd-flag ts-flagOptional">Optional</span> secret<wbr>Key<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
-										</li>
-										<li class="tsd-parameter">
-											<h5>subdomain<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-										</li>
-									</ul>
+									<h5>store: <a href="util_store.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="api_billing.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -135,12 +124,12 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="billing" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> billing</h3>
-					<div class="tsd-signature tsd-kind-icon">billing<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">default</span></div>
+					<a name="plans" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> plans</h3>
+					<div class="tsd-signature tsd-kind-icon">plans<span class="tsd-signature-symbol">:</span> <a href="api_billing_plans.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/7ca2f5d/src/index.ts#L6">index.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/4dd5640/src/api/billing/index.ts#L5">api/billing/index.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -152,20 +141,38 @@
 					<li class=" ">
 						<a href="../modules.html">Exports</a>
 					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/api_billing.html">api/billing</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/api_billing_plans.html">api/billing/plans</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/index.html">index</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/util_credentials.html">util/credentials</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/util_request.html">util/request</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/util_store.html">util/store</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class">
-						<a href="default.html" class="tsd-kind-icon">default</a>
+					<li class="current tsd-kind-class tsd-parent-kind-module">
+						<a href="api_billing.default.html" class="tsd-kind-icon">default</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="default.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="api_billing.default.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="default.html#billing" class="tsd-kind-icon">billing</a>
+								<a href="api_billing.default.html#plans" class="tsd-kind-icon">plans</a>
 							</li>
 						</ul>
 					</li>
@@ -181,6 +188,7 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
 				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
 				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
