@@ -1,0 +1,2 @@
+# outseta-api-client
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/92acabe7bc8140fdacda0ecbf7d99401)](https://app.codacy.com/gh/tiltcamp/outseta-api-client?utm_source=github.com&utm_medium=referral&utm_content=tiltcamp/outseta-api-client&utm_campaign=Badge_Grade)
