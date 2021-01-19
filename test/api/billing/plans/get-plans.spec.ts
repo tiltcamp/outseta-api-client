@@ -2,28 +2,18 @@ import Pretender, { ResponseHandler } from 'pretender';
 
 import Store from '@src/util/store';
 import { ServerCredentials, UserCredentials } from '@src/util/credentials';
-import Request from '@src/util/request';
 import Plans from '@src/api/billing/plans';
 
 describe('api', () => {
   describe('Plans', () => {
     describe('getAll', () => {
-      let defaultFetch: typeof Request.fetch;
-
       let server: Pretender;
       let store: Store;
 
       let plans: Plans;
 
-      beforeAll(() => {
-        defaultFetch = Request.fetch;
-
-        server = new Pretender();
-        Request.fetch = self.fetch;
-      });
-
       beforeEach(() => {
-        server.shutdown();
+        if (server) server.shutdown();
 
         store = new Store(
           'https://test-company.outseta.com/api/v1/',
@@ -36,7 +26,6 @@ describe('api', () => {
 
       afterAll(() => {
         server.shutdown();
-        Request.fetch = defaultFetch;
       });
 
       it('handles successful request', async () => {

@@ -5,51 +5,25 @@ import Store from '@src/util/store';
 import { ServerCredentials, UserCredentials } from '@src/util/credentials';
 
 describe('Request', () => {
-  let defaultFetch: typeof Request.fetch;
-  let pretenderFetch: typeof Request.fetch;
-
   let server: Pretender;
   let store: Store;
 
   beforeAll(() => {
     store = new Store('https://test-company.outseta.com/api/', new UserCredentials(), new ServerCredentials());
-    new Request(store, '');
-    defaultFetch = Request.fetch;
-
-    server = new Pretender();
-    pretenderFetch = self.fetch;
   });
 
   beforeEach(() => {
-    server.shutdown();
+    if (server) server.shutdown();
 
     store = new Store(
       'https://test-company.outseta.com/api/',
       new UserCredentials(),
       new ServerCredentials()
     );
-
-    Request.fetch = pretenderFetch;
   });
 
   afterAll(() => {
     server.shutdown();
-    Request.fetch = defaultFetch;
-  });
-
-  describe('constructor', () => {
-    it('uses unfetch by default', async () => {
-      expect(Request.fetch.toString()).toBe(pretenderFetch.toString());
-      expect(Request.fetch.toString()).not.toBe(defaultFetch.toString());
-
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      Request.fetch = undefined;
-
-      new Request(store, '/');
-      expect(Request.fetch.toString()).toBe(defaultFetch.toString());
-      expect(Request.fetch.toString()).not.toBe(pretenderFetch.toString());
-    });
   });
 
   describe('get', () => {

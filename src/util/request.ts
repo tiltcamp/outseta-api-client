@@ -1,9 +1,7 @@
-import unfetch from 'isomorphic-unfetch';
+import 'isomorphic-fetch';
 import Store from './store';
 
 export default class Request {
-  public static fetch: (url: string, options: Options) => Promise<Response>;
-
   private readonly store: Store;
   private _options: Options = {
     headers: {
@@ -13,8 +11,6 @@ export default class Request {
   private url: URL;
 
   constructor(store: Store, endpoint: string) {
-    if (!Request.fetch) Request.fetch = unfetch.bind(window);
-
     this.store = store;
     while (endpoint.startsWith('/')) endpoint = endpoint.substring(1);
     this.url = new URL(`${store.baseUrl}${endpoint}`);
@@ -86,7 +82,7 @@ export default class Request {
 
   private execute(method: Method): Promise<Response> {
     this._options.method = method;
-    return Request.fetch(this.url.toString(), this._options);
+    return fetch(this.url.toString(), this._options);
   }
 }
 
