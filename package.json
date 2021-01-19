@@ -8,7 +8,7 @@
     "dist/**/*"
   ],
   "scripts": {
-    "lint": "npx eslint ./src ./test --ext .ts,.js",
+    "lint": "npx eslint ./src ./test --ext .ts,.js --max-warnings 0",
     "build": "npx tsc --project tsconfig.lib.json",
     "test": "npx karma start karma.conf.js --single-run",
     "test:watch": "npx karma start karma.conf.js --auto-watch",
