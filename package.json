@@ -10,7 +10,7 @@
   "scripts": {
     "lint": "npx eslint ./src ./test --ext .ts,.js --max-warnings 0",
     "build": "npx tsc --project tsconfig.lib.json",
-    "build:docs": "npx typedoc src/index.ts",
+    "build:docs": "npx typedoc",
     "test": "npx karma start karma.conf.js --single-run --browsers=ChromeHeadless",
     "test:watch": "npx karma start karma.conf.js --auto-watch",
     "prepare": "rm -rf dist/ && npm run build",
