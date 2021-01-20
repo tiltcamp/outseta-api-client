@@ -5,100 +5,102 @@ import { ServerCredentials, UserCredentials } from '@src/util/credentials';
 import Plans from '@src/api/billing/plans';
 
 describe('api', () => {
-  describe('Plans', () => {
-    describe('getAll', () => {
-      let server: Pretender;
-      let store: Store;
+  describe('billing', () => {
+    describe('Plans', () => {
+      describe('getAll', () => {
+        let server: Pretender;
+        let store: Store;
 
-      let plans: Plans;
+        let plans: Plans;
 
-      beforeEach(() => {
-        if (server) server.shutdown();
+        beforeEach(() => {
+          if (server) server.shutdown();
 
-        store = new Store(
-          'https://test-company.outseta.com/api/v1/',
-          new UserCredentials(),
-          new ServerCredentials()
-        );
+          store = new Store(
+            'https://test-company.outseta.com/api/v1/',
+            new UserCredentials(),
+            new ServerCredentials()
+          );
 
-        plans = new Plans(store);
-      });
-
-      afterAll(() => {
-        server.shutdown();
-      });
-
-      it('handles successful request', async () => {
-        const responseHandler: ResponseHandler = (request) => {
-          expect(request.requestHeaders['authorization']).toBeUndefined();
-          expect(request.queryParams).toEqual({});
-          expect(request.requestBody).toBeNull();
-          expect(request.requestHeaders['content-type']).toBe('application/json');
-
-          return [
-            200,
-            {'Content-Type': 'application/json'},
-            JSON.stringify(exampleResponse)
-          ];
-        };
-        server = new Pretender(function () {
-          this.get('https://test-company.outseta.com/api/v1/billing/plans', responseHandler);
+          plans = new Plans(store);
         });
 
-        const response = await plans.getAll();
-        expect(response.metadata.total).toBe(3);
-        expect(response.items).toHaveSize(3);
-        expect(response.items[0].Name).toBe('Basic');
-      });
-
-      it('handles successful request', async () => {
-        const responseHandler: ResponseHandler = (request) => {
-          expect(request.requestHeaders['authorization']).toBeUndefined();
-          expect(request.queryParams).toEqual({ offset: '10', limit: '20' });
-          expect(request.requestBody).toBeNull();
-          expect(request.requestHeaders['content-type']).toBe('application/json');
-
-          return [
-            200,
-            {'Content-Type': 'application/json'},
-            JSON.stringify({})
-          ];
-        };
-        server = new Pretender(function () {
-          this.get('https://test-company.outseta.com/api/v1/billing/plans', responseHandler);
+        afterAll(() => {
+          server.shutdown();
         });
 
-        await plans.getAll({ offset: 10, limit: 20 });
-      });
+        it('handles successful request', async () => {
+          const responseHandler: ResponseHandler = (request) => {
+            expect(request.requestHeaders['authorization']).toBeUndefined();
+            expect(request.queryParams).toEqual({});
+            expect(request.requestBody).toBeNull();
+            expect(request.requestHeaders['content-type']).toBe('application/json');
 
-      it('throws failed request', async () => {
-        const responseHandler: ResponseHandler = (request) => {
-          expect(request.requestHeaders['authorization']).toBeUndefined();
-          expect(request.queryParams).toEqual({});
-          expect(request.requestBody).toBeNull();
-          expect(request.requestHeaders['content-type']).toBe('application/json');
+            return [
+              200,
+              {'Content-Type': 'application/json'},
+              JSON.stringify(exampleResponse)
+            ];
+          };
+          server = new Pretender(function () {
+            this.get('https://test-company.outseta.com/api/v1/billing/plans', responseHandler);
+          });
 
-          return [
-            500,
-            {'Content-Type': 'application/json'},
-            JSON.stringify({})
-          ];
-        };
-        server = new Pretender(function () {
-          this.get('https://test-company.outseta.com/api/v1/billing/plans', responseHandler);
+          const response = await plans.getAll();
+          expect(response.metadata.total).toBe(3);
+          expect(response.items).toHaveSize(3);
+          expect(response.items[0].Name).toBe('Basic');
         });
 
-        let exception;
-        let response;
+        it('handles request with pagination', async () => {
+          const responseHandler: ResponseHandler = (request) => {
+            expect(request.requestHeaders['authorization']).toBeUndefined();
+            expect(request.queryParams).toEqual({ offset: '10', limit: '20' });
+            expect(request.requestBody).toBeNull();
+            expect(request.requestHeaders['content-type']).toBe('application/json');
 
-        try {
-          response = await plans.getAll();
-        } catch (e) {
-          exception = e;
-        }
+            return [
+              200,
+              {'Content-Type': 'application/json'},
+              JSON.stringify({})
+            ];
+          };
+          server = new Pretender(function () {
+            this.get('https://test-company.outseta.com/api/v1/billing/plans', responseHandler);
+          });
 
-        expect(response).toBeUndefined();
-        expect(exception.status).toBe(500);
+          await plans.getAll({ offset: 10, limit: 20 });
+        });
+
+        it('throws failed request', async () => {
+          const responseHandler: ResponseHandler = (request) => {
+            expect(request.requestHeaders['authorization']).toBeUndefined();
+            expect(request.queryParams).toEqual({});
+            expect(request.requestBody).toBeNull();
+            expect(request.requestHeaders['content-type']).toBe('application/json');
+
+            return [
+              500,
+              {'Content-Type': 'application/json'},
+              JSON.stringify({})
+            ];
+          };
+          server = new Pretender(function () {
+            this.get('https://test-company.outseta.com/api/v1/billing/plans', responseHandler);
+          });
+
+          let exception;
+          let response;
+
+          try {
+            response = await plans.getAll();
+          } catch (e) {
+            exception = e;
+          }
+
+          expect(response).toBeUndefined();
+          expect(exception.status).toBe(500);
+        });
       });
     });
   });
