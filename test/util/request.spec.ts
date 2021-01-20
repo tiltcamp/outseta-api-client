@@ -496,37 +496,6 @@ describe('Request', () => {
         expect(await response.json()).toEqual({ message: 'Hello World' });
       });
     });
-
-    describe('withContentType', () => {
-      it('performs post request with specified Content-Type header',  async () => {
-        let requestReceived = false;
-        const responseHandler: ResponseHandler = (request) => {
-          requestReceived = true;
-          expect(request.requestHeaders['authorization']).toBeUndefined();
-          expect(request.queryParams).toEqual({});
-          expect(request.requestBody).toBeNull();
-          expect(request.requestHeaders['content-type']).toBe('application/x-www-form-urlencoded');
-
-          return [
-            204,
-            { 'Content-Type': 'application/json' },
-            JSON.stringify({
-              message: 'Hello World'
-            })
-          ];
-        }
-        server = new Pretender(function() {
-          this.post('https://test-company.outseta.com/api/test_endpoint', responseHandler);
-        });
-
-        const request = new Request(store, '/test_endpoint');
-        const response = await request.withContentType('application/x-www-form-urlencoded').post();
-
-        expect(response.ok).toBeTrue();
-        expect(requestReceived).toBeTrue();
-        expect(await response.json()).toEqual({ message: 'Hello World' });
-      });
-    });
   });
 
   describe('put', () => {

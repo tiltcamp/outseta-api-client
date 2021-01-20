@@ -54,11 +54,6 @@ export default class Request {
     return this;
   }
 
-  withContentType(contentType: string): this {
-    this._options.headers['Content-Type'] = contentType;
-    return this;
-  }
-
   get(): Promise<Response> {
     return this.execute('GET');
   }
