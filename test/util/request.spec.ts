@@ -8,10 +8,6 @@ describe('Request', () => {
   let server: Pretender;
   let store: Store;
 
-  beforeAll(() => {
-    store = new Store('https://test-company.outseta.com/api/', new UserCredentials(), new ServerCredentials());
-  });
-
   beforeEach(() => {
     if (server) server.shutdown();
 
