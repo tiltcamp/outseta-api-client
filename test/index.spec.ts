@@ -1,4 +1,5 @@
 import Outseta from '@src/index';
+import User from '@src/api/user';
 import Billing from '@src/api/billing';
 
 describe('Outseta', () => {
@@ -9,6 +10,7 @@ describe('Outseta', () => {
       });
 
       expect(outseta).toBeInstanceOf(Outseta);
+      expect(outseta.user).toBeInstanceOf(User);
       expect(outseta.billing).toBeInstanceOf(Billing);
     });
   });
