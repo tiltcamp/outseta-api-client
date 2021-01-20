@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>default | outseta-api-client</title>
+	<title>LoginResponse | outseta-api-client</title>
 	<meta name="description" content="Documentation for outseta-api-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,13 +55,13 @@
 					<a href="../modules.html">outseta-api-client</a>
 				</li>
 				<li>
-					<a href="../modules/api_billing.html">api/billing</a>
+					<a href="../modules/api_user.html">api/user</a>
 				</li>
 				<li>
-					<a href="api_billing.default.html">default</a>
+					<a href="api_user.loginresponse.html">LoginResponse</a>
 				</li>
 			</ul>
-			<h1>Class default</h1>
+			<h1>Interface LoginResponse</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">default</span>
+						<span class="target">LoginResponse</span>
 					</li>
 				</ul>
 			</section>
@@ -81,55 +81,45 @@
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Constructors</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="api_billing.default.html#constructor" class="tsd-kind-icon">constructor</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="api_billing.default.html#plans" class="tsd-kind-icon">plans</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="api_user.loginresponse.html#access_token" class="tsd-kind-icon">access_<wbr>token</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="api_user.loginresponse.html#expires_in" class="tsd-kind-icon">expires_<wbr>in</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="api_user.loginresponse.html#token_type" class="tsd-kind-icon">token_<wbr>type</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
-					<a name="constructor" class="tsd-anchor"></a>
-					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new default<span class="tsd-signature-symbol">(</span>store<span class="tsd-signature-symbol">: </span><a href="util_store.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="api_billing.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ca460b5/src/api/billing/index.ts#L5">api/billing/index.ts:5</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>store: <a href="util_store.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="api_billing.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h4>
-						</li>
-					</ul>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="plans" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> plans</h3>
-					<div class="tsd-signature tsd-kind-icon">plans<span class="tsd-signature-symbol">:</span> <a href="api_billing_plans.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></div>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="access_token" class="tsd-anchor"></a>
+					<h3>access_<wbr>token</h3>
+					<div class="tsd-signature tsd-kind-icon">access_<wbr>token<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ca460b5/src/api/billing/index.ts#L5">api/billing/index.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ca460b5/src/api/user/index.ts#L72">api/user/index.ts:72</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="expires_in" class="tsd-anchor"></a>
+					<h3>expires_<wbr>in</h3>
+					<div class="tsd-signature tsd-kind-icon">expires_<wbr>in<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ca460b5/src/api/user/index.ts#L73">api/user/index.ts:73</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="token_type" class="tsd-anchor"></a>
+					<h3>token_<wbr>type</h3>
+					<div class="tsd-signature tsd-kind-icon">token_<wbr>type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ca460b5/src/api/user/index.ts#L74">api/user/index.ts:74</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -141,13 +131,13 @@
 					<li class=" ">
 						<a href="../modules.html">Exports</a>
 					</li>
-					<li class="current tsd-kind-module">
+					<li class=" tsd-kind-module">
 						<a href="../modules/api_billing.html">api/billing</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/api_billing_plans.html">api/billing/plans</a>
 					</li>
-					<li class=" tsd-kind-module">
+					<li class="current tsd-kind-module">
 						<a href="../modules/api_user.html">api/user</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -166,16 +156,22 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/api_user.default.html" class="tsd-kind-icon">default</a>
+					</li>
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="api_billing.default.html" class="tsd-kind-icon">default</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="api_user.loginresponse.html" class="tsd-kind-icon">Login<wbr>Response</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="api_billing.default.html#constructor" class="tsd-kind-icon">constructor</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="api_user.loginresponse.html#access_token" class="tsd-kind-icon">access_<wbr>token</a>
 							</li>
-							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="api_billing.default.html#plans" class="tsd-kind-icon">plans</a>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="api_user.loginresponse.html#expires_in" class="tsd-kind-icon">expires_<wbr>in</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="api_user.loginresponse.html#token_type" class="tsd-kind-icon">token_<wbr>type</a>
 							</li>
 						</ul>
 					</li>
@@ -191,12 +187,11 @@
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
-				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
-				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
-				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
 			</ul>
 			<ul class="tsd-legend">
-				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
 			</ul>
 		</div>
 	</div>
