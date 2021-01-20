@@ -9,16 +9,22 @@ export default class User {
   }
 
   /**
-   * Login as a user
+   * Get an access token for a user via their username and password. Even
+   * if the API client was not initialized with a user access token,
+   * performing this action will internally set the token if the login
+   * is successful.
    *
    * ```typescript
    * const client = new OutsetaApiClient({ subdomain: 'test-company' });
-   * await client.user.login('username', 'password');
+   * const response = await client.user.login('username', 'password');
+   * console.log(response.access_token);
    * ```
    *
-   * @param username The user's email
-   * @param password The user's password
+   * @param username (usually an email address)
+   * @param password
    * @returns The response body with the user's JWT token
+   * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
+   *  non-"OK" status, the whole response object will be thrown.
    */
   public async login(username: string, password: string): Promise<LoginResponse> {
     const request = new Request(this.store, 'tokens').withBody({
@@ -37,15 +43,21 @@ export default class User {
   }
 
   /**
-   * Get an access token for any user using the server's API key and secret
+   * Get an access token for any user using the server's API key and secret.
+   * Even if the API client was not initialized with a user access token,
+   * performing this action will internally set the token if the login
+   * is successful.
    *
    * ```typescript
    * const client = new OutsetaApiClient({ subdomain: 'test-company', apiKey: 'api_key', secretKey: 'api_secret' });
-   * await client.user.impersonate('username', 'password');
+   * const response = await client.user.impersonate('username');
+   * console.log(response.access_token);
    * ```
    *
-   * @param username The user's email
+   * @param username (usually an email address)
    * @returns The response body with the user's JWT token
+   * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
+   *  non-"OK" status, the whole response object will be thrown.
    */
   public async impersonate(username: string): Promise<LoginResponse> {
     const request = new Request(this.store, 'tokens')
@@ -66,7 +78,7 @@ export default class User {
   }
 }
 
-interface LoginResponse {
+export interface LoginResponse {
   access_token: string;
   expires_in: number;
   token_type: string;

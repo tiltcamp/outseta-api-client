@@ -7,6 +7,36 @@ export default class OutsetaApiClient {
   public readonly user: User;
   public readonly billing: Billing;
 
+  /**
+   * Initializing without any keys:
+   * ```typescript
+   * import OutsetaApiClient from 'outseta-api-client';
+   * const client = new OutsetaApiClient({subdomain: 'test-company'});
+   * ```
+   *
+   * Initializing with server-side API keys:
+   * ```typescript
+   * import OutsetaApiClient from 'outseta-api-client';
+   * const client = new OutsetaApiClient({
+   *   subdomain: 'test-company',
+   *   apiKey: example_key,
+   *   secretKey: example_secret
+   * });
+   * ```
+   *
+   * Initializing with a user access token:
+   * ```typescript
+   * import OutsetaApiClient from 'outseta-api-client';
+   * const client = new OutsetaApiClient({
+   *   subdomain: 'test-company',
+   *   accessToken: jwt_user_token
+   * });
+   * ```
+   * @param subdomain If your Outseta domain is `tiltcamp.outseta.com`, this would be `tiltcamp`
+   * @param accessToken A user's access token (if available)
+   * @param apiKey A server-side API key (if available)
+   * @param secretKey A server-side API key secret (if available)
+   */
   constructor({ subdomain, accessToken, apiKey, secretKey }: {
     subdomain: string;
     accessToken?: string;

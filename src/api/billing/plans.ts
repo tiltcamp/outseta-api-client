@@ -8,6 +8,21 @@ export default class Plans {
     this.store = store;
   }
 
+  /**
+   * Get all available plans.
+   *
+   * ```typescript
+   * const client = new OutsetaApiClient({ subdomain: 'test-company' });
+   * const response = await client.billing.plans.getAll();
+   * console.log(response);
+   * ```
+   *
+   * @param options.limit The number of results returned by the API.
+   * @param options.offset For pagination; returns (limit) results after this value.
+   * @returns The response body.
+   * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
+   *  non-"OK" status, the whole response object will be thrown.
+   */
   public async getAll(options: {
     limit?: number,
     offset?: number
@@ -23,18 +38,18 @@ export default class Plans {
   }
 }
 
-interface PlansResponse {
+export interface PlansResponse {
   metadata: Metadata;
   items: Item[];
 }
 
-interface Metadata {
+export interface Metadata {
   limit: number;
   offset: number;
   total: number;
 }
 
-interface Item {
+export interface Item {
   Name: string;
   Description: string;
   PlanFamily: PlanFamily;
@@ -54,14 +69,14 @@ interface Item {
   Updated: Date;
 }
 
-interface PlanAddOn {
+export interface PlanAddOn {
   IsUserSelectable: boolean;
   Uid: string;
   Created: Date;
   Updated: Date;
 }
 
-interface PlanFamily {
+export interface PlanFamily {
   Name: string;
   IsActive: boolean;
   Uid: string;
