@@ -4,7 +4,7 @@ import User from '@src/api/user';
 import { ServerCredentials, UserCredentials } from '@src/util/credentials';
 
 describe('api', () => {
-  describe('user', () => {
+  describe('User', () => {
     describe('impersonate', () => {
       let server: Pretender;
       let store: Store;
