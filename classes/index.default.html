@@ -108,9 +108,32 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/d93f0d3/src/index.ts#L8">index.ts:8</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/1c825b3/src/index.ts#L8">index.ts:8</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Initializing without any keys:</p>
+									<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">OutsetaApiClient</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;outseta-api-client&#039;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">OutsetaApiClient</span><span style="color: #000000">({</span><span style="color: #001080">subdomain:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test-company&#039;</span><span style="color: #000000">});</span>
+</code></pre>
+								</div>
+								<p>Initializing with server-side API keys:</p>
+								<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">OutsetaApiClient</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;outseta-api-client&#039;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">OutsetaApiClient</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #001080">subdomain:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test-company&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">apiKey:</span><span style="color: #000000"> </span><span style="color: #001080">example_key</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">secretKey:</span><span style="color: #000000"> </span><span style="color: #001080">example_secret</span>
+<span style="color: #000000">});</span>
+</code></pre>
+								<p>Initializing with a user access token:</p>
+								<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">OutsetaApiClient</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;outseta-api-client&#039;</span><span style="color: #000000">;</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">OutsetaApiClient</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #001080">subdomain:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test-company&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">accessToken:</span><span style="color: #000000"> </span><span style="color: #001080">jwt_user_token</span>
+<span style="color: #000000">});</span>
+</code></pre>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
@@ -118,15 +141,27 @@
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter">
 											<h5><span class="tsd-flag ts-flagOptional">Optional</span> access<wbr>Token<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>A user&#39;s access token (if available)</p>
+											</div>
 										</li>
 										<li class="tsd-parameter">
 											<h5><span class="tsd-flag ts-flagOptional">Optional</span> api<wbr>Key<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>A server-side API key (if available)</p>
+											</div>
 										</li>
 										<li class="tsd-parameter">
 											<h5><span class="tsd-flag ts-flagOptional">Optional</span> secret<wbr>Key<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>A server-side API key secret (if available)</p>
+											</div>
 										</li>
 										<li class="tsd-parameter">
 											<h5>subdomain<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>If your Outseta domain is <code>tiltcamp.outseta.com</code>, this would be <code>tiltcamp</code></p>
+											</div>
 										</li>
 									</ul>
 								</li>
@@ -144,7 +179,7 @@
 					<div class="tsd-signature tsd-kind-icon">billing<span class="tsd-signature-symbol">:</span> <a href="api_billing.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/d93f0d3/src/index.ts#L8">index.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/1c825b3/src/index.ts#L8">index.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -154,7 +189,7 @@
 					<div class="tsd-signature tsd-kind-icon">user<span class="tsd-signature-symbol">:</span> <a href="api_user.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/d93f0d3/src/index.ts#L7">index.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/1c825b3/src/index.ts#L7">index.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>

@@ -114,7 +114,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/d93f0d3/src/api/user/index.ts#L5">api/user/index.ts:5</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/1c825b3/src/api/user/index.ts#L5">api/user/index.ts:5</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -136,7 +136,7 @@
 					<div class="tsd-signature tsd-kind-icon">store<span class="tsd-signature-symbol">:</span> <a href="util_store.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/d93f0d3/src/api/user/index.ts#L5">api/user/index.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/1c825b3/src/api/user/index.ts#L5">api/user/index.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -153,24 +153,33 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/d93f0d3/src/api/user/index.ts#L52">api/user/index.ts:52</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/1c825b3/src/api/user/index.ts#L62">api/user/index.ts:62</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Get an access token for any user using the server&#39;s API key and secret</p>
+									<p>Get an access token for any user using the server&#39;s API key and secret.
+										Even if the API client was not initialized with a user access token,
+										performing this action will internally set the token if the login
+									is successful.</p>
 								</div>
 								<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">OutsetaApiClient</span><span style="color: #000000">({ </span><span style="color: #001080">subdomain:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test-company&#039;</span><span style="color: #000000">, </span><span style="color: #001080">apiKey:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;api_key&#039;</span><span style="color: #000000">, </span><span style="color: #001080">secretKey:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;api_secret&#039;</span><span style="color: #000000"> });</span>
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">response</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">client</span><span style="color: #000000">.</span><span style="color: #001080">user</span><span style="color: #000000">.</span><span style="color: #795E26">impersonate</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;username&#039;</span><span style="color: #000000">);</span>
 <span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">response</span><span style="color: #000000">.</span><span style="color: #001080">access_token</span><span style="color: #000000">);</span>
 </code></pre>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Response</a> If the server returns a
+										non-&quot;OK&quot; status, the whole response object will be thrown.</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>username: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The user&#39;s email</p>
+										<p>(usually an email address)</p>
 									</div>
 								</li>
 							</ul>
@@ -189,31 +198,37 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/d93f0d3/src/api/user/index.ts#L24">api/user/index.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/1c825b3/src/api/user/index.ts#L29">api/user/index.ts:29</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Login as a user</p>
+									<p>Get an access token for a user via their username and password. Even
+										if the API client was not initialized with a user access token,
+										performing this action will internally set the token if the login
+									is successful.</p>
 								</div>
 								<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">OutsetaApiClient</span><span style="color: #000000">({ </span><span style="color: #001080">subdomain:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test-company&#039;</span><span style="color: #000000"> });</span>
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">response</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">client</span><span style="color: #000000">.</span><span style="color: #001080">user</span><span style="color: #000000">.</span><span style="color: #795E26">login</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;username&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;password&#039;</span><span style="color: #000000">);</span>
 <span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">response</span><span style="color: #000000">.</span><span style="color: #001080">access_token</span><span style="color: #000000">);</span>
 </code></pre>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Response</a> If the server returns a
+										non-&quot;OK&quot; status, the whole response object will be thrown.</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>username: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>The user&#39;s email</p>
+										<p>(usually an email address)</p>
 									</div>
 								</li>
 								<li>
 									<h5>password: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The user&#39;s password</p>
-									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/api_user.loginresponse.html" class="tsd-signature-type" data-tsd-kind="Interface">LoginResponse</a><span class="tsd-signature-symbol">&gt;</span></h4>
