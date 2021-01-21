@@ -1,4 +1,4 @@
-import { UserCredentials, ServerCredentials } from '@src/util/credentials';
+import { UserCredentials, ServerCredentials } from '../../src/util/credentials';
 
 describe('util', () =>
   describe('Credentials', () => {

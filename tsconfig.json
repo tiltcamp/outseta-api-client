@@ -9,10 +9,7 @@
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "paths": {
-      "@src/*": ["src/*"]
-    }
+    "moduleResolution": "node"
   },
   "exclude": [
     "node_modules",

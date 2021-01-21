@@ -1,8 +1,8 @@
 import Pretender, { ResponseHandler } from 'pretender';
 
-import Request from '@src/util/request';
-import Store from '@src/util/store';
-import { ServerCredentials, UserCredentials } from '@src/util/credentials';
+import Request from '../../src/util/request';
+import Store from '../../src/util/store';
+import { ServerCredentials, UserCredentials } from '../../src/util/credentials';
 
 describe('util', () =>
   describe('Request', () => {

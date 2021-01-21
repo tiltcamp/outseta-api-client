@@ -1,5 +1,5 @@
-import Store from '@src/util/store';
-import Request from '@src/util/request';
+import Store from '../../util/store';
+import Request from '../../util/request';
 
 export default class User {
   private readonly store: Store;
