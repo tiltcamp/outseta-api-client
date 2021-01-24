@@ -1,12 +1,12 @@
 import Pretender, { ResponseHandler } from 'pretender';
 
-import Store from '@src/util/store';
-import { ServerCredentials, UserCredentials } from '@src/util/credentials';
-import Plans from '@src/api/billing/plans';
+import Store from '../../../../src/util/store';
+import Plans from '../../../../src/api/billing/plans';
+import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
 
-describe('api', () => {
-  describe('billing', () => {
-    describe('Plans', () => {
+describe('api', () =>
+  describe('Billing', () =>
+    describe('Plans', () =>
       describe('getAll', () => {
         let server: Pretender;
         let store: Store;
@@ -101,10 +101,10 @@ describe('api', () => {
           expect(response).toBeUndefined();
           expect(exception.status).toBe(500);
         });
-      });
-    });
-  });
-});
+      })
+    )
+  )
+);
 
 const exampleResponse = {
   "metadata": {
