@@ -1,6 +1,6 @@
 {
   "name": "outseta-api-client",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "An API client for Outseta.",
   "main": "dist/cjs/index.js",
   "types": "dist/cjs/index.d.ts",
