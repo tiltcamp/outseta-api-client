@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>EntityValidationError | outseta-api-client</title>
+	<title>PlanAddOn | outseta-api-client</title>
 	<meta name="description" content="Documentation for outseta-api-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,32 +55,24 @@
 					<a href="../modules.html">outseta-api-client</a>
 				</li>
 				<li>
-					<a href="../modules/models_validation_error.html">models/validation-error</a>
+					<a href="../modules/models_billing_plan.html">models/billing/plan</a>
 				</li>
 				<li>
-					<a href="models_validation_error.entityvalidationerror.html">EntityValidationError</a>
+					<a href="models_billing_plan.planaddon.html">PlanAddOn</a>
 				</li>
 			</ul>
-			<h1>Interface EntityValidationError&lt;T&gt;</h1>
+			<h1>Interface PlanAddOn</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-type-parameters">
-				<h3>Type parameters</h3>
-				<ul class="tsd-type-parameters">
-					<li>
-						<h4>T</h4>
-					</li>
-				</ul>
-			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">EntityValidationError</span>
+						<span class="target">PlanAddOn</span>
 					</li>
 				</ul>
 			</section>
@@ -91,9 +83,10 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_validation_error.entityvalidationerror.html#entity" class="tsd-kind-icon">Entity</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_validation_error.entityvalidationerror.html#typename" class="tsd-kind-icon">Type<wbr>Name</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_validation_error.entityvalidationerror.html#validationerrors" class="tsd-kind-icon">Validation<wbr>Errors</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_billing_plan.planaddon.html#created" class="tsd-kind-icon">Created</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_billing_plan.planaddon.html#isuserselectable" class="tsd-kind-icon">Is<wbr>User<wbr>Selectable</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_billing_plan.planaddon.html#uid" class="tsd-kind-icon">Uid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_billing_plan.planaddon.html#updated" class="tsd-kind-icon">Updated</a></li>
 							</ul>
 						</section>
 					</div>
@@ -102,32 +95,42 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="entity" class="tsd-anchor"></a>
-					<h3>Entity</h3>
-					<div class="tsd-signature tsd-kind-icon">Entity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span></div>
+					<a name="created" class="tsd-anchor"></a>
+					<h3>Created</h3>
+					<div class="tsd-signature tsd-kind-icon">Created<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/f0733bc/src/models/validation-error.ts#L7">models/validation-error.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/c564573/src/models/billing/plan.ts#L24">models/billing/plan.ts:24</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="typename" class="tsd-anchor"></a>
-					<h3>Type<wbr>Name</h3>
-					<div class="tsd-signature tsd-kind-icon">Type<wbr>Name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="isuserselectable" class="tsd-anchor"></a>
+					<h3>Is<wbr>User<wbr>Selectable</h3>
+					<div class="tsd-signature tsd-kind-icon">Is<wbr>User<wbr>Selectable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/f0733bc/src/models/validation-error.ts#L8">models/validation-error.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/c564573/src/models/billing/plan.ts#L22">models/billing/plan.ts:22</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="validationerrors" class="tsd-anchor"></a>
-					<h3>Validation<wbr>Errors</h3>
-					<div class="tsd-signature tsd-kind-icon">Validation<wbr>Errors<span class="tsd-signature-symbol">:</span> <a href="models_validation_error.errordetail.html" class="tsd-signature-type" data-tsd-kind="Interface">ErrorDetail</a><span class="tsd-signature-symbol">[]</span></div>
+					<a name="uid" class="tsd-anchor"></a>
+					<h3>Uid</h3>
+					<div class="tsd-signature tsd-kind-icon">Uid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/f0733bc/src/models/validation-error.ts#L9">models/validation-error.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/c564573/src/models/billing/plan.ts#L23">models/billing/plan.ts:23</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="updated" class="tsd-anchor"></a>
+					<h3>Updated</h3>
+					<div class="tsd-signature tsd-kind-icon">Updated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/c564573/src/models/billing/plan.ts#L25">models/billing/plan.ts:25</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -146,6 +149,12 @@
 						<a href="../modules/api_billing_plans.html">api/billing/plans</a>
 					</li>
 					<li class=" tsd-kind-module">
+						<a href="../modules/api_crm.html">api/crm</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/api_crm_people.html">api/crm/people</a>
+					</li>
+					<li class=" tsd-kind-module">
 						<a href="../modules/api_user.html">api/user</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -157,11 +166,17 @@
 					<li class=" tsd-kind-module">
 						<a href="../modules/index.html">index</a>
 					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/models_billing_plan.html">models/billing/plan</a>
+					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/models_person.html">models/person</a>
 					</li>
-					<li class="current tsd-kind-module">
-						<a href="../modules/models_validation_error.html">models/validation-<wbr>error</a>
+					<li class=" tsd-kind-module">
+						<a href="../modules/models_wrappers_list.html">models/wrappers/list</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="../modules/models_wrappers_validation_error.html">models/wrappers/validation-<wbr>error</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="../modules/util_credentials.html">util/credentials</a>
@@ -178,27 +193,30 @@
 				<ul class="before-current">
 				</ul>
 				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="models_validation_error.entityvalidationerror.html" class="tsd-kind-icon">Entity<wbr>Validation<wbr>Error</a>
+					<li class="current tsd-kind-interface tsd-parent-kind-module">
+						<a href="models_billing_plan.planaddon.html" class="tsd-kind-icon">Plan<wbr>Add<wbr>On</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_validation_error.entityvalidationerror.html#entity" class="tsd-kind-icon">Entity</a>
+								<a href="models_billing_plan.planaddon.html#created" class="tsd-kind-icon">Created</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_validation_error.entityvalidationerror.html#typename" class="tsd-kind-icon">Type<wbr>Name</a>
+								<a href="models_billing_plan.planaddon.html#isuserselectable" class="tsd-kind-icon">Is<wbr>User<wbr>Selectable</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_validation_error.entityvalidationerror.html#validationerrors" class="tsd-kind-icon">Validation<wbr>Errors</a>
+								<a href="models_billing_plan.planaddon.html#uid" class="tsd-kind-icon">Uid</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="models_billing_plan.planaddon.html#updated" class="tsd-kind-icon">Updated</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="models_validation_error.errordetail.html" class="tsd-kind-icon">Error<wbr>Detail</a>
+						<a href="models_billing_plan.planfamily.html" class="tsd-kind-icon">Plan<wbr>Family</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module tsd-has-type-parameter">
-						<a href="models_validation_error.default.html" class="tsd-kind-icon">default</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="models_billing_plan.default.html" class="tsd-kind-icon">default</a>
 					</li>
 				</ul>
 			</nav>
