@@ -65,7 +65,7 @@ export default class Profile {
       return await response.json() as ValidationError<PersonModel>;
     else if (response.ok)
       return await response.json() as PersonModel;
-    else throw await response;
+    else throw response;
   }
 }
 

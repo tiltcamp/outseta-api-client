@@ -39,6 +39,6 @@ export default class Password {
       return await response.json() as ValidationError<PersonModel>;
     else if (response.ok)
       return null;
-    else throw await response;
+    else throw response;
   }
 }
