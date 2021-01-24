@@ -95,7 +95,7 @@ describe('api', () => {
           expect(response).toBeUndefined();
           expect(exception.status).toBe(500);
         });
-      })
+      });
     });
   });
 });
@@ -145,4 +145,4 @@ const exampleResponse = {
   "Uid": "DQ2DyknW",
   "Created": "2021-01-20T05:24:53",
   "Updated": "2021-01-24T00:59:57.1856278Z"
-}
+};

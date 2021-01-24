@@ -1,13 +1,16 @@
 import Store from '../../util/store';
 import Request from '../../util/request';
 import Profile from './profile';
+import Password from './password';
 
 export default class User {
+  public readonly password: Password;
   public readonly profile: Profile;
 
   private readonly store: Store;
 
   constructor(store: Store) {
+    this.password = new Password(store);
     this.profile = new Profile(store);
 
     this.store = store;

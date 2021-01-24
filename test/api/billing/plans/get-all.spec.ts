@@ -222,4 +222,4 @@ const exampleResponse = {
       "Updated": "2021-01-19T04:00:23"
     }
   ]
-}
+};

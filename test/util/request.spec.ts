@@ -70,7 +70,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function () {
             this.get('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -102,7 +102,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function () {
             this.get('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -134,7 +134,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function () {
             this.get('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -165,7 +165,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function () {
             this.get('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -196,7 +196,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function () {
             this.get('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -229,7 +229,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function () {
             this.get('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -261,7 +261,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function () {
             this.get('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -292,7 +292,7 @@ describe('util', () =>
               message: 'Hello World'
             })
           ];
-        }
+        };
         server = new Pretender(function () {
           this.get('https://test-company.outseta.com/api/test_endpoint', responseHandler);
         });
@@ -353,7 +353,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function() {
             this.post('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -385,7 +385,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function() {
             this.post('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -418,7 +418,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function() {
             this.post('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -450,7 +450,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function() {
             this.post('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -483,7 +483,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function() {
             this.post('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -546,7 +546,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function() {
             this.put('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -578,7 +578,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function() {
             this.put('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -609,7 +609,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function() {
             this.put('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -671,7 +671,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function() {
             this.patch('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -703,7 +703,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function() {
             this.patch('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -734,7 +734,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function() {
             this.patch('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -796,7 +796,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function() {
             this.delete('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -828,7 +828,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function() {
             this.delete('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });
@@ -859,7 +859,7 @@ describe('util', () =>
                 message: 'Hello World'
               })
             ];
-          }
+          };
           server = new Pretender(function() {
             this.delete('https://test-company.outseta.com/api/test_endpoint', responseHandler);
           });

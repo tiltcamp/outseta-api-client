@@ -1,4 +1,5 @@
 import User from '../../../src/api/user';
+import Password from '../../../src/api/user/password';
 import Profile from '../../../src/api/user/profile';
 import Store from '../../../src/util/store';
 import { ServerCredentials, UserCredentials } from '../../../src/util/credentials';
@@ -16,6 +17,7 @@ describe('api', () =>
         );
 
         expect(user).toBeInstanceOf(User);
+        expect(user.password).toBeInstanceOf(Password);
         expect(user.profile).toBeInstanceOf(Profile);
       });
     })

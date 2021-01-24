@@ -14,7 +14,7 @@ describe('util', () =>
           const credentials = new ServerCredentials();
 
           try {
-            credentials.authorizationHeader
+            credentials.authorizationHeader;
           } catch (e) {
             exception = e;
           }
@@ -42,7 +42,7 @@ describe('util', () =>
           expect(credentials.isReady).toBeFalse();
         });
       });
-    })
+    });
 
     describe('UserCredentials', () => {
       describe('authorizationHeader', () => {
@@ -56,7 +56,7 @@ describe('util', () =>
           const credentials = new UserCredentials();
 
           try {
-            credentials.authorizationHeader
+            credentials.authorizationHeader;
           } catch (e) {
             exception = e;
           }

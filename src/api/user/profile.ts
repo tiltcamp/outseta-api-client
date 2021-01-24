@@ -1,5 +1,6 @@
 import Request from '../../util/request';
 import Store from '../../util/store';
+import UserProfileModel from '../../models/user-profile';
 
 export default class Profile {
   private readonly store: Store;
@@ -24,12 +25,12 @@ export default class Profile {
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" status, the whole response object will be thrown.
    */
-  public async get(): Promise<ProfileResponse> {
+  public async get(): Promise<UserProfileModel> {
     const request = new Request(this.store, 'profile').authenticateAsUser();
     const response = await request.get();
 
     if (!response.ok) throw response;
-    return await response.json() as ProfileResponse;
+    return await response.json() as UserProfileModel;
   }
 
   /**
@@ -53,67 +54,18 @@ export default class Profile {
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" status, the whole response object will be thrown.
    */
-  public async update(profile: ProfileUpdate): Promise<ProfileResponse> {
+  public async update(profile: ProfileUpdate): Promise<UserProfileModel> {
     const request = new Request(this.store, 'profile')
       .authenticateAsUser()
       .withBody(profile);
     const response = await request.put();
 
     if (!response.ok) throw response;
-    return await response.json() as ProfileResponse;
+    return await response.json() as UserProfileModel;
   }
 }
 
-export interface ProfileUpdate extends Partial<ProfileResponse> {
+export interface ProfileUpdate extends Partial<UserProfileModel> {
   [key: string]: unknown;
   Uid: string;
-}
-
-export interface ProfileResponse {
-  Email: string;
-  FirstName: string;
-  LastName: string;
-  MailingAddress: MailingAddress;
-  PasswordMustChange: boolean;
-  PhoneMobile: string;
-  PhoneWork: string;
-  Title?: string;
-  Timezone?: unknown;
-  Language?: unknown;
-  IPAddress?: unknown;
-  Referer?: unknown;
-  UserAgent?: unknown;
-  LastLoginDateTime?: unknown;
-  OAuthGoogleProfileId?: unknown;
-  PersonAccount: PersonAccount[];
-  DealPeople: unknown[];
-  Account?: unknown;
-  FullName: string;
-  OAuthIntegrationStatus: number;
-  UserAgentPlatformBrowser: string;
-  Uid: string;
-  Created: Date;
-  Updated: Date;
-}
-
-export interface MailingAddress {
-  AddressLine1?: string;
-  AddressLine2?: string;
-  AddressLine3?: string;
-  City: string;
-  State: string;
-  PostalCode: string;
-  Country?: string;
-  Uid: string;
-  Created: Date;
-  Updated: Date;
-}
-
-export interface PersonAccount {
-  Person?: unknown;
-  Account?: unknown;
-  IsPrimary: boolean;
-  Uid: string;
-  Created: Date;
-  Updated: Date;
 }
