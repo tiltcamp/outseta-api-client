@@ -2,7 +2,7 @@ export default interface Person {
   Email: string;
   FirstName: string;
   LastName: string;
-  MailingAddress: MailingAddress;
+  MailingAddress?: MailingAddress;
   PasswordMustChange: boolean;
   PhoneMobile: string;
   PhoneWork: string;
