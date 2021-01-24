@@ -65,7 +65,7 @@ describe('api', () => {
             return [
               400,
               {'Content-Type': 'application/json'},
-              JSON.stringify(exampleErrorResponse)
+              JSON.stringify(exampleValidationResponse)
             ];
           };
           server = new Pretender(function () {
@@ -118,7 +118,7 @@ describe('api', () => {
   });
 });
 
-const exampleErrorResponse = {
+const exampleValidationResponse = {
   "ErrorMessage": "A validation error has occurred",
   "EntityValidationErrors": [
     {

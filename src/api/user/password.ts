@@ -1,7 +1,7 @@
 import Request from '../../util/request';
 import Store from '../../util/store';
 import ValidationError from '../../models/validation-error';
-import UserProfileModel from '../../models/user-profile';
+import PersonModel from '../../models/person';
 
 export default class Password {
   private readonly store: Store;
@@ -26,7 +26,7 @@ export default class Password {
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" or non-"400" status, the whole response object will be thrown.
    */
-  public async update(existingPassword: string, newPassword: string): Promise<null | ValidationError<UserProfileModel>> {
+  public async update(existingPassword: string, newPassword: string): Promise<null | ValidationError<PersonModel>> {
     const request = new Request(this.store, 'profile/password')
       .authenticateAsUser()
       .withBody({
@@ -36,7 +36,7 @@ export default class Password {
     const response = await request.put();
 
     if (response.status === 400)
-      return await response.json() as ValidationError<UserProfileModel>;
+      return await response.json() as ValidationError<PersonModel>;
     else if (response.ok)
       return null;
     else throw await response;
