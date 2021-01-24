@@ -1,10 +1,15 @@
 import Store from '../../util/store';
 import Request from '../../util/request';
+import Profile from './profile';
 
 export default class User {
+  public readonly profile: Profile;
+
   private readonly store: Store;
 
   constructor(store: Store) {
+    this.profile = new Profile(store);
+
     this.store = store;
   }
 
@@ -22,7 +27,7 @@ export default class User {
    *
    * @param username (usually an email address)
    * @param password
-   * @returns The response body with the user's JWT token
+   * @returns The response body with the user's JWT token.
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" status, the whole response object will be thrown.
    */
@@ -55,7 +60,7 @@ export default class User {
    * ```
    *
    * @param username (usually an email address)
-   * @returns The response body with the user's JWT token
+   * @returns The response body with the user's JWT token.
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" status, the whole response object will be thrown.
    */
