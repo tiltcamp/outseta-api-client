@@ -1,7 +1,7 @@
 import Request from '../../util/request';
 import Store from '../../util/store';
 import PersonModel from '../../models/person';
-import ValidationError from '../../models/validation-error';
+import ValidationError from '../../models/wrappers/validation-error';
 
 export default class Profile {
   private readonly store: Store;

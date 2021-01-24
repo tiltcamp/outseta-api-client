@@ -5,7 +5,7 @@ import Profile from '../../../../src/api/user/profile';
 import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
 
 import PersonModel from '../../../../src/models/person';
-import ValidationError from '../../../../src/models/validation-error';
+import ValidationError from '../../../../src/models/wrappers/validation-error';
 
 describe('api', () => {
   describe('User', () => {
