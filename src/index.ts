@@ -2,10 +2,12 @@ import { ServerCredentials, UserCredentials } from './util/credentials';
 import Store from './util/store';
 import User from './api/user';
 import Billing from './api/billing';
+import Crm from './api/crm';
 
 export default class OutsetaApiClient {
   public readonly user: User;
   public readonly billing: Billing;
+  public readonly crm: Crm;
 
   /**
    * Initializing without any keys:
@@ -50,5 +52,6 @@ export default class OutsetaApiClient {
 
     this.user = new User(store);
     this.billing = new Billing(store);
+    this.crm = new Crm(store);
   }
 }
