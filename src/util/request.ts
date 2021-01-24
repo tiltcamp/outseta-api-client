@@ -44,7 +44,7 @@ export default class Request {
     return this;
   }
 
-  withBody(body: { [key: string]: string }): this {
+  withBody(body: Record<string, unknown>): this {
     if (this._options.body) {
       const existingBody = JSON.parse(this._options.body);
       body = Object.assign(existingBody, body);
