@@ -49,7 +49,11 @@ describe('api', () => {
           this.post('https://test-company.outseta.com/api/v1/tokens', responseHandler);
         });
 
+        expect(store.userAuth.accessToken).toBeUndefined();
+
         const response = await user.login('example_username', 'example_password');
+
+        expect(store.userAuth.accessToken).toBe(exampleResponse.access_token);
         expect(response.access_token).toBe(exampleResponse.access_token);
         expect(response.expires_in).toBe(exampleResponse.expires_in);
         expect(response.token_type).toBe(exampleResponse.token_type);
