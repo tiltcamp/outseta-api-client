@@ -9,6 +9,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
   ],
   rules: {
+    'no-console': 'error',
     'eol-last': 'error',
     "@typescript-eslint/semi": ["error"]
   }
