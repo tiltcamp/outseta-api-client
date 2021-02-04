@@ -1,4 +1,4 @@
-# Outseta API Client
+# Outseta REST API Client
 
 [![Build Status](https://img.shields.io/github/workflow/status/tiltcamp/outseta-api-client/CI/main)](https://github.com/tiltcamp/outseta-api-client/actions?query=branch%3Amain)
 [![Test Coverage](https://img.shields.io/codacy/coverage/e981251e6d9c4fb0a201c5e4adaebf9f/main)](https://app.codacy.com/gh/tiltcamp/outseta-api-client/dashboard)
@@ -8,7 +8,80 @@
 [![License](https://img.shields.io/github/license/tiltcamp/outseta-api-client)](https://github.com/tiltcamp/outseta-api-client/blob/main/LICENSE)
 
 
-This package is currently a work in progress and is not ready for use.
+***This package is currently a work in progress, so the structure is subject to change and there's stuff missing 
+(see the list of implemented endpoints below).***
 
-- NPM: https://www.npmjs.com/package/outseta-api-client
-- Documentation: https://tiltcamp.github.io/outseta-api-client/
+## Quick Start
+
+### Installing
+NPM:
+```shell
+npm install outseta-api-client --save
+```
+
+Yarn:
+```shell
+yarn add outseta-api-client
+```
+### Importing
+```typescript
+import OutsetaApiClient from 'outseta-api-client';
+```
+or
+```javascript
+var OutsetaApiClient = require('outseta-api-client');
+```
+
+### Initialization
+
+In the following examples, the subdomain is the beginning of your Outseta domain - so if your Outseta domain
+is `test-company.outseta.com`, it would be just `test-company` as seen below.
+
+#### Initializing without any keys:
+```typescript
+const client = new OutsetaApiClient({ subdomain: 'test-company' });
+```
+#### Initializing with server-side API keys:
+```typescript
+const client = new OutsetaApiClient({
+  subdomain: 'test-company',
+  apiKey: example_key,
+  secretKey: example_secret
+});
+```
+
+#### Initializing with a user access token:
+```typescript
+const client = new OutsetaApiClient({
+  subdomain: 'test-company',
+  accessToken: jwt_user_token
+});
+```
+
+## Resources & Documentation
+#### Billing
+- Invoices (planned)
+- [Plans](https://tiltcamp.github.io/outseta-api-client/classes/api_billing_plans.default.html#getall)
+- Plan Families (planned)
+- Subscriptions (planned)
+- Transactions (planned)
+- Trial Extension (planned)
+- Usage (planned)
+
+#### CRM
+- [Accounts](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_people.default.html#add)
+- Activities (planned)
+- Deals (planned)
+- [People](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_accounts.default.html#add)
+
+#### Marketing
+- Subscribers (planned)
+
+#### Support
+- Cases (planned)
+
+#### User
+- [Login](https://tiltcamp.github.io/outseta-api-client/classes/api_user.default.html#login)
+- [Impersonate](https://tiltcamp.github.io/outseta-api-client/classes/api_user.default.html#impersonate)
+- [Password](https://tiltcamp.github.io/outseta-api-client/classes/api_user_password.default.html#update)
+- [Profile](https://tiltcamp.github.io/outseta-api-client/classes/api_user_profile.default.html#get)
