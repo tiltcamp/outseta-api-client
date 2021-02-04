@@ -69,10 +69,10 @@ const client = new OutsetaApiClient({
 - Usage (planned)
 
 #### CRM
-- [Accounts](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_people.default.html#add)
+- [Accounts](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_accounts.default.html#add)
 - Activities (planned)
 - Deals (planned)
-- [People](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_accounts.default.html#add)
+- [People](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_people.default.html#add)
 
 #### Marketing
 - Subscribers (planned)
@@ -81,7 +81,7 @@ const client = new OutsetaApiClient({
 - Cases (planned)
 
 #### User
-- [Login](https://tiltcamp.github.io/outseta-api-client/classes/api_user.default.html#login)
 - [Impersonate](https://tiltcamp.github.io/outseta-api-client/classes/api_user.default.html#impersonate)
+- [Login](https://tiltcamp.github.io/outseta-api-client/classes/api_user.default.html#login)
 - [Password](https://tiltcamp.github.io/outseta-api-client/classes/api_user_password.default.html#update)
 - [Profile](https://tiltcamp.github.io/outseta-api-client/classes/api_user_profile.default.html#get)
