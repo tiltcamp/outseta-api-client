@@ -81,7 +81,7 @@ describe('api', () => {
             return [
               500,
               {'Content-Type': 'application/json'},
-              JSON.stringify({})
+              JSON.stringify({ "Message": "An error has occurred." })
             ];
           };
           server = new Pretender(function () {

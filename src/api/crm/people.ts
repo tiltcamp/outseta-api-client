@@ -1,5 +1,5 @@
 import Store from '../../util/store';
-import PersonModel from '../../models/person';
+import PersonModel from '../../models/shared/person';
 import Request from '../../util/request';
 import List from '../../models/wrappers/list';
 import ValidationError from '../../models/wrappers/validation-error';
