@@ -192,7 +192,7 @@ const exampleResponse = {
       "Updated": "2021-01-20T05:25:56"
     }
   ]
-}
+};
 
 const exampleNoResults = {
   "metadata": {
@@ -201,4 +201,4 @@ const exampleNoResults = {
     "total": 0
   },
   "items": []
-}
+};

@@ -3,7 +3,6 @@ import List from '../../models/wrappers/list';
 import AccountModel from '../../models/crm/account';
 import Request from '../../util/request';
 import { AccountStage } from '../../models/crm/account-stage';
-import PersonAccount from '../../models/shared/person-account';
 import ValidationError from '../../models/wrappers/validation-error';
 
 export default class Accounts {

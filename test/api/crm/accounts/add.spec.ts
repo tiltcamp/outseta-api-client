@@ -199,7 +199,7 @@ const exampleResponse = {
   "Uid": "BWz8JPQE",
   "Created": "2021-02-04T16:22:10.8860898Z",
   "Updated": "2021-02-04T16:22:10.8860898Z"
-}
+};
 
 const exampleValidationResponse = {
   "ErrorMessage": "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
@@ -281,4 +281,4 @@ const exampleValidationResponse = {
       ]
     }
   ]
-}
+};

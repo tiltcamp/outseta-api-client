@@ -3,7 +3,6 @@ import Store from '../../../../src/util/store';
 import Accounts from '../../../../src/api/crm/accounts';
 
 import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
-import { AccountStage } from '../../../../src/models/crm/account-stage';
 
 describe('api', () => {
   describe('Crm', () => {
@@ -152,4 +151,4 @@ const exampleResponse = {
   "Uid": "E9Ly3PWw",
   "Created": "2021-01-20T05:25:56",
   "Updated": "2021-01-20T05:25:56"
-}
+};

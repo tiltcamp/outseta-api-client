@@ -3,7 +3,6 @@ import Store from '../../../../src/util/store';
 import Accounts from '../../../../src/api/crm/accounts';
 
 import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
-import { AccountStage } from '../../../../src/models/crm/account-stage';
 import ValidationError from '../../../../src/models/wrappers/validation-error';
 import AccountModel from '../../../../src/models/crm/account';
 
@@ -215,4 +214,4 @@ const exampleValidationResponse = {
       ]
     }
   ]
-}
+};

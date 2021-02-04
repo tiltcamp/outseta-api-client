@@ -3,7 +3,6 @@ import Store from '../../../../src/util/store';
 import Accounts from '../../../../src/api/crm/accounts';
 
 import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
-import { AccountStage } from '../../../../src/models/crm/account-stage';
 import AccountModel from '../../../../src/models/crm/account';
 import ValidationError from '../../../../src/models/wrappers/validation-error';
 
@@ -182,7 +181,7 @@ const exampleResponse = {
   "Uid": "BWz87NQE",
   "Created": "2021-02-02T05:19:46",
   "Updated": "2021-02-02T17:49:58.706488Z"
-}
+};
 
 const exampleValidationResponse = {
   "ErrorMessage": "Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.",
@@ -249,4 +248,4 @@ const exampleValidationResponse = {
       ]
     }
   ]
-}
+};

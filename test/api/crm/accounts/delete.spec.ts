@@ -3,7 +3,6 @@ import Store from '../../../../src/util/store';
 import Accounts from '../../../../src/api/crm/accounts';
 
 import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
-import { AccountStage } from '../../../../src/models/crm/account-stage';
 
 describe('api', () => {
   describe('Crm', () => {
