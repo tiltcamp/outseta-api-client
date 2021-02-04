@@ -1,5 +1,5 @@
 import Store from '../../util/store';
-import PersonModel from '../../models/person';
+import PersonModel from '../../models/shared/person';
 import Request from '../../util/request';
 import List from '../../models/wrappers/list';
 import ValidationError from '../../models/wrappers/validation-error';
@@ -86,7 +86,7 @@ export default class People {
    * ```
    *
    * @param person The details for the person to add.
-   * @returns The response body.
+   * @returns The response body if response status OK, or response body with validation errors if response status 400.
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" status, the whole response object will be thrown.
    */

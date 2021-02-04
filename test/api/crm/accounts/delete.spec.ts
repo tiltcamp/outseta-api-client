@@ -1,16 +1,17 @@
 import Pretender, { ResponseHandler } from 'pretender';
 import Store from '../../../../src/util/store';
-import People from '../../../../src/api/crm/people';
+import Accounts from '../../../../src/api/crm/accounts';
+
 import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
 
 describe('api', () => {
   describe('Crm', () => {
-    describe('People', () => {
-      describe('get', () => {
+    describe('Accounts', () => {
+      describe('delete', () => {
         let server: Pretender;
         let store: Store;
 
-        let people: People;
+        let accounts: Accounts;
 
         beforeEach(() => {
           if (server) server.shutdown();
@@ -21,7 +22,7 @@ describe('api', () => {
             new ServerCredentials('example_key', 'example_secret')
           );
 
-          people = new People(store);
+          accounts = new Accounts(store);
         });
 
         afterAll(() => {
@@ -38,15 +39,15 @@ describe('api', () => {
             return [
               200,
               {'Content-Type': 'application/json'},
-              JSON.stringify(exampleResponse)
+              ''
             ];
           };
           server = new Pretender(function () {
-            this.get('https://test-company.outseta.com/api/v1/crm/people/DQ2DyknW', responseHandler);
+            this.delete('https://test-company.outseta.com/api/v1/crm/accounts/BWz87NQE', responseHandler);
           });
 
-          const response = await people.get('DQ2DyknW');
-          expect(response.Email).toBe('demo@tiltcamp.com');
+          const response = await accounts.delete('BWz87NQE');
+          expect(response).toBeNull();
         });
 
         it('throws failed request', async () => {
@@ -57,75 +58,28 @@ describe('api', () => {
             expect(request.requestHeaders['content-type']).toBe('application/json');
 
             return [
-              500,
+              404,
               {'Content-Type': 'application/json'},
-              JSON.stringify({ "Message": "An error has occurred." })
+              ''
             ];
           };
           server = new Pretender(function () {
-            this.get('https://test-company.outseta.com/api/v1/crm/people/DQ2DyknW', responseHandler);
+            this.delete('https://test-company.outseta.com/api/v1/crm/accounts/BWz87NQE', responseHandler);
           });
 
           let exception;
           let response;
 
           try {
-            response = await people.get('DQ2DyknW');
+            response = await accounts.delete('BWz87NQE');
           } catch (e) {
             exception = e;
           }
 
           expect(response).toBeUndefined();
-          expect(exception.status).toBe(500);
+          expect(exception.status).toBe(404);
         });
       });
     });
   });
 });
-
-const exampleResponse = {
-  "Email": "demo@tiltcamp.com",
-  "FirstName": "Jane",
-  "LastName": "Doe",
-  "MailingAddress": {
-    "AddressLine1": "152 Test Lane",
-    "AddressLine2": "Apt L",
-    "AddressLine3": null,
-    "City": "San Diego",
-    "State": "CA",
-    "PostalCode": "91511",
-    "Country": "United States of America",
-    "Uid": "yW1Kj1QB",
-    "Created": "2021-01-20T05:24:53",
-    "Updated": "2021-01-24T19:05:56"
-  },
-  "PasswordMustChange": false,
-  "PhoneMobile": "4084841547",
-  "PhoneWork": "4122144785",
-  "Title": "Engineer",
-  "Timezone": null,
-  "Language": null,
-  "IPAddress": null,
-  "Referer": null,
-  "UserAgent": null,
-  "LastLoginDateTime": null,
-  "OAuthGoogleProfileId": null,
-  "PersonAccount": [
-    {
-      "Person": null,
-      "Account": null,
-      "IsPrimary": true,
-      "Uid": "496L7AmX",
-      "Created": "2021-01-20T05:25:56",
-      "Updated": "2021-01-20T05:25:56"
-    }
-  ],
-  "DealPeople": [],
-  "Account": null,
-  "FullName": "Jane Doe",
-  "OAuthIntegrationStatus": 0,
-  "UserAgentPlatformBrowser": "",
-  "Uid": "DQ2DyknW",
-  "Created": "2021-01-20T05:24:53",
-  "Updated": "2021-01-24T19:16:37"
-};

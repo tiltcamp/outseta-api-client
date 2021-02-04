@@ -4,7 +4,7 @@ import Store from '../../../../src/util/store';
 import Profile from '../../../../src/api/user/profile';
 import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
 
-import PersonModel from '../../../../src/models/person';
+import PersonModel from '../../../../src/models/shared/person';
 import ValidationError from '../../../../src/models/wrappers/validation-error';
 
 describe('api', () => {
@@ -109,7 +109,7 @@ describe('api', () => {
             return [
               500,
               {'Content-Type': 'application/json'},
-              JSON.stringify({})
+              JSON.stringify({ "Message": "An error has occurred." })
             ];
           };
           server = new Pretender(function () {

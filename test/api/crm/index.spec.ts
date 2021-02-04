@@ -1,5 +1,6 @@
 import Crm from '../../../src/api/crm';
 import People from '../../../src/api/crm/people';
+import Accounts from '../../../src/api/crm/accounts';
 import Store from '../../../src/util/store';
 import { ServerCredentials, UserCredentials } from '../../../src/util/credentials';
 
@@ -17,6 +18,7 @@ describe('api', () =>
 
         expect(crm).toBeInstanceOf(Crm);
         expect(crm.people).toBeInstanceOf(People);
+        expect(crm.accounts).toBeInstanceOf(Accounts);
       });
     })
   )
