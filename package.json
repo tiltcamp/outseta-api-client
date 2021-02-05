@@ -2,15 +2,17 @@
   "name": "outseta-api-client",
   "version": "0.0.9",
   "description": "An API client for Outseta.",
-  "main": "dist/cjs/index.js",
-  "types": "dist/cjs/index.d.ts",
-  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.mjs",
   "files": [
     "dist/**/*"
   ],
   "scripts": {
     "lint": "npx eslint ./src ./test --ext .ts,.js --max-warnings 0",
-    "build": "rm -rf dist/ && npx tsc --project tsconfig.cjs.json && npx tsc --project tsconfig.esm.json",
+    "build:cjs": "npx tsc --project tsconfig.cjs.json",
+    "build:esm": "npx tsc --project tsconfig.esm.json && npx renamer --find '/\\.js$/' --replace '.mjs' './dist/**/*.js'",
+    "build": "rm -rf dist/ && npm run build:esm && npm run build:cjs",
     "build:docs": "npx typedoc",
     "test": "npx karma start karma.conf.js --single-run --browsers=ChromeHeadless",
     "test:watch": "npx karma start karma.conf.js --auto-watch",
@@ -41,6 +43,7 @@
     "karma-jasmine-html-reporter": "^1.5.4",
     "karma-typescript": "^5.2.0",
     "pretender": "^3.4.3",
+    "renamer": "^2.0.1",
     "typedoc": "^0.20.16",
     "typescript": "^4.1.3"
   },
