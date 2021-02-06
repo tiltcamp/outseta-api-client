@@ -86,7 +86,7 @@ export default class Accounts {
    * Add an account to the CRM. Must include a name.
    *
    * ```typescript
-   * import { AccountStage } from 'outseta-api-client/models/crm/account-stage';
+   * import { AccountStage } from 'outseta-api-client/dist/models/crm/account-stage';
    *
    * const client = new OutsetaApiClient({
    *   subdomain: 'test-company',
