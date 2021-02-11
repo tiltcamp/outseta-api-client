@@ -1,4 +1,4 @@
-import Address from './address';
+import Address from '../shared/address';
 import PersonAccount from './person-account';
 
 export default interface Person {

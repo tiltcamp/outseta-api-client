@@ -50,6 +50,29 @@ describe('api', () => {
           expect(response.Name).toBe('Demo Account');
         });
 
+        it('handles request with fields', async () => {
+          const responseHandler: ResponseHandler = (request) => {
+            expect(request.requestHeaders['authorization']).toBe('Outseta example_key:example_secret');
+            expect(request.queryParams).toEqual({ fields: '*' });
+            expect(request.requestBody).toBeNull();
+            expect(request.requestHeaders['content-type']).toBe('application/json');
+
+            return [
+              200,
+              {'Content-Type': 'application/json'},
+              JSON.stringify(exampleResponse)
+            ];
+          };
+          server = new Pretender(function () {
+            this.get('https://test-company.outseta.com/api/v1/crm/accounts/pWrYPn9n', responseHandler);
+          });
+
+          const response = await accounts.get('pWrYPn9n', {
+            fields: '*'
+          });
+          expect(response.Name).toBe('Demo Account');
+        });
+
         it('throws failed request', async () => {
           const responseHandler: ResponseHandler = (request) => {
             expect(request.requestHeaders['authorization']).toBe('Outseta example_key:example_secret');

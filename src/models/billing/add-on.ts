@@ -1,21 +1,17 @@
 import PlanAddOn from './plan-add-on';
-import PlanFamily from './plan-family';
 
-export default interface Plan {
+export default interface AddOn {
   Name: string;
-  Description: string;
-  PlanFamily: PlanFamily;
+  BillingAddOnType: number;
   IsQuantityEditable: boolean;
   MinimumQuantity: number;
   MonthlyRate: number;
   AnnualRate: number;
   SetupFee: number;
-  IsTaxable: boolean;
-  IsActive: boolean;
-  TrialPeriodDays: number;
   UnitOfMeasure: string;
-  PlanAddOns: PlanAddOn[];
-  NumberOfSubscriptions: number;
+  IsTaxable: boolean;
+  IsBilledDuringTrial: boolean;
+  PlanAddOns?: PlanAddOn[];
   Uid: string;
   Created: Date;
   Updated: Date;

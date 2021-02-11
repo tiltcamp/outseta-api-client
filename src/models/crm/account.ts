@@ -1,6 +1,7 @@
 import Address from '../shared/address';
-import PersonAccount from '../shared/person-account';
+import PersonAccount from './person-account';
 import { AccountStage } from './account-stage';
+import Subscription from '../billing/subscription';
 
 export default interface Account {
   Name: string;
@@ -11,7 +12,7 @@ export default interface Account {
   AccountStage: AccountStage;
   PaymentInformation?: unknown;
   PersonAccount: PersonAccount[];
-  Subscriptions: unknown[];
+  Subscriptions: Subscription[];
   Deals: unknown[];
   LastLoginDateTime?: unknown;
   AccountSpecificPageUrl1: string;

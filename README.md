@@ -63,7 +63,7 @@ const client = new OutsetaApiClient({
 - Invoices (planned)
 - [Plans](https://tiltcamp.github.io/outseta-api-client/classes/api_billing_plans.default.html#getall)
 - Plan Families (planned)
-- Subscriptions (planned)
+- [Subscriptions](https://tiltcamp.github.io/outseta-api-client/classes/api_billing_subscriptions.default.html#add)
 - Transactions (planned)
 - Trial Extension (planned)
 - Usage (planned)

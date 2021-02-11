@@ -72,6 +72,48 @@ describe('api', () => {
           expect(response.Name).toBe('TiltCamp');
         });
 
+        it('handles request with fields', async () => {
+          const responseHandler: ResponseHandler = (request) => {
+            expect(request.requestHeaders['authorization']).toBe('Outseta example_key:example_secret');
+            expect(request.queryParams).toEqual({ fields: '*' });
+            expect(JSON.parse(request.requestBody)).toEqual({
+              Name: 'TiltCamp',
+              AccountStage: AccountStage.Trialing,
+              PersonAccount: [{
+                Person: {
+                  Email: 'hello@tiltcamp.com'
+                },
+                IsPrimary: true
+              }]
+            });
+            expect(request.requestHeaders['content-type']).toBe('application/json');
+
+            return [
+              200,
+              {'Content-Type': 'application/json'},
+              JSON.stringify(exampleResponse)
+            ];
+          };
+          server = new Pretender(function () {
+            this.post('https://test-company.outseta.com/api/v1/crm/accounts', responseHandler);
+          });
+
+          const response = await accounts.add({
+            Name: 'TiltCamp',
+            AccountStage: AccountStage.Trialing,
+            PersonAccount: [{
+              Person: {
+                Email: 'hello@tiltcamp.com'
+              },
+              IsPrimary: true
+            }]
+          }, {
+            fields: '*'
+          }) as AccountModel;
+
+          expect(response.Name).toBe('TiltCamp');
+        });
+
         it('handles validation errors', async () => {
           const responseHandler: ResponseHandler = (request) => {
             expect(request.requestHeaders['authorization']).toBe('Outseta example_key:example_secret');
