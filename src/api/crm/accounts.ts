@@ -173,7 +173,7 @@ export default class Accounts {
    *   apiKey: example_key,
    *   secretKey: example_secret
    * });
-   * const response = await client.crm.people.update({
+   * const response = await client.crm.accounts.update({
    *   Uid: 'DQ2DyknW',
    *   Name: 'New Name for TiltCamp'
    * });
