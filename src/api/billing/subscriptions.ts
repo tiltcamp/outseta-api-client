@@ -1,3 +1,4 @@
+import { SubscriptionAddOn } from '../../models/billing/subscription-add-on';
 import { Store } from '../../util/store';
 import { ValidationError } from '../../models/wrappers/validation-error';
 import { Request } from '../../util/request';
@@ -183,6 +184,87 @@ export class Subscriptions {
   }
 
   /**
+   * Update an existing subscription.
+   * ```typescript
+   * const client = new OutsetaApiClient({
+   *   subdomain: 'test-company',
+   *   apiKey: example_key,
+   *   secretKey: example_secret
+   * });
+   * const response = await client.billing.subscriptions.update({
+   *   Uid: uid,
+   *   Account: {
+   *     Uid: accountUid
+   *   },
+   *   Plan: {
+   *     Uid: planUid
+   *   },
+   *   SubscriptionAddOns: [],
+   *   BillingRenewalTerm: 1 // Monthly, 2 for Annually
+   * });
+   * console.log(response);
+   * ```
+   *
+   * @param subscription The subscription to update.
+   * @returns The response body if response status OK, or response body of validation errors if response status 400.
+   * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
+   *  non-"OK" status, the whole response object will be thrown.
+   */
+  public async update(subscription: SubscriptionUpdate): Promise<Subscription | ValidationError<Subscription>> {
+    const request = new Request(this.store, `billing/subscriptions/${subscription.Uid}/changesubscription`)
+      .authenticateAsServer()
+      .withBody(subscription);
+    const response = await request.put();
+
+    if (response.status === 400)
+      return await response.json() as ValidationError<Subscription>;
+    else if (response.ok)
+      return await response.json() as Subscription;
+    else throw response;
+  }
+
+  /**
+   * Like `update`, but returns an Invoice object without actually saving any changes. Used to show the user what they
+   * would be charged.
+   * ```typescript
+   * const client = new OutsetaApiClient({
+   *   subdomain: 'test-company',
+   *   apiKey: example_key,
+   *   secretKey: example_secret
+   * });
+   * const response = await client.billing.subscriptions.previewUpdate({
+   *   Uid: uid,
+   *   Account: {
+   *     Uid: accountUid
+   *   },
+   *   Plan: {
+   *     Uid: planUid
+   *   },
+   *   SubscriptionAddOns: [],
+   *   BillingRenewalTerm: 1 // Monthly, 2 for Annually
+   * });
+   * console.log(response);
+   * ```
+   *
+   * @param subscription The subscription to update.
+   * @returns The response body if response status OK, or response body of validation errors if response status 400.
+   * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
+   *  non-"OK" status, the whole response object will be thrown.
+   */
+  public async previewUpdate(subscription: SubscriptionUpdate): Promise<ChargeSummary | ValidationError<Subscription>> {
+    const request = new Request(this.store, `billing/subscriptions/${subscription.Uid}/changesubscriptionpreview`)
+      .authenticateAsServer()
+      .withBody(subscription);
+    const response = await request.put();
+
+    if (response.status === 400)
+      return await response.json() as ValidationError<Subscription>;
+    else if (response.ok)
+      return await response.json() as ChargeSummary;
+    else throw response;
+  }
+
+  /**
    * Set the "subscription upgrade required" flag on the subscription.
    * ```typescript
    * const client = new OutsetaApiClient({
@@ -256,6 +338,7 @@ export interface SubscriptionAdd extends Partial<Omit<Subscription, 'Plan' | 'Ac
 export interface SubscriptionUpdate extends Partial<SubscriptionAdd> {
   [key: string]: unknown;
   Uid: string;
+  SubscriptionAddOns: SubscriptionAddOn[];
 }
 
 export interface SubscriptionUpgradeRequired extends Partial<Subscription> {
