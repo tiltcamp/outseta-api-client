@@ -98,8 +98,11 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="api_crm_accounts.default.html#add" class="tsd-kind-icon">add</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="api_crm_accounts.default.html#cancel" class="tsd-kind-icon">cancel</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="api_crm_accounts.default.html#delete" class="tsd-kind-icon">delete</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="api_crm_accounts.default.html#expirecurrentsubscription" class="tsd-kind-icon">expire<wbr>Current<wbr>Subscription</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="api_crm_accounts.default.html#extendtrial" class="tsd-kind-icon">extend<wbr>Trial</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="api_crm_accounts.default.html#get" class="tsd-kind-icon">get</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="api_crm_accounts.default.html#getall" class="tsd-kind-icon">get<wbr>All</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="api_crm_accounts.default.html#removecancellation" class="tsd-kind-icon">remove<wbr>Cancellation</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="api_crm_accounts.default.html#update" class="tsd-kind-icon">update</a></li>
 							</ul>
 						</section>
@@ -118,7 +121,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/8157fc5/src/api/crm/accounts.ts#L9">api/crm/accounts.ts:9</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ec815be/src/api/crm/accounts.ts#L10">api/crm/accounts.ts:10</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -140,7 +143,7 @@
 					<div class="tsd-signature tsd-kind-icon">store<span class="tsd-signature-symbol">:</span> <a href="util_store.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/8157fc5/src/api/crm/accounts.ts#L9">api/crm/accounts.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ec815be/src/api/crm/accounts.ts#L10">api/crm/accounts.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -151,20 +154,20 @@
 					<a name="add" class="tsd-anchor"></a>
 					<h3>add</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>account<span class="tsd-signature-symbol">: </span><a href="../interfaces/api_crm_accounts.accountadd.html" class="tsd-signature-type" data-tsd-kind="Interface">AccountAdd</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/models_wrappers_validation_error.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>account<span class="tsd-signature-symbol">: </span><a href="../interfaces/api_crm_accounts.accountadd.html" class="tsd-signature-type" data-tsd-kind="Interface">AccountAdd</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/models_wrappers_validation_error.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/8157fc5/src/api/crm/accounts.ts#L136">api/crm/accounts.ts:136</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ec815be/src/api/crm/accounts.ts#L149">api/crm/accounts.ts:149</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Add an account to the CRM. Must include a name.</p>
 								</div>
-								<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">AccountStage</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;outseta-api-client/models/crm/account-stage&#039;</span><span style="color: #000000">;</span>
+								<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> { </span><span style="color: #001080">AccountStage</span><span style="color: #000000"> } </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;outseta-api-client/dist/models/crm/account-stage&#039;</span><span style="color: #000000">;</span>
 
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">OutsetaApiClient</span><span style="color: #000000">({</span>
 <span style="color: #000000">  </span><span style="color: #001080">subdomain:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test-company&#039;</span><span style="color: #000000">,</span>
@@ -216,6 +219,19 @@
 										<p>The details for the account to add.</p>
 									</div>
 								</li>
+								<li>
+									<h5>options: <span class="tsd-signature-symbol">{ </span>fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = ...</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>Not all fields on the model are returned by default - you can request specific fields with a
+													that looks something like &#39;<em>,PersonAccount.</em>,PersonAccount.Person.Uid&#39;. Note: the shape of the returned object
+												may not match the model in this library if this string does not start with &#39;*&#39; as shown.</p>
+											</div>
+										</li>
+									</ul>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/models_wrappers_validation_error.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>The response body if response status OK, or response body with validation errors if response status 400.</p>
@@ -232,7 +248,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/8157fc5/src/api/crm/accounts.ts#L213">api/crm/accounts.ts:213</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ec815be/src/api/crm/accounts.ts#L233">api/crm/accounts.ts:233</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -284,7 +300,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/8157fc5/src/api/crm/accounts.ts#L245">api/crm/accounts.ts:245</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ec815be/src/api/crm/accounts.ts#L265">api/crm/accounts.ts:265</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -321,16 +337,115 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="get" class="tsd-anchor"></a>
-					<h3>get</h3>
+					<a name="expirecurrentsubscription" class="tsd-anchor"></a>
+					<h3>expire<wbr>Current<wbr>Subscription</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>uid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">expire<wbr>Current<wbr>Subscription<span class="tsd-signature-symbol">(</span>uid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/models_wrappers_validation_error.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_billing_subscription.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/8157fc5/src/api/crm/accounts.ts#L73">api/crm/accounts.ts:73</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ec815be/src/api/crm/accounts.ts#L356">api/crm/accounts.ts:356</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Immediately cancel an account&#39;s subscription by &quot;expiring&quot; it <em>now</em>.</p>
+								</div>
+								<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">OutsetaApiClient</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #001080">subdomain:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test-company&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">apiKey:</span><span style="color: #000000"> </span><span style="color: #001080">example_key</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">secretKey:</span><span style="color: #000000"> </span><span style="color: #001080">example_secret</span>
+<span style="color: #000000">});</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">response</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">client</span><span style="color: #000000">.</span><span style="color: #001080">crm</span><span style="color: #000000">.</span><span style="color: #001080">accounts</span><span style="color: #000000">.</span><span style="color: #795E26">expireCurrentSubscription</span><span style="color: #000000">(</span><span style="color: #001080">uid</span><span style="color: #000000">);</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">response</span><span style="color: #000000">);</span>
+</code></pre>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Response</a> If the server returns a
+										non-&quot;OK&quot; or non-&quot;400&quot; status, the whole response object will be thrown.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>uid: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The uid for the account to expire.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/models_wrappers_validation_error.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_billing_subscription.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Null if deletion was successful, or response body of validation errors if response status 400.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="extendtrial" class="tsd-anchor"></a>
+					<h3>extend<wbr>Trial</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">extend<wbr>Trial<span class="tsd-signature-symbol">(</span>uid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, date<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/models_wrappers_validation_error.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_billing_subscription.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ec815be/src/api/crm/accounts.ts#L293">api/crm/accounts.ts:293</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Set the trial expiration to a particular date. Meant for extension, but seems to also work for
+									shortening a trial period.</p>
+								</div>
+								<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">OutsetaApiClient</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #001080">subdomain:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test-company&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">apiKey:</span><span style="color: #000000"> </span><span style="color: #001080">example_key</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">secretKey:</span><span style="color: #000000"> </span><span style="color: #001080">example_secret</span>
+<span style="color: #000000">});</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">response</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">client</span><span style="color: #000000">.</span><span style="color: #001080">crm</span><span style="color: #000000">.</span><span style="color: #001080">accounts</span><span style="color: #000000">.</span><span style="color: #795E26">extendTrial</span><span style="color: #000000">(</span><span style="color: #001080">uid</span><span style="color: #000000">, </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">Date</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;01/01/2021&#039;</span><span style="color: #000000">));</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">response</span><span style="color: #000000">);</span>
+</code></pre>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Response</a> If the server returns a
+										non-&quot;OK&quot; or non-&quot;400&quot; status, the whole response object will be thrown.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>uid: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The uid for the account to edit.</p>
+									</div>
+								</li>
+								<li>
+									<h5>date: <span class="tsd-signature-type">Date</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The date to set the trial expiration to.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/models_wrappers_validation_error.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_billing_subscription.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Null if deletion was successful, or response body of validation errors if response status 400.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="get" class="tsd-anchor"></a>
+					<h3>get</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<span class="tsd-signature-symbol">(</span>uid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ec815be/src/api/crm/accounts.ts#L81">api/crm/accounts.ts:81</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -360,6 +475,19 @@
 										<p>The uid for the account to get.</p>
 									</div>
 								</li>
+								<li>
+									<h5>options: <span class="tsd-signature-symbol">{ </span>fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = ...</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>Not all fields on the model are returned by default - you can request specific fields with a
+													that looks something like &#39;<em>,PersonAccount.</em>,PersonAccount.Person.Uid&#39;. Note: the shape of the returned object
+												may not match the model in this library if this string does not start with &#39;*&#39; as shown.</p>
+											</div>
+										</li>
+									</ul>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>The response body.</p>
@@ -370,13 +498,13 @@
 					<a name="getall" class="tsd-anchor"></a>
 					<h3>get<wbr>All</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>All<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>accountStage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#trialing" class="tsd-signature-type" data-tsd-kind="Enumeration member">Trialing</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#subscribing" class="tsd-signature-type" data-tsd-kind="Enumeration member">Subscribing</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#cancelling" class="tsd-signature-type" data-tsd-kind="Enumeration member">Cancelling</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#expired" class="tsd-signature-type" data-tsd-kind="Enumeration member">Expired</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#trialexpired" class="tsd-signature-type" data-tsd-kind="Enumeration member">TrialExpired</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#pastdue" class="tsd-signature-type" data-tsd-kind="Enumeration member">PastDue</a><span class="tsd-signature-symbol">; </span>limit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_wrappers_list.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>All<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>accountStage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#trialing" class="tsd-signature-type" data-tsd-kind="Enumeration member">Trialing</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#subscribing" class="tsd-signature-type" data-tsd-kind="Enumeration member">Subscribing</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#cancelling" class="tsd-signature-type" data-tsd-kind="Enumeration member">Cancelling</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#expired" class="tsd-signature-type" data-tsd-kind="Enumeration member">Expired</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#trialexpired" class="tsd-signature-type" data-tsd-kind="Enumeration member">TrialExpired</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#pastdue" class="tsd-signature-type" data-tsd-kind="Enumeration member">PastDue</a><span class="tsd-signature-symbol">; </span>fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>limit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_wrappers_list.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/8157fc5/src/api/crm/accounts.ts#L35">api/crm/accounts.ts:35</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ec815be/src/api/crm/accounts.ts#L39">api/crm/accounts.ts:39</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -401,12 +529,20 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>options: <span class="tsd-signature-symbol">{ </span>accountStage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#trialing" class="tsd-signature-type" data-tsd-kind="Enumeration member">Trialing</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#subscribing" class="tsd-signature-type" data-tsd-kind="Enumeration member">Subscribing</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#cancelling" class="tsd-signature-type" data-tsd-kind="Enumeration member">Cancelling</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#expired" class="tsd-signature-type" data-tsd-kind="Enumeration member">Expired</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#trialexpired" class="tsd-signature-type" data-tsd-kind="Enumeration member">TrialExpired</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#pastdue" class="tsd-signature-type" data-tsd-kind="Enumeration member">PastDue</a><span class="tsd-signature-symbol">; </span>limit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = ...</span></h5>
+									<h5>options: <span class="tsd-signature-symbol">{ </span>accountStage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#trialing" class="tsd-signature-type" data-tsd-kind="Enumeration member">Trialing</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#subscribing" class="tsd-signature-type" data-tsd-kind="Enumeration member">Subscribing</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#cancelling" class="tsd-signature-type" data-tsd-kind="Enumeration member">Cancelling</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#expired" class="tsd-signature-type" data-tsd-kind="Enumeration member">Expired</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#trialexpired" class="tsd-signature-type" data-tsd-kind="Enumeration member">TrialExpired</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#pastdue" class="tsd-signature-type" data-tsd-kind="Enumeration member">PastDue</a><span class="tsd-signature-symbol">; </span>fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">; </span>limit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = ...</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter">
 											<h5><span class="tsd-flag ts-flagOptional">Optional</span> account<wbr>Stage<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#trialing" class="tsd-signature-type" data-tsd-kind="Enumeration member">Trialing</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#subscribing" class="tsd-signature-type" data-tsd-kind="Enumeration member">Subscribing</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#cancelling" class="tsd-signature-type" data-tsd-kind="Enumeration member">Cancelling</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#expired" class="tsd-signature-type" data-tsd-kind="Enumeration member">Expired</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#trialexpired" class="tsd-signature-type" data-tsd-kind="Enumeration member">TrialExpired</a><span class="tsd-signature-symbol"> | </span><a href="../enums/models_crm_account_stage.accountstage.html#pastdue" class="tsd-signature-type" data-tsd-kind="Enumeration member">PastDue</a></h5>
 											<div class="tsd-comment tsd-typography">
 												<p>Filter the results to only users in this account stage.</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>Not all fields on the model are returned by default - you can request specific fields with a
+													that looks something like &#39;<em>,PersonAccount.</em>,PersonAccount.Person.Uid&#39;. Note: the shape of the returned object
+												may not match the model in this library if this string does not start with &#39;*&#39; as shown.</p>
 											</div>
 										</li>
 										<li class="tsd-parameter">
@@ -430,16 +566,62 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="update" class="tsd-anchor"></a>
-					<h3>update</h3>
+					<a name="removecancellation" class="tsd-anchor"></a>
+					<h3>remove<wbr>Cancellation</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>account<span class="tsd-signature-symbol">: </span><a href="../interfaces/api_crm_accounts.accountupdate.html" class="tsd-signature-type" data-tsd-kind="Interface">AccountUpdate</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/models_wrappers_validation_error.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Cancellation<span class="tsd-signature-symbol">(</span>uid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/models_wrappers_validation_error.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/8157fc5/src/api/crm/accounts.ts#L173">api/crm/accounts.ts:173</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ec815be/src/api/crm/accounts.ts#L326">api/crm/accounts.ts:326</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes the &quot;cancellation&quot; flag from an account with a subscription that is scheduled to expire.</p>
+								</div>
+								<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">OutsetaApiClient</span><span style="color: #000000">({</span>
+<span style="color: #000000">  </span><span style="color: #001080">subdomain:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test-company&#039;</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">apiKey:</span><span style="color: #000000"> </span><span style="color: #001080">example_key</span><span style="color: #000000">,</span>
+<span style="color: #000000">  </span><span style="color: #001080">secretKey:</span><span style="color: #000000"> </span><span style="color: #001080">example_secret</span>
+<span style="color: #000000">});</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">response</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">client</span><span style="color: #000000">.</span><span style="color: #001080">crm</span><span style="color: #000000">.</span><span style="color: #001080">accounts</span><span style="color: #000000">.</span><span style="color: #795E26">removeCancellation</span><span style="color: #000000">(</span><span style="color: #001080">uid</span><span style="color: #000000">);</span>
+<span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">response</span><span style="color: #000000">);</span>
+</code></pre>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Response</a> If the server returns a
+										non-&quot;OK&quot; or non-&quot;400&quot; status, the whole response object will be thrown.</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>uid: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The uid for the account to &quot;uncancel&quot;.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/models_wrappers_validation_error.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>Null if deletion was successful, or response body of validation errors if response status 400.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="update" class="tsd-anchor"></a>
+					<h3>update</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>account<span class="tsd-signature-symbol">: </span><a href="../interfaces/api_crm_accounts.accountupdate.html" class="tsd-signature-type" data-tsd-kind="Interface">AccountUpdate</a>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/models_wrappers_validation_error.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/ec815be/src/api/crm/accounts.ts#L191">api/crm/accounts.ts:191</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -472,6 +654,19 @@
 										<p>The account fields and values to update. Must include the account&#39;s uid.</p>
 									</div>
 								</li>
+								<li>
+									<h5>options: <span class="tsd-signature-symbol">{ </span>fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = ...</span></h5>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> fields<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>Not all fields on the model are returned by default - you can request specific fields with a
+													that looks something like &#39;<em>,PersonAccount.</em>,PersonAccount.Person.Uid&#39;. Note: the shape of the returned object
+												may not match the model in this library if this string does not start with &#39;*&#39; as shown.</p>
+											</div>
+										</li>
+									</ul>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/models_wrappers_validation_error.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_account.default.html" class="tsd-signature-type" data-tsd-kind="Interface">default</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 							<p>The response body if response status OK, or response body with validation errors if response status 400.</p>
@@ -486,65 +681,8 @@
 					<li class=" ">
 						<a href="../modules.html">Exports</a>
 					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/api_billing.html">api/billing</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/api_billing_plans.html">api/billing/plans</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/api_crm.html">api/crm</a>
-					</li>
 					<li class="current tsd-kind-module">
 						<a href="../modules/api_crm_accounts.html">api/crm/accounts</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/api_crm_people.html">api/crm/people</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/api_user.html">api/user</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/api_user_password.html">api/user/password</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/api_user_profile.html">api/user/profile</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/index.html">index</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/models_billing_plan.html">models/billing/plan</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/models_crm_account.html">models/crm/account</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/models_crm_account_stage.html">models/crm/account-<wbr>stage</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/models_shared_address.html">models/shared/address</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/models_shared_person.html">models/shared/person</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/models_shared_person_account.html">models/shared/person-<wbr>account</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/models_wrappers_list.html">models/wrappers/list</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/models_wrappers_validation_error.html">models/wrappers/validation-<wbr>error</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/util_credentials.html">util/credentials</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/util_request.html">util/request</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="../modules/util_store.html">util/store</a>
 					</li>
 				</ul>
 			</nav>
@@ -571,10 +709,19 @@
 								<a href="api_crm_accounts.default.html#delete" class="tsd-kind-icon">delete</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="api_crm_accounts.default.html#expirecurrentsubscription" class="tsd-kind-icon">expire<wbr>Current<wbr>Subscription</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="api_crm_accounts.default.html#extendtrial" class="tsd-kind-icon">extend<wbr>Trial</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="api_crm_accounts.default.html#get" class="tsd-kind-icon">get</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="api_crm_accounts.default.html#getall" class="tsd-kind-icon">get<wbr>All</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="api_crm_accounts.default.html#removecancellation" class="tsd-kind-icon">remove<wbr>Cancellation</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="api_crm_accounts.default.html#update" class="tsd-kind-icon">update</a>
