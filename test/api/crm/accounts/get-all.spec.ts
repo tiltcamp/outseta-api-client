@@ -53,14 +53,14 @@ describe('api', () => {
           expect(response.items[0].Name).toBe('Demo Account');
         });
 
-        it('handles request with pagination and filters', async () => {
+        it('handles request with pagination, filters, fields', async () => {
           const responseHandler: ResponseHandler = (request) => {
             expect(request.requestHeaders['authorization']).toBe('Outseta example_key:example_secret');
             expect(request.queryParams).toEqual({
               offset: '10',
               limit: '20',
               AccountStage: '3',
-              fields: '*,PersonAccount.*,PersonAccount.Person.Uid'
+              fields: '*'
             });
             expect(request.requestBody).toBeNull();
             expect(request.requestHeaders['content-type']).toBe('application/json');
@@ -78,7 +78,8 @@ describe('api', () => {
           const response = await accounts.getAll({
             offset: 10,
             limit: 20,
-            accountStage: AccountStage.Subscribing
+            accountStage: AccountStage.Subscribing,
+            fields: '*'
           });
           expect(response.metadata.total).toBe(0);
           expect(response.items).toHaveSize(0);

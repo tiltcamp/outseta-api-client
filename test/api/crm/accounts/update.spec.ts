@@ -59,6 +59,36 @@ describe('api', () => {
           expect(response.Name).toBe('TiltCamp Rebranded');
         });
 
+        it('handles request with fields', async () => {
+          const responseHandler: ResponseHandler = (request) => {
+            expect(request.requestHeaders['authorization']).toBe('Outseta example_key:example_secret');
+            expect(request.queryParams).toEqual({ fields: '*' });
+            expect(JSON.parse(request.requestBody)).toEqual({
+              Uid: 'BWz87NQE',
+              Name: 'TiltCamp Rebranded'
+            });
+            expect(request.requestHeaders['content-type']).toBe('application/json');
+
+            return [
+              200,
+              {'Content-Type': 'application/json'},
+              JSON.stringify(exampleResponse)
+            ];
+          };
+          server = new Pretender(function () {
+            this.put('https://test-company.outseta.com/api/v1/crm/accounts/BWz87NQE', responseHandler);
+          });
+
+          const response = await accounts.update({
+            Uid: 'BWz87NQE',
+            Name: 'TiltCamp Rebranded'
+          }, {
+            fields: '*'
+          }) as AccountModel;
+
+          expect(response.Name).toBe('TiltCamp Rebranded');
+        });
+
         it('handles validation errors', async () => {
           const responseHandler: ResponseHandler = (request) => {
             expect(request.requestHeaders['authorization']).toBe('Outseta example_key:example_secret');
