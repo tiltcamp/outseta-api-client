@@ -286,6 +286,7 @@ export default class Accounts {
    *
    * @param uid The uid for the account to edit.
    * @param date The date to set the trial expiration to.
+   * @returns Null if deletion was successful, or response body of validation errors if response status 400.
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" or non-"400" status, the whole response object will be thrown.
    */
@@ -318,6 +319,7 @@ export default class Accounts {
    * ```
    *
    * @param uid The uid for the account to "uncancel".
+   * @returns Null if deletion was successful, or response body of validation errors if response status 400.
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" or non-"400" status, the whole response object will be thrown.
    */
@@ -347,6 +349,7 @@ export default class Accounts {
    * ```
    *
    * @param uid The uid for the account to expire.
+   * @returns Null if deletion was successful, or response body of validation errors if response status 400.
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" or non-"400" status, the whole response object will be thrown.
    */

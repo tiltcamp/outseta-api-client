@@ -2,7 +2,7 @@ import Pretender, { ResponseHandler } from 'pretender';
 import Store from '../../../../src/util/store';
 import People from '../../../../src/api/crm/people';
 import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
-import PersonModel from '../../../../src/models/shared/person';
+import PersonModel from '../../../../src/models/crm/person';
 import ValidationError from '../../../../src/models/wrappers/validation-error';
 
 describe('api', () => {

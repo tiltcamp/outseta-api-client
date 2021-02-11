@@ -1,5 +1,5 @@
 import Person from './person';
-import Account from '../crm/account';
+import Account from './account';
 
 export default interface PersonAccount {
   Person?: Person;

@@ -1,7 +1,7 @@
 import Request from '../../util/request';
 import Store from '../../util/store';
 import ValidationError from '../../models/wrappers/validation-error';
-import PersonModel from '../../models/shared/person';
+import PersonModel from '../../models/crm/person';
 
 export default class Password {
   private readonly store: Store;
