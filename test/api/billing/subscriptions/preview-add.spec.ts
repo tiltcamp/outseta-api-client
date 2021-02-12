@@ -5,7 +5,7 @@ import Subscriptions from '../../../../src/api/billing/subscriptions';
 import { BillingRenewalTerm } from '../../../../src/models/billing/billing-renewal-term';
 import Subscription from '../../../../src/models/billing/subscription';
 import ValidationError from '../../../../src/models/wrappers/validation-error';
-import Invoice from '../../../../src/models/billing/invoice';
+import ChargeSummary from '../../../../src/models/billing/charge-summary';
 
 describe('api', () => {
   describe('Billing', () => {
@@ -65,7 +65,7 @@ describe('api', () => {
             Plan: {
               Uid: 'wZmNw7Q2'
             }
-          }) as Invoice;
+          }) as ChargeSummary;
 
           expect(response.Total).toBe(0.0);
         });
