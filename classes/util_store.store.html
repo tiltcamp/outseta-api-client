@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>default | outseta-api-client</title>
+	<title>Store | outseta-api-client</title>
 	<meta name="description" content="Documentation for outseta-api-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,13 +55,13 @@
 					<a href="../modules.html">outseta-api-client</a>
 				</li>
 				<li>
-					<a href="../modules/api_billing.html">api/billing</a>
+					<a href="../modules/util_store.html">util/store</a>
 				</li>
 				<li>
-					<a href="api_billing.default.html">default</a>
+					<a href="util_store.store.html">Store</a>
 				</li>
 			</ul>
-			<h1>Class default</h1>
+			<h1>Class Store</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">default</span>
+						<span class="target">Store</span>
 					</li>
 				</ul>
 			</section>
@@ -83,14 +83,15 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="api_billing.default.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="util_store.store.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="api_billing.default.html#plans" class="tsd-kind-icon">plans</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-class"><a href="api_billing.default.html#subscriptions" class="tsd-kind-icon">subscriptions</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="util_store.store.html#baseurl" class="tsd-kind-icon">base<wbr>Url</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="util_store.store.html#serverauth" class="tsd-kind-icon">server<wbr>Auth</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class"><a href="util_store.store.html#userauth" class="tsd-kind-icon">user<wbr>Auth</a></li>
 							</ul>
 						</section>
 					</div>
@@ -102,22 +103,28 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new default<span class="tsd-signature-symbol">(</span>store<span class="tsd-signature-symbol">: </span><a href="util_store.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="api_billing.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Store<span class="tsd-signature-symbol">(</span>baseUrl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, userAuth<span class="tsd-signature-symbol">: </span><a href="util_credentials.usercredentials.html" class="tsd-signature-type" data-tsd-kind="Class">UserCredentials</a>, serverAuth<span class="tsd-signature-symbol">: </span><a href="util_credentials.servercredentials.html" class="tsd-signature-type" data-tsd-kind="Class">ServerCredentials</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="util_store.store.html" class="tsd-signature-type" data-tsd-kind="Class">Store</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/c347b0a/src/api/billing/index.ts#L7">api/billing/index.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/e6ceb3b/src/util/store.ts#L6">util/store.ts:6</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>store: <a href="util_store.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h5>
+									<h5>baseUrl: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>userAuth: <a href="util_credentials.usercredentials.html" class="tsd-signature-type" data-tsd-kind="Class">UserCredentials</a></h5>
+								</li>
+								<li>
+									<h5>serverAuth: <a href="util_credentials.servercredentials.html" class="tsd-signature-type" data-tsd-kind="Class">ServerCredentials</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="api_billing.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="util_store.store.html" class="tsd-signature-type" data-tsd-kind="Class">Store</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -125,22 +132,32 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="plans" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> plans</h3>
-					<div class="tsd-signature tsd-kind-icon">plans<span class="tsd-signature-symbol">:</span> <a href="api_billing_plans.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></div>
+					<a name="baseurl" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> base<wbr>Url</h3>
+					<div class="tsd-signature tsd-kind-icon">base<wbr>Url<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/c347b0a/src/api/billing/index.ts#L6">api/billing/index.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/e6ceb3b/src/util/store.ts#L4">util/store.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
-					<a name="subscriptions" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> subscriptions</h3>
-					<div class="tsd-signature tsd-kind-icon">subscriptions<span class="tsd-signature-symbol">:</span> <a href="api_billing_subscriptions.default.html" class="tsd-signature-type" data-tsd-kind="Class">default</a></div>
+					<a name="serverauth" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> server<wbr>Auth</h3>
+					<div class="tsd-signature tsd-kind-icon">server<wbr>Auth<span class="tsd-signature-symbol">:</span> <a href="util_credentials.servercredentials.html" class="tsd-signature-type" data-tsd-kind="Class">ServerCredentials</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/c347b0a/src/api/billing/index.ts#L7">api/billing/index.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/e6ceb3b/src/util/store.ts#L6">util/store.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="userauth" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> user<wbr>Auth</h3>
+					<div class="tsd-signature tsd-kind-icon">user<wbr>Auth<span class="tsd-signature-symbol">:</span> <a href="util_credentials.usercredentials.html" class="tsd-signature-type" data-tsd-kind="Class">UserCredentials</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/e6ceb3b/src/util/store.ts#L5">util/store.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -153,7 +170,7 @@
 						<a href="../modules.html">Exports</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="../modules/api_billing.html">api/billing</a>
+						<a href="../modules/util_store.html">util/store</a>
 					</li>
 				</ul>
 			</nav>
@@ -162,16 +179,19 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="api_billing.default.html" class="tsd-kind-icon">default</a>
+						<a href="util_store.store.html" class="tsd-kind-icon">Store</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="api_billing.default.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="util_store.store.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="api_billing.default.html#plans" class="tsd-kind-icon">plans</a>
+								<a href="util_store.store.html#baseurl" class="tsd-kind-icon">base<wbr>Url</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class">
-								<a href="api_billing.default.html#subscriptions" class="tsd-kind-icon">subscriptions</a>
+								<a href="util_store.store.html#serverauth" class="tsd-kind-icon">server<wbr>Auth</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class">
+								<a href="util_store.store.html#userauth" class="tsd-kind-icon">user<wbr>Auth</a>
 							</li>
 						</ul>
 					</li>
