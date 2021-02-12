@@ -1,8 +1,8 @@
-import Store from '../../util/store';
-import People from './people';
-import Accounts from './accounts';
+import { Store } from '../../util/store';
+import { People } from './people';
+import { Accounts } from './accounts';
 
-export default class Crm {
+export class Crm {
   public readonly people: People;
   public readonly accounts: Accounts;
 

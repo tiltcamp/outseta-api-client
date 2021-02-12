@@ -1,12 +1,17 @@
-import InvoiceDisplayItem from './invoice-display-item';
+import { Subscription } from './subscription';
+import { InvoiceLineItem } from './invoice-line-item';
 
-export default interface Invoice {
-  Number: number;
+export interface Invoice {
   InvoiceDate: Date;
-  Subtotal: number;
-  Tax: number;
-  Paid: number;
-  InvoiceDisplayItems: InvoiceDisplayItem[];
-  Total: number;
-  Balance: number;
+  PaymentReminderSentDate?: Date;
+  Number: number;
+  BillingInvoiceStatus: number;
+  Subscription: Subscription;
+  Amount: number;
+  AmountOutstanding: number;
+  InvoiceLineItems: InvoiceLineItem[];
+  IsUserGenerated: boolean;
+  Uid: string;
+  Created: Date;
+  Updated: Date;
 }

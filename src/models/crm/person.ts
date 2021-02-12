@@ -1,7 +1,7 @@
-import Address from '../shared/address';
-import PersonAccount from './person-account';
+import { Address } from '../shared/address';
+import { PersonAccount } from './person-account';
 
-export default interface Person {
+export interface Person {
   Email: string;
   FirstName?: string;
   LastName?: string;

@@ -1,9 +1,9 @@
-import Store from '../../util/store';
-import Request from '../../util/request';
-import Profile from './profile';
-import Password from './password';
+import { Store } from '../../util/store';
+import { Request } from '../../util/request';
+import { Profile } from './profile';
+import { Password } from './password';
 
-export default class User {
+export class User {
   public readonly password: Password;
   public readonly profile: Profile;
 

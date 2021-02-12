@@ -1,6 +1,6 @@
 import { ServerCredentials, UserCredentials } from './credentials';
 
-export default class Store {
+export class Store {
   public readonly baseUrl: string;
   public readonly userAuth: UserCredentials;
   public readonly serverAuth: ServerCredentials;

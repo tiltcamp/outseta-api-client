@@ -1,14 +1,14 @@
-import Store from '../../util/store';
-import ValidationError from '../../models/wrappers/validation-error';
-import Request from '../../util/request';
-import Subscription from '../../models/billing/subscription';
-import Plan from 'src/models/billing/plan';
-import Account from 'src/models/crm/account';
+import { Store } from '../../util/store';
+import { ValidationError } from '../../models/wrappers/validation-error';
+import { Request } from '../../util/request';
+import { Subscription } from '../../models/billing/subscription';
+import { Plan } from 'src/models/billing/plan';
+import { Account } from 'src/models/crm/account';
 import { BillingRenewalTerm } from '../../models/billing/billing-renewal-term';
-import List from '../../models/wrappers/list';
-import Invoice from '../../models/billing/invoice';
+import { List } from '../../models/wrappers/list';
+import { ChargeSummary } from '../../models/billing/charge-summary';
 
-export default class Subscriptions {
+export class Subscriptions {
   private readonly store: Store;
 
   constructor(store: Store) {
@@ -169,7 +169,7 @@ export default class Subscriptions {
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" status, the whole response object will be thrown.
    */
-  public async previewAdd(subscription: SubscriptionAdd): Promise<Invoice | ValidationError<Subscription>> {
+  public async previewAdd(subscription: SubscriptionAdd): Promise<ChargeSummary | ValidationError<Subscription>> {
     const request = new Request(this.store, 'billing/subscriptions/compute-charge-summary')
       .authenticateAsServer()
       .withBody(subscription);
@@ -178,7 +178,7 @@ export default class Subscriptions {
     if (response.status === 400)
       return await response.json() as ValidationError<Subscription>;
     else if (response.ok)
-      return await response.json() as Invoice;
+      return await response.json() as ChargeSummary;
     else throw response;
   }
 

@@ -1,6 +1,6 @@
-import Store from './store';
+import { Store } from './store';
 
-export default class Request {
+export class Request {
   private readonly store: Store;
   private _options: Options = {
     headers: {

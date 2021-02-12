@@ -1,4 +1,4 @@
-export default interface Address {
+export interface Address {
   AddressLine1?: string;
   AddressLine2?: string;
   AddressLine3?: string;

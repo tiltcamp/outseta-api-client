@@ -1,9 +1,10 @@
 import { ServerCredentials, UserCredentials } from './util/credentials';
-import Store from './util/store';
-import User from './api/user';
-import Billing from './api/billing';
-import Crm from './api/crm';
+import { Store } from './util/store';
+import { User } from './api/user';
+import { Billing } from './api/billing';
+import { Crm } from './api/crm';
 
+// eslint-disable-next-line import/no-default-export
 export default class OutsetaApiClient {
   public readonly user: User;
   public readonly billing: Billing;

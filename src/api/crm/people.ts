@@ -1,10 +1,10 @@
-import Store from '../../util/store';
-import PersonModel from '../../models/crm/person';
-import Request from '../../util/request';
-import List from '../../models/wrappers/list';
-import ValidationError from '../../models/wrappers/validation-error';
+import { Store } from '../../util/store';
+import { Person } from '../../models/crm/person';
+import { Request } from '../../util/request';
+import { List } from '../../models/wrappers/list';
+import { ValidationError } from '../../models/wrappers/validation-error';
 
-export default class People {
+export class People {
   private readonly store: Store;
 
   constructor(store: Store) {
@@ -33,7 +33,7 @@ export default class People {
   public async getAll(options: {
     limit?: number,
     offset?: number
-  } = {}): Promise<List<PersonModel>> {
+  } = {}): Promise<List<Person>> {
     const request = new Request(this.store, 'crm/people').authenticateAsServer();
     if (options.limit) request.withParams({ limit: `${options.limit}` });
     if (options.offset) request.withParams({ offset: `${options.offset}` });
@@ -41,7 +41,7 @@ export default class People {
     const response = await request.get();
 
     if (!response.ok) throw response;
-    return await response.json() as List<PersonModel>;
+    return await response.json() as List<Person>;
   }
 
   /**
@@ -62,12 +62,12 @@ export default class People {
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" status, the whole response object will be thrown.
    */
-  public async get(uid: string): Promise<PersonModel> {
+  public async get(uid: string): Promise<Person> {
     const request = new Request(this.store, `crm/people/${uid}`).authenticateAsServer();
     const response = await request.get();
 
     if (!response.ok) throw response;
-    return await response.json() as PersonModel;
+    return await response.json() as Person;
   }
 
   /**
@@ -90,16 +90,16 @@ export default class People {
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" status, the whole response object will be thrown.
    */
-  public async add(person: PersonAdd): Promise<PersonModel | ValidationError<PersonModel>> {
+  public async add(person: PersonAdd): Promise<Person | ValidationError<Person>> {
     const request = new Request(this.store, 'crm/people')
       .authenticateAsServer()
       .withBody(person);
     const response = await request.post();
 
     if (response.status === 400)
-      return await response.json() as ValidationError<PersonModel>;
+      return await response.json() as ValidationError<Person>;
     else if (response.ok)
-      return await response.json() as PersonModel;
+      return await response.json() as Person;
     else throw response;
   }
 
@@ -124,16 +124,16 @@ export default class People {
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" or non-"400" status, the whole response object will be thrown.
    */
-  public async update(person: PersonUpdate): Promise<PersonModel | ValidationError<PersonModel>> {
+  public async update(person: PersonUpdate): Promise<Person | ValidationError<Person>> {
     const request = new Request(this.store, `crm/people/${person.Uid}`)
       .authenticateAsServer()
       .withBody(person);
     const response = await request.put();
 
     if (response.status === 400)
-      return await response.json() as ValidationError<PersonModel>;
+      return await response.json() as ValidationError<Person>;
     else if (response.ok)
-      return await response.json() as PersonModel;
+      return await response.json() as Person;
     else throw response;
   }
 
@@ -164,12 +164,12 @@ export default class People {
   }
 }
 
-export interface PersonAdd extends Partial<PersonModel> {
+export interface PersonAdd extends Partial<Person> {
   [key: string]: unknown;
   Email: string;
 }
 
-export interface PersonUpdate extends Partial<PersonModel> {
+export interface PersonUpdate extends Partial<Person> {
   [key: string]: unknown;
   Uid: string;
 }

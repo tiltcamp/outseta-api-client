@@ -1,10 +1,10 @@
 import Pretender, { ResponseHandler } from 'pretender';
-import Store from '../../../../src/util/store';
-import Accounts from '../../../../src/api/crm/accounts';
+import { Store } from '../../../../src/util/store';
+import { Accounts } from '../../../../src/api/crm/accounts';
 
 import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
-import AccountModel from '../../../../src/models/crm/account';
-import ValidationError from '../../../../src/models/wrappers/validation-error';
+import { Account } from '../../../../src/models/crm/account';
+import { ValidationError } from '../../../../src/models/wrappers/validation-error';
 
 describe('api', () => {
   describe('Crm', () => {
@@ -54,7 +54,7 @@ describe('api', () => {
           const response = await accounts.update({
             Uid: 'BWz87NQE',
             Name: 'TiltCamp Rebranded'
-          }) as AccountModel;
+          }) as Account;
 
           expect(response.Name).toBe('TiltCamp Rebranded');
         });
@@ -84,7 +84,7 @@ describe('api', () => {
             Name: 'TiltCamp Rebranded'
           }, {
             fields: '*'
-          }) as AccountModel;
+          }) as Account;
 
           expect(response.Name).toBe('TiltCamp Rebranded');
         });
@@ -112,7 +112,7 @@ describe('api', () => {
           const response = await accounts.update({
             Uid: 'BWz87NQE',
             Name: ''
-          }) as ValidationError<AccountModel>;
+          }) as ValidationError<Account>;
 
           expect(response.EntityValidationErrors[0].ValidationErrors[0]).toEqual({
             ErrorCode: "required",

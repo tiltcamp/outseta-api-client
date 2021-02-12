@@ -1,6 +1,6 @@
-import PlanAddOn from './plan-add-on';
+import { PlanAddOn } from './plan-add-on';
 
-export default interface AddOn {
+export interface AddOn {
   Name: string;
   BillingAddOnType: number;
   IsQuantityEditable: boolean;

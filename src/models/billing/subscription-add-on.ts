@@ -1,6 +1,6 @@
-import AddOn from "./add-on";
+import { AddOn } from './add-on';
 
-export default interface SubscriptionAddOn {
+export interface SubscriptionAddOn {
   BillingRenewalTerm: number;
   Subscription?: unknown;
   AddOn: AddOn;

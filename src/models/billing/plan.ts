@@ -1,7 +1,7 @@
-import PlanAddOn from './plan-add-on';
-import PlanFamily from './plan-family';
+import { PlanAddOn } from './plan-add-on';
+import { PlanFamily } from './plan-family';
 
-export default interface Plan {
+export interface Plan {
   Name: string;
   Description: string;
   PlanFamily: PlanFamily;

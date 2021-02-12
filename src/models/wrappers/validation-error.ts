@@ -1,4 +1,4 @@
-export default interface ValidationError<T> {
+export interface ValidationError<T> {
   ErrorMessage: string;
   EntityValidationErrors: EntityValidationError<T>[];
 }

@@ -1,9 +1,9 @@
+import { PlanFamily } from '../../models/billing/plan-family';
 import { Request } from '../../util/request';
 import { Store } from '../../util/store';
 import { List } from '../../models/wrappers/list';
-import { Plan } from '../../models/billing/plan';
 
-export class Plans {
+export class PlanFamilies {
   private readonly store: Store;
 
   constructor(store: Store) {
@@ -11,11 +11,11 @@ export class Plans {
   }
 
   /**
-   * Get all available plans.
+   * Get all available plan families.
    *
    * ```typescript
    * const client = new OutsetaApiClient({ subdomain: 'test-company' });
-   * const response = await client.billing.plans.getAll();
+   * const response = await client.billing.planFamilies.getAll();
    * console.log(response);
    * ```
    *
@@ -28,14 +28,14 @@ export class Plans {
   public async getAll(options: {
     limit?: number,
     offset?: number
-  } = {}): Promise<List<Plan>> {
-    const request = new Request(this.store, 'billing/plans');
+  } = {}): Promise<List<PlanFamily>> {
+    const request = new Request(this.store, 'billing/planfamilies');
     if (options.limit) request.withParams({ limit: `${options.limit}` });
     if (options.offset) request.withParams({ offset: `${options.offset}` });
 
     const response = await request.get();
 
     if (!response.ok) throw response;
-    return await response.json() as List<Plan>;
+    return await response.json() as List<PlanFamily>;
   }
 }

@@ -1,11 +1,11 @@
 import Pretender, { ResponseHandler } from 'pretender';
-import Store from '../../../../src/util/store';
-import Accounts from '../../../../src/api/crm/accounts';
+import { Store } from '../../../../src/util/store';
+import { Accounts } from '../../../../src/api/crm/accounts';
 
 import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
 import { AccountStage } from '../../../../src/models/crm/account-stage';
-import AccountModel from '../../../../src/models/crm/account';
-import ValidationError from '../../../../src/models/wrappers/validation-error';
+import { Account } from '../../../../src/models/crm/account';
+import { ValidationError } from '../../../../src/models/wrappers/validation-error';
 
 describe('api', () => {
   describe('Crm', () => {
@@ -67,7 +67,7 @@ describe('api', () => {
               },
               IsPrimary: true
             }]
-          }) as AccountModel;
+          }) as Account;
 
           expect(response.Name).toBe('TiltCamp');
         });
@@ -109,7 +109,7 @@ describe('api', () => {
             }]
           }, {
             fields: '*'
-          }) as AccountModel;
+          }) as Account;
 
           expect(response.Name).toBe('TiltCamp');
         });
@@ -149,7 +149,7 @@ describe('api', () => {
               },
               IsPrimary: true
             }]
-          }) as ValidationError<AccountModel>;
+          }) as ValidationError<Account>;
 
           expect(response.EntityValidationErrors[0].ValidationErrors[0]).toEqual({
             ErrorCode: "required",

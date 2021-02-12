@@ -60,19 +60,19 @@ const client = new OutsetaApiClient({
 
 ## Resources & Documentation
 #### Billing
-- Invoices (planned)
-- [Plans](https://tiltcamp.github.io/outseta-api-client/classes/api_billing_plans.default.html#getall)
-- Plan Families (planned)
-- [Subscriptions](https://tiltcamp.github.io/outseta-api-client/classes/api_billing_subscriptions.default.html#add)
+- [Invoices](https://tiltcamp.github.io/outseta-api-client/classes/api_billing_invoices.invoices.html#add)
+- [Plans](https://tiltcamp.github.io/outseta-api-client/classes/api_billing_plans.plans.html#getall)
+- [Plan Families](https://tiltcamp.github.io/outseta-api-client/classes/api_billing_plan_families.planfamilies.html#getall)
+- [Subscriptions](https://tiltcamp.github.io/outseta-api-client/classes/api_billing_subscriptions.subscriptions.html#add)
 - Transactions (planned)
 - Trial Extension (planned)
 - Usage (planned)
 
 #### CRM
-- [Accounts](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_accounts.default.html#add)
+- [Accounts](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_accounts.accounts.html#add)
 - Activities (planned)
 - Deals (planned)
-- [People](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_people.default.html#add)
+- [People](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_people.people.html#add)
 
 #### Marketing
 - Subscribers (planned)
@@ -81,7 +81,7 @@ const client = new OutsetaApiClient({
 - Cases (planned)
 
 #### User
-- [Impersonate](https://tiltcamp.github.io/outseta-api-client/classes/api_user.default.html#impersonate)
-- [Login](https://tiltcamp.github.io/outseta-api-client/classes/api_user.default.html#login)
-- [Password](https://tiltcamp.github.io/outseta-api-client/classes/api_user_password.default.html#update)
-- [Profile](https://tiltcamp.github.io/outseta-api-client/classes/api_user_profile.default.html#get)
+- [Impersonate](https://tiltcamp.github.io/outseta-api-client/classes/api_user.user.html#impersonate)
+- [Login](https://tiltcamp.github.io/outseta-api-client/classes/api_user.user.html#login)
+- [Password](https://tiltcamp.github.io/outseta-api-client/classes/api_user_password.password.html#update)
+- [Profile](https://tiltcamp.github.io/outseta-api-client/classes/api_user_profile.profile.html#get)
