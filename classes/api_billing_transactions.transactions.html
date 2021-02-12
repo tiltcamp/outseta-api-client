@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Password | outseta-api-client</title>
+	<title>Transactions | outseta-api-client</title>
 	<meta name="description" content="Documentation for outseta-api-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,13 +55,13 @@
 					<a href="../modules.html">outseta-api-client</a>
 				</li>
 				<li>
-					<a href="../modules/api_user_password.html">api/user/password</a>
+					<a href="../modules/api_billing_transactions.html">api/billing/transactions</a>
 				</li>
 				<li>
-					<a href="api_user_password.password.html">Password</a>
+					<a href="api_billing_transactions.transactions.html">Transactions</a>
 				</li>
 			</ul>
-			<h1>Class Password</h1>
+			<h1>Class Transactions</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Password</span>
+						<span class="target">Transactions</span>
 					</li>
 				</ul>
 			</section>
@@ -83,19 +83,19 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="api_user_password.password.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="api_billing_transactions.transactions.html#constructor" class="tsd-kind-icon">constructor</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section tsd-is-private tsd-is-private-protected">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="api_user_password.password.html#store" class="tsd-kind-icon">store</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="api_billing_transactions.transactions.html#store" class="tsd-kind-icon">store</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class"><a href="api_user_password.password.html#update" class="tsd-kind-icon">update</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="api_billing_transactions.transactions.html#getall" class="tsd-kind-icon">get<wbr>All</a></li>
 							</ul>
 						</section>
 					</div>
@@ -107,13 +107,13 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Password<span class="tsd-signature-symbol">(</span>store<span class="tsd-signature-symbol">: </span><a href="util_store.store.html" class="tsd-signature-type" data-tsd-kind="Class">Store</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="api_user_password.password.html" class="tsd-signature-type" data-tsd-kind="Class">Password</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Transactions<span class="tsd-signature-symbol">(</span>store<span class="tsd-signature-symbol">: </span><a href="util_store.store.html" class="tsd-signature-type" data-tsd-kind="Class">Store</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="api_billing_transactions.transactions.html" class="tsd-signature-type" data-tsd-kind="Class">Transactions</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/faf31e0/src/api/user/password.ts#L7">api/user/password.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/faf31e0/src/api/billing/transactions.ts#L7">api/billing/transactions.ts:7</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -122,7 +122,7 @@
 									<h5>store: <a href="util_store.store.html" class="tsd-signature-type" data-tsd-kind="Class">Store</a></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="api_user_password.password.html" class="tsd-signature-type" data-tsd-kind="Class">Password</a></h4>
+							<h4 class="tsd-returns-title">Returns <a href="api_billing_transactions.transactions.html" class="tsd-signature-type" data-tsd-kind="Class">Transactions</a></h4>
 						</li>
 					</ul>
 				</section>
@@ -135,7 +135,7 @@
 					<div class="tsd-signature tsd-kind-icon">store<span class="tsd-signature-symbol">:</span> <a href="util_store.store.html" class="tsd-signature-type" data-tsd-kind="Class">Store</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/faf31e0/src/api/user/password.ts#L7">api/user/password.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/faf31e0/src/api/billing/transactions.ts#L7">api/billing/transactions.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -143,47 +143,44 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
-					<a name="update" class="tsd-anchor"></a>
-					<h3>update</h3>
+					<a name="getall" class="tsd-anchor"></a>
+					<h3>get<wbr>All</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">update<span class="tsd-signature-symbol">(</span>existingPassword<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, newPassword<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/models_wrappers_validation_error.validationerror.html" class="tsd-signature-type" data-tsd-kind="Interface">ValidationError</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_person.person.html" class="tsd-signature-type" data-tsd-kind="Interface">Person</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>All<span class="tsd-signature-symbol">(</span>accountUid<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_wrappers_list.list.html" class="tsd-signature-type" data-tsd-kind="Interface">List</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_billing_transaction.transaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Transaction</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/faf31e0/src/api/user/password.ts#L29">api/user/password.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/faf31e0/src/api/billing/transactions.ts#L27">api/billing/transactions.ts:27</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Change the password belonging to the provided user&#39;s access token.</p>
+									<p>Get all transactions for a particular account by its uid.</p>
 								</div>
-								<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">OutsetaApiClient</span><span style="color: #000000">({</span>
-<span style="color: #000000">  </span><span style="color: #001080">subdomain:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test-company&#039;</span><span style="color: #000000">,</span>
-<span style="color: #000000">  </span><span style="color: #001080">accessToken:</span><span style="color: #000000"> </span><span style="color: #001080">jwt_user_token</span>
-<span style="color: #000000">});</span>
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">response</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">client</span><span style="color: #000000">.</span><span style="color: #001080">user</span><span style="color: #000000">.</span><span style="color: #001080">password</span><span style="color: #000000">.</span><span style="color: #795E26">update</span><span style="color: #000000">(</span><span style="color: #001080">existingPassword</span><span style="color: #000000">, </span><span style="color: #001080">newPassword</span><span style="color: #000000">);</span>
+								<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">OutsetaApiClient</span><span style="color: #000000">({ </span><span style="color: #001080">subdomain:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test-company&#039;</span><span style="color: #000000"> });</span>
+<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">response</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">client</span><span style="color: #000000">.</span><span style="color: #001080">billing</span><span style="color: #000000">.</span><span style="color: #001080">transactions</span><span style="color: #000000">.</span><span style="color: #795E26">getAll</span><span style="color: #000000">(</span><span style="color: #001080">accountUid</span><span style="color: #000000">);</span>
 <span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">response</span><span style="color: #000000">);</span>
 </code></pre>
 								<dl class="tsd-comment-tags">
 									<dt>throws</dt>
 									<dd><p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Response">Response</a> If the server returns a
-										non-&quot;OK&quot; or non-&quot;400&quot; status, the whole response object will be thrown.</p>
+										non-&quot;OK&quot; status, the whole response object will be thrown.</p>
 									</dd>
 								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>existingPassword: <span class="tsd-signature-type">string</span></h5>
-								</li>
-								<li>
-									<h5>newPassword: <span class="tsd-signature-type">string</span></h5>
+									<h5>accountUid: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The uid for the account to grab transactions from.</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">null</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/models_wrappers_validation_error.validationerror.html" class="tsd-signature-type" data-tsd-kind="Interface">ValidationError</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_crm_person.person.html" class="tsd-signature-type" data-tsd-kind="Interface">Person</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>Null if response status OK, or the response body with validation errors if response status 400.</p>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_wrappers_list.list.html" class="tsd-signature-type" data-tsd-kind="Interface">List</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_billing_transaction.transaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Transaction</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The response body.</p>
 						</li>
 					</ul>
 				</section>
@@ -196,7 +193,7 @@
 						<a href="../modules.html">Exports</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="../modules/api_user_password.html">api/user/password</a>
+						<a href="../modules/api_billing_transactions.html">api/billing/transactions</a>
 					</li>
 				</ul>
 			</nav>
@@ -205,16 +202,16 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class tsd-parent-kind-module">
-						<a href="api_user_password.password.html" class="tsd-kind-icon">Password</a>
+						<a href="api_billing_transactions.transactions.html" class="tsd-kind-icon">Transactions</a>
 						<ul>
 							<li class=" tsd-kind-constructor tsd-parent-kind-class">
-								<a href="api_user_password.password.html#constructor" class="tsd-kind-icon">constructor</a>
+								<a href="api_billing_transactions.transactions.html#constructor" class="tsd-kind-icon">constructor</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
-								<a href="api_user_password.password.html#store" class="tsd-kind-icon">store</a>
+								<a href="api_billing_transactions.transactions.html#store" class="tsd-kind-icon">store</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
-								<a href="api_user_password.password.html#update" class="tsd-kind-icon">update</a>
+								<a href="api_billing_transactions.transactions.html#getall" class="tsd-kind-icon">get<wbr>All</a>
 							</li>
 						</ul>
 					</li>
