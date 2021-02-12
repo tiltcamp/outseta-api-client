@@ -3,6 +3,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: [
     '@typescript-eslint',
+    'import'
   ],
   extends: [
     'eslint:recommended',
@@ -11,6 +12,7 @@ module.exports = {
   rules: {
     'no-console': 'error',
     'eol-last': 'error',
+    'import/no-default-export': 'error',
     "@typescript-eslint/semi": ["error"]
   }
 };

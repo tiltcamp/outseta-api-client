@@ -1,11 +1,11 @@
-import Store from '../../util/store';
-import ValidationError from '../../models/wrappers/validation-error';
-import Request from '../../util/request';
-import Invoice from '../../models/billing/invoice';
-import Subscription from 'src/models/billing/subscription';
-import InvoiceLineItem from '../../models/billing/invoice-line-item';
+import { Store } from '../../util/store';
+import { ValidationError } from '../../models/wrappers/validation-error';
+import { Request } from '../../util/request';
+import { Invoice } from '../../models/billing/invoice';
+import { Subscription } from 'src/models/billing/subscription';
+import { InvoiceLineItem } from '../../models/billing/invoice-line-item';
 
-export default class Invoices {
+export class Invoices {
   private readonly store: Store;
 
   constructor(store: Store) {

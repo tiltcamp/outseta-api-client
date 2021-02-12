@@ -1,6 +1,6 @@
 import Pretender, { ResponseHandler } from 'pretender';
-import Store from '../../../../src/util/store';
-import People from '../../../../src/api/crm/people';
+import { Store } from '../../../../src/util/store';
+import { People } from '../../../../src/api/crm/people';
 import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
 
 describe('api', () => {

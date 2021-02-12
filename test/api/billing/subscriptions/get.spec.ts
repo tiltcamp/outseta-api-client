@@ -1,7 +1,7 @@
 import Pretender, { ResponseHandler } from 'pretender';
-import Store from '../../../../src/util/store';
+import { Store } from '../../../../src/util/store';
 import { UserCredentials, ServerCredentials } from '../../../../src/util/credentials';
-import Subscriptions from '../../../../src/api/billing/subscriptions';
+import { Subscriptions } from '../../../../src/api/billing/subscriptions';
 
 describe('api', () => {
   describe('Billing', () => {

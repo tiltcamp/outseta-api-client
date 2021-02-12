@@ -1,11 +1,11 @@
 import Pretender, { ResponseHandler } from 'pretender';
-import Store from '../../../../src/util/store';
+import { Store } from '../../../../src/util/store';
 import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
-import Subscriptions from '../../../../src/api/billing/subscriptions';
+import { Subscriptions } from '../../../../src/api/billing/subscriptions';
 import { BillingRenewalTerm } from '../../../../src/models/billing/billing-renewal-term';
-import Subscription from '../../../../src/models/billing/subscription';
-import ValidationError from '../../../../src/models/wrappers/validation-error';
-import ChargeSummary from '../../../../src/models/billing/charge-summary';
+import { Subscription } from '../../../../src/models/billing/subscription';
+import { ValidationError } from '../../../../src/models/wrappers/validation-error';
+import { ChargeSummary } from '../../../../src/models/billing/charge-summary';
 
 describe('api', () => {
   describe('Billing', () => {

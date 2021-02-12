@@ -1,12 +1,12 @@
-import Store from '../../util/store';
-import List from '../../models/wrappers/list';
-import Account from '../../models/crm/account';
-import Request from '../../util/request';
+import { Store } from '../../util/store';
+import { List } from '../../models/wrappers/list';
+import { Account } from '../../models/crm/account';
+import { Request } from '../../util/request';
 import { AccountStage } from '../../models/crm/account-stage';
-import ValidationError from '../../models/wrappers/validation-error';
-import Subscription from '../../models/billing/subscription';
+import { ValidationError } from '../../models/wrappers/validation-error';
+import { Subscription } from '../../models/billing/subscription';
 
-export default class Accounts {
+export class Accounts {
   private readonly store: Store;
 
   constructor(store: Store) {

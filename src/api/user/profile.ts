@@ -1,9 +1,9 @@
-import Request from '../../util/request';
-import Store from '../../util/store';
-import PersonModel from '../../models/crm/person';
-import ValidationError from '../../models/wrappers/validation-error';
+import { Request } from '../../util/request';
+import { Store } from '../../util/store';
+import { Person } from '../../models/crm/person';
+import { ValidationError } from '../../models/wrappers/validation-error';
 
-export default class Profile {
+export class Profile {
   private readonly store: Store;
 
   constructor(store: Store) {
@@ -26,12 +26,12 @@ export default class Profile {
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" status, the whole response object will be thrown.
    */
-  public async get(): Promise<PersonModel> {
+  public async get(): Promise<Person> {
     const request = new Request(this.store, 'profile').authenticateAsUser();
     const response = await request.get();
 
     if (!response.ok) throw response;
-    return await response.json() as PersonModel;
+    return await response.json() as Person;
   }
 
   /**
@@ -55,21 +55,21 @@ export default class Profile {
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" or non-"400" status, the whole response object will be thrown.
    */
-  public async update(profile: ProfileUpdate): Promise<PersonModel | ValidationError<PersonModel>> {
+  public async update(profile: ProfileUpdate): Promise<Person | ValidationError<Person>> {
     const request = new Request(this.store, 'profile')
       .authenticateAsUser()
       .withBody(profile);
     const response = await request.put();
 
     if (response.status === 400)
-      return await response.json() as ValidationError<PersonModel>;
+      return await response.json() as ValidationError<Person>;
     else if (response.ok)
-      return await response.json() as PersonModel;
+      return await response.json() as Person;
     else throw response;
   }
 }
 
-export interface ProfileUpdate extends Partial<PersonModel> {
+export interface ProfileUpdate extends Partial<Person> {
   [key: string]: unknown;
   Uid: string;
 }

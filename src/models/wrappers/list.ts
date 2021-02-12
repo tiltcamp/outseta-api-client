@@ -1,4 +1,4 @@
-export default interface List<T> {
+export interface List<T> {
   metadata: Metadata;
   items: T[];
 }

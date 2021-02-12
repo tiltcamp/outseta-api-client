@@ -1,9 +1,9 @@
-import Request from '../../util/request';
-import Store from '../../util/store';
-import List from '../../models/wrappers/list';
-import PlanModel from '../../models/billing/plan';
+import { Request } from '../../util/request';
+import { Store } from '../../util/store';
+import { List } from '../../models/wrappers/list';
+import { Plan } from '../../models/billing/plan';
 
-export default class Plans {
+export class Plans {
   private readonly store: Store;
 
   constructor(store: Store) {
@@ -28,7 +28,7 @@ export default class Plans {
   public async getAll(options: {
     limit?: number,
     offset?: number
-  } = {}): Promise<List<PlanModel>> {
+  } = {}): Promise<List<Plan>> {
     const request = new Request(this.store, 'billing/plans');
     if (options.limit) request.withParams({ limit: `${options.limit}` });
     if (options.offset) request.withParams({ offset: `${options.offset}` });
@@ -36,6 +36,6 @@ export default class Plans {
     const response = await request.get();
 
     if (!response.ok) throw response;
-    return await response.json() as List<PlanModel>;
+    return await response.json() as List<Plan>;
   }
 }

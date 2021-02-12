@@ -1,9 +1,9 @@
 import Pretender, { ResponseHandler } from 'pretender';
-import Store from '../../../../src/util/store';
-import People from '../../../../src/api/crm/people';
+import { Store } from '../../../../src/util/store';
+import { People } from '../../../../src/api/crm/people';
 import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
-import PersonModel from '../../../../src/models/crm/person';
-import ValidationError from '../../../../src/models/wrappers/validation-error';
+import { Person } from '../../../../src/models/crm/person';
+import { ValidationError } from '../../../../src/models/wrappers/validation-error';
 
 describe('api', () => {
   describe('Crm', () => {
@@ -53,7 +53,7 @@ describe('api', () => {
           const response = await people.update({
             Uid: 'DQ2DyknW',
             Email: 'demo@tilt.camp'
-          }) as PersonModel;
+          }) as Person;
 
           expect(response.Email).toBe('demo@tilt.camp');
         });
@@ -81,7 +81,7 @@ describe('api', () => {
           const response = await people.update({
             Uid: 'DQ2DyknW',
             Email: ''
-          }) as ValidationError<PersonModel>;
+          }) as ValidationError<Person>;
 
           expect(response.EntityValidationErrors[0].ValidationErrors[0]).toEqual({
             ErrorCode: "outsetaError",

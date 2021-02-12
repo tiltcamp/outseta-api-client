@@ -1,7 +1,7 @@
-import Subscription from "./subscription";
-import InvoiceLineItem from './invoice-line-item';
+import { Subscription } from './subscription';
+import { InvoiceLineItem } from './invoice-line-item';
 
-export default interface Invoice {
+export interface Invoice {
   InvoiceDate: Date;
   PaymentReminderSentDate?: Date;
   Number: number;

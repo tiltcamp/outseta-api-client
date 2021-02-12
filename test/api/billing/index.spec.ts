@@ -1,8 +1,8 @@
-import Billing from '../../../src/api/billing';
-import Plans from '../../../src/api/billing/plans';
-import Store from '../../../src/util/store';
+import { Billing } from '../../../src/api/billing';
+import { Plans } from '../../../src/api/billing/plans';
+import { Store } from '../../../src/util/store';
 import { ServerCredentials, UserCredentials } from '../../../src/util/credentials';
-import Invoices from '../../../src/api/billing/invoices';
+import { Invoices } from '../../../src/api/billing/invoices';
 
 describe('api', () =>
   describe('Billing', () =>

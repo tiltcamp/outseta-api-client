@@ -1,6 +1,6 @@
-import InvoiceDisplayItem from './invoice-display-item';
+import { InvoiceDisplayItem } from './invoice-display-item';
 
-export default interface ChargeSummary {
+export interface ChargeSummary {
   Number: number;
   InvoiceDate: Date;
   Subtotal: number;

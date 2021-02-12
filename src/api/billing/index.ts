@@ -1,9 +1,9 @@
-import Store from '../../util/store';
-import Plans from './plans';
-import Invoices from './invoices';
-import Subscriptions from './subscriptions';
+import { Store } from '../../util/store';
+import { Plans } from './plans';
+import { Invoices } from './invoices';
+import { Subscriptions } from './subscriptions';
 
-export default class Billing {
+export class Billing {
   public readonly invoices: Invoices;
   public readonly plans: Plans;
   public readonly subscriptions: Subscriptions;

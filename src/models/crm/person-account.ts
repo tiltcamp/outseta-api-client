@@ -1,7 +1,7 @@
-import Person from './person';
-import Account from './account';
+import { Person } from './person';
+import { Account } from './account';
 
-export default interface PersonAccount {
+export interface PersonAccount {
   Person?: Person;
   Account?: Account;
   IsPrimary: boolean;

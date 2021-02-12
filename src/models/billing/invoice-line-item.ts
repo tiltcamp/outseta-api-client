@@ -1,6 +1,6 @@
-import Invoice from "./invoice";
+import { Invoice } from './invoice';
 
-export default interface InvoiceLineItem {
+export interface InvoiceLineItem {
   StartDate?: Date;
   EndDate?: Date;
   Description: string;

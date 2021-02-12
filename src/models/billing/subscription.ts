@@ -1,9 +1,9 @@
-import Account from '../crm/account';
-import Plan from "./plan";
+import { Account } from '../crm/account';
+import { Plan } from './plan';
 import { BillingRenewalTerm } from './billing-renewal-term';
-import SubscriptionAddOn from './subscription-add-on';
+import { SubscriptionAddOn } from './subscription-add-on';
 
-export default interface Subscription {
+export interface Subscription {
   Uid?: string;
   Plan: Plan ;
   BillingRenewalTerm: BillingRenewalTerm;

@@ -1,6 +1,6 @@
 import Pretender, { ResponseHandler } from 'pretender';
-import Store from '../../../../src/util/store';
-import Accounts from '../../../../src/api/crm/accounts';
+import { Store } from '../../../../src/util/store';
+import { Accounts } from '../../../../src/api/crm/accounts';
 
 import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
 

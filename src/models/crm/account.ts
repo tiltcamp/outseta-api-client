@@ -1,9 +1,9 @@
-import Address from '../shared/address';
-import PersonAccount from './person-account';
+import { Address } from '../shared/address';
+import { PersonAccount } from './person-account';
 import { AccountStage } from './account-stage';
-import Subscription from '../billing/subscription';
+import { Subscription } from '../billing/subscription';
 
-export default interface Account {
+export interface Account {
   Name: string;
   ClientIdentifier?: unknown;
   IsDemo: boolean;

@@ -1,4 +1,4 @@
-export default interface InvoiceDisplayItem {
+export interface InvoiceDisplayItem {
   Date: Date;
   Type: string;
   Description: string;

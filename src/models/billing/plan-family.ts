@@ -1,4 +1,4 @@
-export default interface PlanFamily {
+export interface PlanFamily {
   Name: string;
   IsActive: boolean;
   Uid: string;

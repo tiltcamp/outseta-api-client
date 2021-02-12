@@ -1,14 +1,14 @@
-import Store from '../../util/store';
-import ValidationError from '../../models/wrappers/validation-error';
-import Request from '../../util/request';
-import Subscription from '../../models/billing/subscription';
-import Plan from 'src/models/billing/plan';
-import Account from 'src/models/crm/account';
+import { Store } from '../../util/store';
+import { ValidationError } from '../../models/wrappers/validation-error';
+import { Request } from '../../util/request';
+import { Subscription } from '../../models/billing/subscription';
+import { Plan } from 'src/models/billing/plan';
+import { Account } from 'src/models/crm/account';
 import { BillingRenewalTerm } from '../../models/billing/billing-renewal-term';
-import List from '../../models/wrappers/list';
-import ChargeSummary from '../../models/billing/charge-summary';
+import { List } from '../../models/wrappers/list';
+import { ChargeSummary } from '../../models/billing/charge-summary';
 
-export default class Subscriptions {
+export class Subscriptions {
   private readonly store: Store;
 
   constructor(store: Store) {

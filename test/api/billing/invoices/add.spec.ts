@@ -1,9 +1,9 @@
 import Pretender, { ResponseHandler } from 'pretender';
-import Store from '../../../../src/util/store';
-import Invoices from '../../../../src/api/billing/invoices';
+import { Store } from '../../../../src/util/store';
+import { Invoices } from '../../../../src/api/billing/invoices';
 import { UserCredentials, ServerCredentials } from '../../../../src/util/credentials';
-import ValidationError from '../../../../src/models/wrappers/validation-error';
-import Invoice from '../../../../src/models/billing/invoice';
+import { ValidationError } from '../../../../src/models/wrappers/validation-error';
+import { Invoice } from '../../../../src/models/billing/invoice';
 
 describe('api', () => {
   describe('Billing', () => {

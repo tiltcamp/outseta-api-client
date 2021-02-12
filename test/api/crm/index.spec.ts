@@ -1,7 +1,7 @@
-import Crm from '../../../src/api/crm';
-import People from '../../../src/api/crm/people';
-import Accounts from '../../../src/api/crm/accounts';
-import Store from '../../../src/util/store';
+import { Crm } from '../../../src/api/crm';
+import { People } from '../../../src/api/crm/people';
+import { Accounts } from '../../../src/api/crm/accounts';
+import { Store } from '../../../src/util/store';
 import { ServerCredentials, UserCredentials } from '../../../src/util/credentials';
 
 describe('api', () =>
