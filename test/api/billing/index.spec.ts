@@ -1,5 +1,6 @@
 import { Billing } from '../../../src/api/billing';
 import { Plans } from '../../../src/api/billing/plans';
+import { Transactions } from '../../../src/api/billing/transactions';
 import { Store } from '../../../src/util/store';
 import { ServerCredentials, UserCredentials } from '../../../src/util/credentials';
 import { Invoices } from '../../../src/api/billing/invoices';
@@ -21,6 +22,7 @@ describe('api', () =>
         expect(billing.invoices).toBeInstanceOf(Invoices);
         expect(billing.plans).toBeInstanceOf(Plans);
         expect(billing.planFamilies).toBeInstanceOf(PlanFamilies);
+        expect(billing.transactions).toBeInstanceOf(Transactions);
       });
     })
   )
