@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PersonAccount | outseta-api-client</title>
+	<title>UsageAdd | outseta-api-client</title>
 	<meta name="description" content="Documentation for outseta-api-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,13 +55,13 @@
 					<a href="../modules.html">outseta-api-client</a>
 				</li>
 				<li>
-					<a href="../modules/models_crm_person_account.html">models/crm/person-account</a>
+					<a href="../modules/api_billing_usage.html">api/billing/usage</a>
 				</li>
 				<li>
-					<a href="models_crm_person_account.personaccount.html">PersonAccount</a>
+					<a href="api_billing_usage.usageadd.html">UsageAdd</a>
 				</li>
 			</ul>
-			<h1>Interface PersonAccount</h1>
+			<h1>Interface UsageAdd</h1>
 		</div>
 	</div>
 </header>
@@ -72,9 +72,18 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">PersonAccount</span>
+						<span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Omit</span><span class="tsd-signature-symbol">&lt;</span><a href="models_billing_usage_item.usageitem.html" class="tsd-signature-type" data-tsd-kind="Interface">UsageItem</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;SubscriptionAddOn&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">UsageAdd</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
+			</section>
+			<section class="tsd-panel tsd-kind-interface tsd-parent-kind-module">
+				<h3 class="tsd-before-signature">Indexable</h3>
+				<div class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">[</span>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">]: </span><span class="tsd-signature-type">unknown</span></div>
 			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
@@ -83,12 +92,13 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_person_account.personaccount.html#account" class="tsd-kind-icon">Account</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_person_account.personaccount.html#created" class="tsd-kind-icon">Created</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_person_account.personaccount.html#isprimary" class="tsd-kind-icon">Is<wbr>Primary</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_person_account.personaccount.html#person" class="tsd-kind-icon">Person</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_person_account.personaccount.html#uid" class="tsd-kind-icon">Uid</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_person_account.personaccount.html#updated" class="tsd-kind-icon">Updated</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="api_billing_usage.usageadd.html#amount" class="tsd-kind-icon">Amount</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="api_billing_usage.usageadd.html#created" class="tsd-kind-icon">Created</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="api_billing_usage.usageadd.html#invoice" class="tsd-kind-icon">Invoice</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="api_billing_usage.usageadd.html#subscriptionaddon" class="tsd-kind-icon">Subscription<wbr>Add<wbr>On</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="api_billing_usage.usageadd.html#uid" class="tsd-kind-icon">Uid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="api_billing_usage.usageadd.html#updated" class="tsd-kind-icon">Updated</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="api_billing_usage.usageadd.html#usagedate" class="tsd-kind-icon">Usage<wbr>Date</a></li>
 							</ul>
 						</section>
 					</div>
@@ -97,62 +107,72 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="account" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> Account</h3>
-					<div class="tsd-signature tsd-kind-icon">Account<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="models_crm_account.account.html" class="tsd-signature-type" data-tsd-kind="Interface">Account</a></div>
+					<a name="amount" class="tsd-anchor"></a>
+					<h3>Amount</h3>
+					<div class="tsd-signature tsd-kind-icon">Amount<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bde3afc/src/models/crm/person-account.ts#L6">models/crm/person-account.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bde3afc/src/api/billing/usage.ts#L126">api/billing/usage.ts:126</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="created" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> Created</h3>
+					<h3>Created</h3>
 					<div class="tsd-signature tsd-kind-icon">Created<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bde3afc/src/models/crm/person-account.ts#L9">models/crm/person-account.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bde3afc/src/models/billing/usage-item.ts#L10">models/billing/usage-item.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="isprimary" class="tsd-anchor"></a>
-					<h3>Is<wbr>Primary</h3>
-					<div class="tsd-signature tsd-kind-icon">Is<wbr>Primary<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="invoice" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> Invoice</h3>
+					<div class="tsd-signature tsd-kind-icon">Invoice<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="models_billing_invoice.invoice.html" class="tsd-signature-type" data-tsd-kind="Interface">Invoice</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bde3afc/src/models/crm/person-account.ts#L7">models/crm/person-account.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bde3afc/src/models/billing/usage-item.ts#L6">models/billing/usage-item.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="person" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> Person</h3>
-					<div class="tsd-signature tsd-kind-icon">Person<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="models_crm_person.person.html" class="tsd-signature-type" data-tsd-kind="Interface">Person</a></div>
+					<a name="subscriptionaddon" class="tsd-anchor"></a>
+					<h3>Subscription<wbr>Add<wbr>On</h3>
+					<div class="tsd-signature tsd-kind-icon">Subscription<wbr>Add<wbr>On<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Required</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="models_billing_subscription_add_on.subscriptionaddon.html" class="tsd-signature-type" data-tsd-kind="Interface">SubscriptionAddOn</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;Uid&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="models_billing_subscription_add_on.subscriptionaddon.html" class="tsd-signature-type" data-tsd-kind="Interface">SubscriptionAddOn</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bde3afc/src/models/crm/person-account.ts#L5">models/crm/person-account.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bde3afc/src/api/billing/usage.ts#L127">api/billing/usage.ts:127</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="uid" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> Uid</h3>
+					<h3>Uid</h3>
 					<div class="tsd-signature tsd-kind-icon">Uid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bde3afc/src/models/crm/person-account.ts#L8">models/crm/person-account.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bde3afc/src/models/billing/usage-item.ts#L9">models/billing/usage-item.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 					<a name="updated" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> Updated</h3>
+					<h3>Updated</h3>
 					<div class="tsd-signature tsd-kind-icon">Updated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bde3afc/src/models/crm/person-account.ts#L10">models/crm/person-account.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bde3afc/src/models/billing/usage-item.ts#L11">models/billing/usage-item.ts:11</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="usagedate" class="tsd-anchor"></a>
+					<h3>Usage<wbr>Date</h3>
+					<div class="tsd-signature tsd-kind-icon">Usage<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bde3afc/src/api/billing/usage.ts#L128">api/billing/usage.ts:128</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -165,34 +185,40 @@
 						<a href="../modules.html">Exports</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="../modules/models_crm_person_account.html">models/crm/person-<wbr>account</a>
+						<a href="../modules/api_billing_usage.html">api/billing/usage</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+					<li class=" tsd-kind-class tsd-parent-kind-module">
+						<a href="../classes/api_billing_usage.usage.html" class="tsd-kind-icon">Usage</a>
+					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="models_crm_person_account.personaccount.html" class="tsd-kind-icon">Person<wbr>Account</a>
+						<a href="api_billing_usage.usageadd.html" class="tsd-kind-icon">Usage<wbr>Add</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_crm_person_account.personaccount.html#account" class="tsd-kind-icon">Account</a>
+								<a href="api_billing_usage.usageadd.html#amount" class="tsd-kind-icon">Amount</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_crm_person_account.personaccount.html#created" class="tsd-kind-icon">Created</a>
+								<a href="api_billing_usage.usageadd.html#created" class="tsd-kind-icon">Created</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_crm_person_account.personaccount.html#isprimary" class="tsd-kind-icon">Is<wbr>Primary</a>
+								<a href="api_billing_usage.usageadd.html#invoice" class="tsd-kind-icon">Invoice</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_crm_person_account.personaccount.html#person" class="tsd-kind-icon">Person</a>
+								<a href="api_billing_usage.usageadd.html#subscriptionaddon" class="tsd-kind-icon">Subscription<wbr>Add<wbr>On</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_crm_person_account.personaccount.html#uid" class="tsd-kind-icon">Uid</a>
+								<a href="api_billing_usage.usageadd.html#uid" class="tsd-kind-icon">Uid</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_crm_person_account.personaccount.html#updated" class="tsd-kind-icon">Updated</a>
+								<a href="api_billing_usage.usageadd.html#updated" class="tsd-kind-icon">Updated</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="api_billing_usage.usageadd.html#usagedate" class="tsd-kind-icon">Usage<wbr>Date</a>
 							</li>
 						</ul>
 					</li>
