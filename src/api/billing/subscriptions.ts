@@ -35,6 +35,9 @@ export class Subscriptions {
    *   apiKey: example_key,
    *   secretKey: example_secret
    * });
+   * const Account = {
+   *   Uid: 'jW7GJVWq'
+   * };
    * const response = await client.billing.subscriptions.getAll({ Account });
    * console.log(response);
    * ```
