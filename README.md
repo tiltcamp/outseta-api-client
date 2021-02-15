@@ -69,7 +69,7 @@ const client = new OutsetaApiClient({
 
 #### CRM
 - [Accounts](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_accounts.accounts.html#add)
-- Activities (planned)
+- [Activities](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_activities.activities.html#add)
 - Deals (planned)
 - [People](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_people.people.html#add)
 
