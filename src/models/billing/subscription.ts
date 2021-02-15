@@ -5,9 +5,9 @@ import { SubscriptionAddOn } from './subscription-add-on';
 
 export interface Subscription {
   Uid?: string;
-  Plan: Plan ;
+  Plan: Plan;
   BillingRenewalTerm: BillingRenewalTerm;
-  Account: Account;
+  Account: Partial<Account>;
   SubscriptionAddOns?: SubscriptionAddOn[];
   Quantity?: unknown;
   StartDate?: Date;

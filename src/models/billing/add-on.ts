@@ -1,8 +1,9 @@
+import { BillingAddOnType } from './billing-add-on-type';
 import { PlanAddOn } from './plan-add-on';
 
 export interface AddOn {
   Name: string;
-  BillingAddOnType: number;
+  BillingAddOnType: BillingAddOnType;
   IsQuantityEditable: boolean;
   MinimumQuantity: number;
   MonthlyRate: number;
