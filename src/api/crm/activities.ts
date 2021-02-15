@@ -128,4 +128,4 @@ export class Activities {
   }
 }
 
-type ActivityAdd = Required<Pick<Activity, 'Title' | 'Description' | 'EntityType' | 'EntityUid'>> & Partial<Activity>;
+export type ActivityAdd = Required<Pick<Activity, 'Title' | 'Description' | 'EntityType' | 'EntityUid'>> & Partial<Activity>;
