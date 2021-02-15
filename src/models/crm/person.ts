@@ -1,4 +1,6 @@
 import { Address } from '../shared/address';
+import { Account } from './account';
+import { DealPerson } from './deal-person';
 import { PersonAccount } from './person-account';
 
 export interface Person {
@@ -11,15 +13,15 @@ export interface Person {
   PhoneWork?: string;
   Title?: string;
   Timezone?: unknown;
-  Language?: unknown;
-  IPAddress?: unknown;
-  Referer?: unknown;
-  UserAgent?: unknown;
-  LastLoginDateTime?: unknown;
+  Language?: string;
+  IPAddress?: string;
+  Referer?: string;
+  UserAgent?: string;
+  LastLoginDateTime?: Date;
   OAuthGoogleProfileId?: unknown;
   PersonAccount?: PersonAccount[];
-  DealPeople?: unknown[];
-  Account?: unknown;
+  DealPeople?: DealPerson[];
+  Account?: Account;
   FullName?: string;
   OAuthIntegrationStatus?: number;
   UserAgentPlatformBrowser?: string;

@@ -61,7 +61,7 @@ export class Usage {
     limit?: number,
     offset?: number,
     fields?: string,
-    Account?: Required<Pick<Account, 'Uid'>> & Partial<Account>
+    Account?: Required<Pick<Account, 'Uid'>>
   } = {}): Promise<List<UsageItem>> {
     const request = new Request(this.store, 'billing/usage')
       .withParams({ fields: options.fields ? options.fields : Usage.DEFAULT_FIELDS })

@@ -1,4 +1,5 @@
 import { Address } from '../shared/address';
+import { Deal } from './deal';
 import { PersonAccount } from './person-account';
 import { AccountStage } from './account-stage';
 import { Subscription } from '../billing/subscription';
@@ -13,7 +14,7 @@ export interface Account {
   PaymentInformation?: unknown;
   PersonAccount: PersonAccount[];
   Subscriptions: Subscription[];
-  Deals: unknown[];
+  Deals: Deal[];
   LastLoginDateTime?: unknown;
   AccountSpecificPageUrl1: string;
   AccountSpecificPageUrl2: string;

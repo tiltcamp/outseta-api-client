@@ -53,7 +53,7 @@ export class Subscriptions {
    *  non-"OK" status, the whole response object will be thrown.
    */
   public async getAll(options: {
-    Account?: { Uid: string } & Partial<Account>,
+    Account?: Required<Pick<Account, 'Uid'>>,
     limit?: number,
     offset?: number,
     fields?: string

@@ -1,3 +1,4 @@
+import { EntityType } from '../crm/entity-type';
 import { Invoice } from './invoice';
 
 export interface InvoiceLineItem {
@@ -10,7 +11,7 @@ export interface InvoiceLineItem {
   Amount: number;
   Tax: number;
   Invoice?: Invoice;
-  LineItemType: number;
+  LineItemType: EntityType;
   LineItemEntityUid?: string;
   Uid: string;
   Created: Date;
