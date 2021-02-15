@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Transaction | outseta-api-client</title>
+	<title>Activity | outseta-api-client</title>
 	<meta name="description" content="Documentation for outseta-api-client">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,13 +55,13 @@
 					<a href="../modules.html">outseta-api-client</a>
 				</li>
 				<li>
-					<a href="../modules/models_billing_transaction.html">models/billing/transaction</a>
+					<a href="../modules/models_crm_activity.html">models/crm/activity</a>
 				</li>
 				<li>
-					<a href="models_billing_transaction.transaction.html">Transaction</a>
+					<a href="models_crm_activity.activity.html">Activity</a>
 				</li>
 			</ul>
-			<h1>Interface Transaction</h1>
+			<h1>Interface Activity</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">Transaction</span>
+						<span class="target">Activity</span>
 					</li>
 				</ul>
 			</section>
@@ -83,15 +83,16 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_billing_transaction.transaction.html#account" class="tsd-kind-icon">Account</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_billing_transaction.transaction.html#amount" class="tsd-kind-icon">Amount</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_billing_transaction.transaction.html#billingtransactiontype" class="tsd-kind-icon">Billing<wbr>Transaction<wbr>Type</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_billing_transaction.transaction.html#created" class="tsd-kind-icon">Created</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_billing_transaction.transaction.html#invoice" class="tsd-kind-icon">Invoice</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_billing_transaction.transaction.html#iselectronictransaction" class="tsd-kind-icon">Is<wbr>Electronic<wbr>Transaction</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_billing_transaction.transaction.html#transactiondate" class="tsd-kind-icon">Transaction<wbr>Date</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_billing_transaction.transaction.html#uid" class="tsd-kind-icon">Uid</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_billing_transaction.transaction.html#updated" class="tsd-kind-icon">Updated</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_activity.activity.html#activitydata" class="tsd-kind-icon">Activity<wbr>Data</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_activity.activity.html#activitydatetime" class="tsd-kind-icon">Activity<wbr>Date<wbr>Time</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_activity.activity.html#activitytype" class="tsd-kind-icon">Activity<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_activity.activity.html#created" class="tsd-kind-icon">Created</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_activity.activity.html#description" class="tsd-kind-icon">Description</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_activity.activity.html#entitytype" class="tsd-kind-icon">Entity<wbr>Type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_activity.activity.html#entityuid" class="tsd-kind-icon">Entity<wbr>Uid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_activity.activity.html#title" class="tsd-kind-icon">Title</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_activity.activity.html#uid" class="tsd-kind-icon">Uid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="models_crm_activity.activity.html#updated" class="tsd-kind-icon">Updated</a></li>
 							</ul>
 						</section>
 					</div>
@@ -100,32 +101,32 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="account" class="tsd-anchor"></a>
-					<h3>Account</h3>
-					<div class="tsd-signature tsd-kind-icon">Account<span class="tsd-signature-symbol">:</span> <a href="models_crm_account.account.html" class="tsd-signature-type" data-tsd-kind="Interface">Account</a></div>
+					<a name="activitydata" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> Activity<wbr>Data</h3>
+					<div class="tsd-signature tsd-kind-icon">Activity<wbr>Data<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/billing/transaction.ts#L8">models/billing/transaction.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/crm/activity.ts#L7">models/crm/activity.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="amount" class="tsd-anchor"></a>
-					<h3>Amount</h3>
-					<div class="tsd-signature tsd-kind-icon">Amount<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<a name="activitydatetime" class="tsd-anchor"></a>
+					<h3>Activity<wbr>Date<wbr>Time</h3>
+					<div class="tsd-signature tsd-kind-icon">Activity<wbr>Date<wbr>Time<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/billing/transaction.ts#L10">models/billing/transaction.ts:10</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/crm/activity.ts#L8">models/crm/activity.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="billingtransactiontype" class="tsd-anchor"></a>
-					<h3>Billing<wbr>Transaction<wbr>Type</h3>
-					<div class="tsd-signature tsd-kind-icon">Billing<wbr>Transaction<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/models_billing_billing_transaction_type.billingtransactiontype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">BillingTransactionType</a></div>
+					<a name="activitytype" class="tsd-anchor"></a>
+					<h3>Activity<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">Activity<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/models_crm_activity_type.activitytype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">ActivityType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/billing/transaction.ts#L7">models/billing/transaction.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/crm/activity.ts#L9">models/crm/activity.ts:9</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -135,37 +136,47 @@
 					<div class="tsd-signature tsd-kind-icon">Created<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/billing/transaction.ts#L13">models/billing/transaction.ts:13</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/crm/activity.ts#L13">models/crm/activity.ts:13</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="invoice" class="tsd-anchor"></a>
-					<h3>Invoice</h3>
-					<div class="tsd-signature tsd-kind-icon">Invoice<span class="tsd-signature-symbol">:</span> <a href="models_billing_invoice.invoice.html" class="tsd-signature-type" data-tsd-kind="Interface">Invoice</a></div>
+					<a name="description" class="tsd-anchor"></a>
+					<h3>Description</h3>
+					<div class="tsd-signature tsd-kind-icon">Description<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/billing/transaction.ts#L9">models/billing/transaction.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/crm/activity.ts#L6">models/crm/activity.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="iselectronictransaction" class="tsd-anchor"></a>
-					<h3>Is<wbr>Electronic<wbr>Transaction</h3>
-					<div class="tsd-signature tsd-kind-icon">Is<wbr>Electronic<wbr>Transaction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<a name="entitytype" class="tsd-anchor"></a>
+					<h3>Entity<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">Entity<wbr>Type<span class="tsd-signature-symbol">:</span> <a href="../enums/models_crm_entity_type.entitytype.html" class="tsd-signature-type" data-tsd-kind="Enumeration">EntityType</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/billing/transaction.ts#L11">models/billing/transaction.ts:11</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/crm/activity.ts#L10">models/crm/activity.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="transactiondate" class="tsd-anchor"></a>
-					<h3>Transaction<wbr>Date</h3>
-					<div class="tsd-signature tsd-kind-icon">Transaction<wbr>Date<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
+					<a name="entityuid" class="tsd-anchor"></a>
+					<h3>Entity<wbr>Uid</h3>
+					<div class="tsd-signature tsd-kind-icon">Entity<wbr>Uid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/billing/transaction.ts#L6">models/billing/transaction.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/crm/activity.ts#L11">models/crm/activity.ts:11</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="title" class="tsd-anchor"></a>
+					<h3>Title</h3>
+					<div class="tsd-signature tsd-kind-icon">Title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/crm/activity.ts#L5">models/crm/activity.ts:5</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -175,7 +186,7 @@
 					<div class="tsd-signature tsd-kind-icon">Uid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/billing/transaction.ts#L12">models/billing/transaction.ts:12</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/crm/activity.ts#L12">models/crm/activity.ts:12</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -185,7 +196,7 @@
 					<div class="tsd-signature tsd-kind-icon">Updated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/billing/transaction.ts#L14">models/billing/transaction.ts:14</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/334b421/src/models/crm/activity.ts#L14">models/crm/activity.ts:14</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -198,7 +209,7 @@
 						<a href="../modules.html">Exports</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="../modules/models_billing_transaction.html">models/billing/transaction</a>
+						<a href="../modules/models_crm_activity.html">models/crm/activity</a>
 					</li>
 				</ul>
 			</nav>
@@ -207,34 +218,37 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="models_billing_transaction.transaction.html" class="tsd-kind-icon">Transaction</a>
+						<a href="models_crm_activity.activity.html" class="tsd-kind-icon">Activity</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_billing_transaction.transaction.html#account" class="tsd-kind-icon">Account</a>
+								<a href="models_crm_activity.activity.html#activitydata" class="tsd-kind-icon">Activity<wbr>Data</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_billing_transaction.transaction.html#amount" class="tsd-kind-icon">Amount</a>
+								<a href="models_crm_activity.activity.html#activitydatetime" class="tsd-kind-icon">Activity<wbr>Date<wbr>Time</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_billing_transaction.transaction.html#billingtransactiontype" class="tsd-kind-icon">Billing<wbr>Transaction<wbr>Type</a>
+								<a href="models_crm_activity.activity.html#activitytype" class="tsd-kind-icon">Activity<wbr>Type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_billing_transaction.transaction.html#created" class="tsd-kind-icon">Created</a>
+								<a href="models_crm_activity.activity.html#created" class="tsd-kind-icon">Created</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_billing_transaction.transaction.html#invoice" class="tsd-kind-icon">Invoice</a>
+								<a href="models_crm_activity.activity.html#description" class="tsd-kind-icon">Description</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_billing_transaction.transaction.html#iselectronictransaction" class="tsd-kind-icon">Is<wbr>Electronic<wbr>Transaction</a>
+								<a href="models_crm_activity.activity.html#entitytype" class="tsd-kind-icon">Entity<wbr>Type</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_billing_transaction.transaction.html#transactiondate" class="tsd-kind-icon">Transaction<wbr>Date</a>
+								<a href="models_crm_activity.activity.html#entityuid" class="tsd-kind-icon">Entity<wbr>Uid</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_billing_transaction.transaction.html#uid" class="tsd-kind-icon">Uid</a>
+								<a href="models_crm_activity.activity.html#title" class="tsd-kind-icon">Title</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="models_billing_transaction.transaction.html#updated" class="tsd-kind-icon">Updated</a>
+								<a href="models_crm_activity.activity.html#uid" class="tsd-kind-icon">Uid</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="models_crm_activity.activity.html#updated" class="tsd-kind-icon">Updated</a>
 							</li>
 						</ul>
 					</li>
