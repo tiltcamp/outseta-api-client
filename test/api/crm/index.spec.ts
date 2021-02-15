@@ -1,4 +1,5 @@
 import { Crm } from '../../../src/api/crm';
+import { Activities } from '../../../src/api/crm/activities';
 import { People } from '../../../src/api/crm/people';
 import { Accounts } from '../../../src/api/crm/accounts';
 import { Store } from '../../../src/util/store';
@@ -17,8 +18,9 @@ describe('api', () =>
         );
 
         expect(crm).toBeInstanceOf(Crm);
-        expect(crm.people).toBeInstanceOf(People);
         expect(crm.accounts).toBeInstanceOf(Accounts);
+        expect(crm.activities).toBeInstanceOf(Activities);
+        expect(crm.people).toBeInstanceOf(People);
       });
     })
   )
