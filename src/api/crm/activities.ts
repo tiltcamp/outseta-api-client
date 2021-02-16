@@ -50,7 +50,7 @@ export class Activities {
    * @param options.limit The number of results returned by the API.
    * @param options.offset For pagination; returns (limit) results after this value.
    * @param options.fields Not all fields on the model are returned by default - you can request specific fields with a
-   *   that looks something like '*,<field name here>.<child field name here>'. Note: the shape of the returned object
+   *   that looks something like '*,(field name here).(child field name here or * for all)'. Note: the shape of the returned object
    *   may not match the model in this library if this string does not start with '*' as shown.
    * @param options.ActivityType Filter by activity type.
    * @param options.EntityType Filter by entity type.
@@ -105,7 +105,7 @@ export class Activities {
    *
    * @param activity The activity to log to Outseta.
    * @param options.fields Not all fields on the model are returned by default - you can request specific fields with a
-   *   that looks something like '*,<field name here>.<child field name here>'. Note: the shape of the returned object
+   *   that looks something like '*,(field name here).(child field name here or * for all)'. Note: the shape of the returned object
    *   may not match the model in this library if this string does not start with '*' as shown.
    * @returns The response body if response status OK, or response body with validation errors if response status 400.
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a

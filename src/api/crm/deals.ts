@@ -44,7 +44,7 @@ export class Deals {
    * @param options.limit The number of results returned by the API.
    * @param options.offset For pagination; returns (limit) results after this value.
    * @param options.fields Not all fields on the model are returned by default - you can request specific fields with a
-   *   that looks something like '*,<field name here>.<child field name here>'. Note: the shape of the returned object
+   *   that looks something like '*,(field name here).(child field name here or * for all)'. Note: the shape of the returned object
    *   may not match the model in this library if this string does not start with '*' as shown.
    * @param options.DealPipelineStage Filter by pipeline stage.
    * @returns The response body if response status OK.
@@ -85,7 +85,7 @@ export class Deals {
    *
    * @param uid The uid for the deal to get.
    * @param options.fields Not all fields on the model are returned by default - you can request specific fields with a
-   *   that looks something like '*,<field name here>.<child field name here>'. Note: the shape of the returned object
+   *   that looks something like '*,(field name here).(child field name here or * for all)'. Note: the shape of the returned object
    *   may not match the model in this library if this string does not start with '*' as shown.
    * @returns The response body if response status OK.
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
@@ -123,7 +123,7 @@ export class Deals {
    *
    * @param deal The deal you would like to add.
    * @param options.fields Not all fields on the model are returned by default - you can request specific fields with a
-   *   that looks something like '*,<field name here>.<child field name here>'. Note: the shape of the returned object
+   *   that looks something like '*,(field name here).(child field name here or * for all)'. Note: the shape of the returned object
    *   may not match the model in this library if this string does not start with '*' as shown.
    * @returns The response body if response status OK, or response body of validation errors if response status 400.
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
@@ -163,7 +163,7 @@ export class Deals {
    *
    * @param deal The deal with its uid and any fields to be changed.
    * @param options.fields Not all fields on the model are returned by default - you can request specific fields with a
-   *   that looks something like '*,<field name here>.<child field name here>'. Note: the shape of the returned object
+   *   that looks something like '*,(field name here).(child field name here or * for all)'. Note: the shape of the returned object
    *   may not match the model in this library if this string does not start with '*' as shown.
    * @returns The response body if response status OK, or response body with validation errors if response status 400.
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
