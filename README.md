@@ -11,6 +11,11 @@
 ***This package is currently a work in progress, so the structure is subject to change and there's stuff missing 
 (see the list of implemented endpoints below).***
 
+This package is mostly feature-complete, and in fact even includes a few extra undocumented endpoints. Most issues are 
+likely to be things like: attributes missing "optional" flags in models, "unknown" types in the models, or missing 
+filters that could be added - lots of stuff related to types. If you catch any of these (or anything else), please 
+submit an issue or feel free to create a PR.
+
 ## Quick Start
 
 ### Installing
@@ -74,7 +79,7 @@ const client = new OutsetaApiClient({
 - [People](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_people.people.html#add)
 
 #### Marketing
-- Subscribers (planned)
+- [Email List Subscriptions](https://tiltcamp.github.io/outseta-api-client/classes/api_marketing_email_list_subscriptions.emaillistsubscriptions.html#add)
 
 #### Support
 - Cases (planned)
