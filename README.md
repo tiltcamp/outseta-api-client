@@ -64,13 +64,13 @@ const client = new OutsetaApiClient({
 - [Plans](https://tiltcamp.github.io/outseta-api-client/classes/api_billing_plans.plans.html#getall)
 - [Plan Families](https://tiltcamp.github.io/outseta-api-client/classes/api_billing_plan_families.planfamilies.html#getall)
 - [Subscriptions](https://tiltcamp.github.io/outseta-api-client/classes/api_billing_subscriptions.subscriptions.html#add)
-- [Transactions](https://tiltcamp.github.io/outseta-api-client/classes/api_billing_plan_transactions.transactions.html#getall)
+- [Transactions](https://tiltcamp.github.io/outseta-api-client/classes/api_billing_transactions.transactions.html#getall)
 - [Usage](https://tiltcamp.github.io/outseta-api-client/classes/api_billing_usage.usage.html#add)
 
 #### CRM
 - [Accounts](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_accounts.accounts.html#add)
 - [Activities](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_activities.activities.html#add)
-- Deals (planned)
+- [Deals](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_deals.deals.html#add)
 - [People](https://tiltcamp.github.io/outseta-api-client/classes/api_crm_people.people.html#add)
 
 #### Marketing

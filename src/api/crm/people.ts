@@ -26,7 +26,7 @@ export class People {
    *
    * @param options.limit The number of results returned by the API.
    * @param options.offset For pagination; returns (limit) results after this value.
-   * @returns The response body.
+   * @returns The response body if response status OK.
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" status, the whole response object will be thrown.
    */
@@ -58,7 +58,7 @@ export class People {
    * ```
    *
    * @param uid The uid for the person to get.
-   * @returns The response body.
+   * @returns The response body if response status OK.
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" status, the whole response object will be thrown.
    */
@@ -88,7 +88,7 @@ export class People {
    * @param person The details for the person to add.
    * @returns The response body if response status OK, or response body of validation errors if response status 400.
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
-   *  non-"OK" status, the whole response object will be thrown.
+   *  non-"OK" or non-"400" status, the whole response object will be thrown.
    */
   public async add(person: PersonAdd): Promise<Person | ValidationError<Person>> {
     const request = new Request(this.store, 'crm/people')
