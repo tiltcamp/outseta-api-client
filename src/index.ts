@@ -1,3 +1,4 @@
+import { Marketing } from './api/marketing';
 import { ServerCredentials, UserCredentials } from './util/credentials';
 import { Store } from './util/store';
 import { User } from './api/user';
@@ -6,9 +7,10 @@ import { Crm } from './api/crm';
 
 // eslint-disable-next-line import/no-default-export
 export default class OutsetaApiClient {
-  public readonly user: User;
   public readonly billing: Billing;
   public readonly crm: Crm;
+  public readonly marketing: Marketing;
+  public readonly user: User;
 
   /**
    * Initializing without any keys:
@@ -51,8 +53,9 @@ export default class OutsetaApiClient {
     const serverAuth = new ServerCredentials(apiKey, secretKey);
     const store = new Store(baseUrl, userAuth, serverAuth);
 
-    this.user = new User(store);
     this.billing = new Billing(store);
     this.crm = new Crm(store);
+    this.marketing = new Marketing(store);
+    this.user = new User(store);
   }
 }
