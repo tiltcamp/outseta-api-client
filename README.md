@@ -7,14 +7,18 @@
 [![NPM Bundle Size](https://img.shields.io/bundlephobia/minzip/outseta-api-client)](https://www.npmjs.com/package/outseta-api-client)
 [![License](https://img.shields.io/github/license/tiltcamp/outseta-api-client)](https://github.com/tiltcamp/outseta-api-client/blob/main/LICENSE)
 
+This is a typed API client for [Outseta](https://www.outseta.com/) written in TypeScript. The only dependency is 
+`fetch`, so it works in the browser and _should_ work with Node if `fetch` is [polyfilled](https://github.com/node-fetch/node-fetch).
 
-***This package is currently a work in progress, so the structure is subject to change and there's stuff missing 
-(see the list of implemented endpoints below).***
+This package implements all the endpoints that are [publicly documented](https://documenter.getpostman.com/view/3613332/outseta-rest-api-v1/7TNfr6k), 
+and even includes a few extras. Most issues are likely to be related to incorrect types: attributes missing "optional" 
+flags in models, "unknown" types in the models, or missing filters that could be added. I've done my best to infer 
+the contents for these models, but as it was done entirely via conjecture there are bound to be some incorrect 
+assumptions. If you catch any of these (or anything else for that matter), please submit an issue or feel free to 
+submit a PR.
 
-This package is mostly feature-complete, and in fact even includes a few extra undocumented endpoints. Most issues are 
-likely to be things like: attributes missing "optional" flags in models, "unknown" types in the models, or missing 
-filters that could be added - lots of stuff related to types. If you catch any of these (or anything else), please 
-submit an issue or feel free to create a PR.
+I am also open to adding more endpoints - there are plenty of undocumented endpoints I can see being useful. As with the
+above, issues and PRs are welcome.
 
 ## Quick Start
 
@@ -82,7 +86,7 @@ const client = new OutsetaApiClient({
 - [Email List Subscriptions](https://tiltcamp.github.io/outseta-api-client/classes/api_marketing_email_list_subscriptions.emaillistsubscriptions.html#add)
 
 #### Support
-- Cases (planned)
+- [Cases](https://tiltcamp.github.io/outseta-api-client/classes/api_support_cases.cases.html#add)
 
 #### User
 - [Impersonate](https://tiltcamp.github.io/outseta-api-client/classes/api_user.user.html#impersonate)

@@ -1,4 +1,4 @@
-import { EntityType } from '../crm/entity-type';
+import { EntityType } from '../shared/entity-type';
 import { Invoice } from './invoice';
 
 export interface InvoiceLineItem {
