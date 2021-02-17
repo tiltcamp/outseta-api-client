@@ -67,12 +67,16 @@
 					<a href="https://www.npmjs.com/package/outseta-api-client"><img src="https://img.shields.io/npm/v/outseta-api-client" alt="Latest Version"></a>
 					<a href="https://www.npmjs.com/package/outseta-api-client"><img src="https://img.shields.io/bundlephobia/minzip/outseta-api-client" alt="NPM Bundle Size"></a>
 				<a href="https://github.com/tiltcamp/outseta-api-client/blob/main/LICENSE"><img src="https://img.shields.io/github/license/tiltcamp/outseta-api-client" alt="License"></a></p>
-				<p><strong><em>This package is currently a work in progress, so the structure is subject to change and there&#39;s stuff missing
-				(see the list of implemented endpoints below).</em></strong></p>
-				<p>This package is mostly feature-complete, and in fact even includes a few extra undocumented endpoints. Most issues are
-					likely to be things like: attributes missing &quot;optional&quot; flags in models, &quot;unknown&quot; types in the models, or missing
-					filters that could be added - lots of stuff related to types. If you catch any of these (or anything else), please
-				submit an issue or feel free to create a PR.</p>
+				<p>This is a typed API client for <a href="https://www.outseta.com/">Outseta</a> written in TypeScript. The only dependency is
+				<code>fetch</code>, so it works in the browser and <em>should</em> work with Node if <code>fetch</code> is <a href="https://github.com/node-fetch/node-fetch">polyfilled</a>.</p>
+				<p>This package implements all the endpoints that are <a href="https://documenter.getpostman.com/view/3613332/outseta-rest-api-v1/7TNfr6k">publicly documented</a>,
+					and even includes a few extras. Most issues are likely to be related to incorrect types: attributes missing &quot;optional&quot;
+					flags in models, &quot;unknown&quot; types in the models, or missing filters that could be added. I&#39;ve done my best to infer
+					the contents for these models, but as it was done entirely via conjecture there are bound to be some incorrect
+					assumptions. If you catch any of these (or anything else for that matter), please submit an issue or feel free to
+				submit a PR.</p>
+				<p>I am also open to adding more endpoints - there are plenty of undocumented endpoints I can see being useful. As with the
+				above, issues and PRs are welcome.</p>
 				<a href="#quick-start" id="quick-start" style="color: inherit; text-decoration: none;">
 					<h2>Quick Start</h2>
 				</a>
@@ -153,7 +157,7 @@
 					<h4>Support</h4>
 				</a>
 				<ul>
-					<li>Cases (planned)</li>
+					<li><a href="https://tiltcamp.github.io/outseta-api-client/classes/api_support_cases.cases.html#add">Cases</a></li>
 				</ul>
 				<a href="#user" id="user" style="color: inherit; text-decoration: none;">
 					<h4>User</h4>
@@ -213,6 +217,12 @@
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/api_marketing_email_list_subscriptions.html">api/marketing/email-<wbr>list-<wbr>subscriptions</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/api_support.html">api/support</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/api_support_cases.html">api/support/cases</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/api_user.html">api/user</a>
@@ -296,9 +306,6 @@
 						<a href="modules/models_crm_deal_pipeline_stage.html">models/crm/deal-<wbr>pipeline-<wbr>stage</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="modules/models_crm_entity_type.html">models/crm/entity-<wbr>type</a>
-					</li>
-					<li class=" tsd-kind-module">
 						<a href="modules/models_crm_person.html">models/crm/person</a>
 					</li>
 					<li class=" tsd-kind-module">
@@ -312,6 +319,21 @@
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/models_shared_address.html">models/shared/address</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/models_shared_entity_type.html">models/shared/entity-<wbr>type</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/models_support_case.html">models/support/case</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/models_support_case_history.html">models/support/case-<wbr>history</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/models_support_case_source.html">models/support/case-<wbr>source</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/models_support_case_status.html">models/support/case-<wbr>status</a>
 					</li>
 					<li class=" tsd-kind-module">
 						<a href="modules/models_wrappers_list.html">models/wrappers/list</a>
