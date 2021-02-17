@@ -1,7 +1,7 @@
 import Pretender, { ResponseHandler } from 'pretender';
 import { Activities } from '../../../../src/api/crm/activities';
 import { Activity } from '../../../../src/models/crm/activity';
-import { EntityType } from '../../../../src/models/crm/entity-type';
+import { EntityType } from '../../../../src/models/shared/entity-type';
 import { ValidationError } from '../../../../src/models/wrappers/validation-error';
 import { ServerCredentials, UserCredentials } from '../../../../src/util/credentials';
 import { Store } from '../../../../src/util/store';

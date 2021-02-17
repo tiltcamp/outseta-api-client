@@ -1,4 +1,4 @@
-import { EntityType } from 'src/models/crm/entity-type';
+import { EntityType } from 'src/models/shared/entity-type';
 import { Activity } from '../../models/crm/activity';
 import { ActivityType } from '../../models/crm/activity-type';
 import { List } from '../../models/wrappers/list';
@@ -30,7 +30,7 @@ export class Activities {
    *
    * Get all activities for a particular account:
    * ```typescript
-   * import { EntityType } from 'outseta-api-client/dist/models/crm/entity-type';
+   * import { EntityType } from 'outseta-api-client/dist/models/shared/entity-type';
    *
    * const client = new OutsetaApiClient({
    *   subdomain: 'test-company',
@@ -87,7 +87,7 @@ export class Activities {
    * Record activity to an entity.
    *
    * ```typescript
-   * import { EntityType } from 'outseta-api-client/dist/models/crm/entity-type';
+   * import { EntityType } from 'outseta-api-client/dist/models/shared/entity-type';
    *
    * const client = new OutsetaApiClient({
    *   subdomain: 'test-company',

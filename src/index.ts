@@ -1,4 +1,5 @@
 import { Marketing } from './api/marketing';
+import { Support } from './api/support';
 import { ServerCredentials, UserCredentials } from './util/credentials';
 import { Store } from './util/store';
 import { User } from './api/user';
@@ -10,6 +11,7 @@ export default class OutsetaApiClient {
   public readonly billing: Billing;
   public readonly crm: Crm;
   public readonly marketing: Marketing;
+  public readonly support: Support;
   public readonly user: User;
 
   /**
@@ -56,6 +58,7 @@ export default class OutsetaApiClient {
     this.billing = new Billing(store);
     this.crm = new Crm(store);
     this.marketing = new Marketing(store);
+    this.support = new Support(store);
     this.user = new User(store);
   }
 }

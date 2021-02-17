@@ -1,5 +1,5 @@
 import { ActivityType } from "./activity-type";
-import { EntityType } from "./entity-type";
+import { EntityType } from "../shared/entity-type";
 
 export interface Activity {
   Title: string;
