@@ -2,7 +2,7 @@ import { Store } from '../../util/store';
 import { ValidationError } from '../../models/wrappers/validation-error';
 import { Request } from '../../util/request';
 import { Invoice } from '../../models/billing/invoice';
-import { Subscription } from 'src/models/billing/subscription';
+import { Subscription } from '../../models/billing/subscription';
 import { InvoiceLineItem } from '../../models/billing/invoice-line-item';
 
 export class Invoices {

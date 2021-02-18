@@ -1,5 +1,5 @@
-import { Person } from 'src/models/crm/person';
-import { EmailList } from 'src/models/marketing/email-list';
+import { Person } from '../../models/crm/person';
+import { EmailList } from '../../models/marketing/email-list';
 import { EmailListPerson } from '../../models/marketing/email-list-person';
 import { List } from '../../models/wrappers/list';
 import { ValidationError } from '../../models/wrappers/validation-error';

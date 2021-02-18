@@ -1,4 +1,4 @@
-import { EntityType } from 'src/models/shared/entity-type';
+import { EntityType } from '../../models/shared/entity-type';
 import { Activity } from '../../models/crm/activity';
 import { ActivityType } from '../../models/crm/activity-type';
 import { List } from '../../models/wrappers/list';

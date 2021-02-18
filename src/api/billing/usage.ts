@@ -4,7 +4,7 @@ import { List } from '../../models/wrappers/list';
 import { ValidationError } from '../../models/wrappers/validation-error';
 import { Request } from '../../util/request';
 import { Store } from '../../util/store';
-import { SubscriptionAddOn } from 'src/models/billing/subscription-add-on';
+import { SubscriptionAddOn } from '../../models/billing/subscription-add-on';
 
 export class Usage {
   static readonly DEFAULT_FIELDS = [
