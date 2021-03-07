@@ -113,7 +113,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/d77fea4/src/api/billing/plans.ts#L7">api/billing/plans.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bc1c53e/src/api/billing/plans.ts#L8">api/billing/plans.ts:8</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -135,7 +135,7 @@
 					<div class="tsd-signature tsd-kind-icon">store<span class="tsd-signature-symbol">:</span> <a href="util_store.store.html" class="tsd-signature-type" data-tsd-kind="Class">Store</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/d77fea4/src/api/billing/plans.ts#L7">api/billing/plans.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bc1c53e/src/api/billing/plans.ts#L8">api/billing/plans.ts:8</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -146,20 +146,20 @@
 					<a name="getall" class="tsd-anchor"></a>
 					<h3>get<wbr>All</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>All<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>limit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_wrappers_list.list.html" class="tsd-signature-type" data-tsd-kind="Interface">List</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_billing_plan.plan.html" class="tsd-signature-type" data-tsd-kind="Interface">Plan</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>All<span class="tsd-signature-symbol">(</span>options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>PlanFamily<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Required</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_billing_plan_family.planfamily.html" class="tsd-signature-type" data-tsd-kind="Interface">PlanFamily</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;Uid&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>limit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_wrappers_list.list.html" class="tsd-signature-type" data-tsd-kind="Interface">List</a><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_billing_plan.plan.html" class="tsd-signature-type" data-tsd-kind="Interface">Plan</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/d77fea4/src/api/billing/plans.ts#L28">api/billing/plans.ts:28</a></li>
+									<li>Defined in <a href="https://github.com/tiltcamp/outseta-api-client/blob/bc1c53e/src/api/billing/plans.ts#L30">api/billing/plans.ts:30</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Get all available plans.</p>
 								</div>
-								<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #267F99">OutsetaApiClient</span><span style="color: #000000">({ </span><span style="color: #001080">subdomain:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test-company&#039;</span><span style="color: #000000"> });</span>
+								<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">OutsetaApiClient</span><span style="color: #000000">({ </span><span style="color: #001080">subdomain:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test-company&#039;</span><span style="color: #000000"> });</span>
 <span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">response</span><span style="color: #000000"> = </span><span style="color: #AF00DB">await</span><span style="color: #000000"> </span><span style="color: #001080">client</span><span style="color: #000000">.</span><span style="color: #001080">billing</span><span style="color: #000000">.</span><span style="color: #001080">plans</span><span style="color: #000000">.</span><span style="color: #795E26">getAll</span><span style="color: #000000">();</span>
 <span style="color: #001080">console</span><span style="color: #000000">.</span><span style="color: #795E26">log</span><span style="color: #000000">(</span><span style="color: #001080">response</span><span style="color: #000000">);</span>
 </code></pre>
@@ -173,16 +173,22 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>options: <span class="tsd-signature-symbol">{ </span>limit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = ...</span></h5>
+									<h5>options: <span class="tsd-signature-symbol">{ </span>PlanFamily<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Required</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_billing_plan_family.planfamily.html" class="tsd-signature-type" data-tsd-kind="Interface">PlanFamily</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;Uid&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">; </span>limit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">; </span>offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol"> = ...</span></h5>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter">
-											<h5><span class="tsd-flag ts-flagOptional">Optional</span> limit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> Plan<wbr>Family<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Required</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Pick</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/models_billing_plan_family.planfamily.html" class="tsd-signature-type" data-tsd-kind="Interface">PlanFamily</a><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;Uid&quot;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h5>
+											<div class="tsd-comment tsd-typography">
+												<p>Get all plans that belong to a specific plan family.</p>
+											</div>
+										</li>
+										<li class="tsd-parameter">
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> limit<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
 											<div class="tsd-comment tsd-typography">
 												<p>The number of results returned by the API.</p>
 											</div>
 										</li>
 										<li class="tsd-parameter">
-											<h5><span class="tsd-flag ts-flagOptional">Optional</span> offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
+											<h5><span class="tsd-flag ts-flagOptional">Optional</span> offset<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span></h5>
 											<div class="tsd-comment tsd-typography">
 												<p>For pagination; returns (limit) results after this value.</p>
 											</div>
