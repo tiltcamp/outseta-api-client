@@ -52,10 +52,14 @@ describe('api', () =>
           expect(response.items[0].Name).toBe('Basic');
         });
 
-        it('handles request with pagination', async () => {
+        it('handles request with pagination and filters', async () => {
           const responseHandler: ResponseHandler = (request) => {
             expect(request.requestHeaders['authorization']).toBeUndefined();
-            expect(request.queryParams).toEqual({ offset: '10', limit: '20' });
+            expect(request.queryParams).toEqual({
+              offset: '10',
+              limit: '20',
+              'PlanFamily.Uid': 'Jy9gw09M'
+            });
             expect(request.requestBody).toBeNull();
             expect(request.requestHeaders['content-type']).toBe('application/json');
 
@@ -69,7 +73,11 @@ describe('api', () =>
             this.get('https://test-company.outseta.com/api/v1/billing/plans', responseHandler);
           });
 
-          await plans.getAll({ offset: 10, limit: 20 });
+          await plans.getAll({
+            offset: 10,
+            limit: 20,
+            PlanFamily: { Uid: 'Jy9gw09M' }
+          });
         });
 
         it('throws failed request', async () => {
