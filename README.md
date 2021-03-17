@@ -8,7 +8,8 @@
 [![License](https://img.shields.io/github/license/tiltcamp/outseta-api-client)](https://github.com/tiltcamp/outseta-api-client/blob/main/LICENSE)
 
 This is a typed API client for [Outseta](https://www.outseta.com/) written in TypeScript. The only dependency is 
-`fetch`, so it works in the browser and _should_ work with Node if `fetch` is [polyfilled](https://github.com/node-fetch/node-fetch).
+`fetch`, so it works in the browser and works with Node if `fetch` is [polyfilled](https://github.com/node-fetch/node-fetch).
+See below for an example.
 
 This package implements all the endpoints that are [publicly documented](https://documenter.getpostman.com/view/3613332/outseta-rest-api-v1/7TNfr6k), 
 and even includes a few extras. Most issues are likely to be related to incorrect types: attributes missing "optional" 
@@ -38,7 +39,7 @@ import OutsetaApiClient from 'outseta-api-client';
 ```
 or
 ```javascript
-var OutsetaApiClient = require('outseta-api-client');
+var OutsetaApiClient = require('outseta-api-client').default;
 ```
 
 ### Initialization
@@ -64,6 +65,17 @@ const client = new OutsetaApiClient({
 const client = new OutsetaApiClient({
   subdomain: 'test-company',
   accessToken: jwt_user_token
+});
+```
+
+#### Initialization in NodeJS
+```javascript
+globalThis.fetch = require('node-fetch');
+var OutsetaApiClient = require('outseta-api-client').default;
+
+const outseta = new OutsetaApiClient({
+  subdomain: 'mycompany'
+  // Use either API keys or an access token here, just the same as above
 });
 ```
 
