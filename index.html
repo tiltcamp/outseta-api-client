@@ -93,10 +93,15 @@
 				<a href="#importing" id="importing" style="color: inherit; text-decoration: none;">
 					<h3>Importing</h3>
 				</a>
+				<p>ES6 import:</p>
 				<pre><code class="language-typescript"><span style="color: #AF00DB">import</span><span style="color: #000000"> </span><span style="color: #001080">OutsetaApiClient</span><span style="color: #000000"> </span><span style="color: #AF00DB">from</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;outseta-api-client&#039;</span><span style="color: #000000">;</span>
 </code></pre>
-				<p>or</p>
+				<p>CommonJS require:</p>
 				<pre><code class="language-javascript"><span style="color: #0000FF">var</span><span style="color: #000000"> </span><span style="color: #001080">OutsetaApiClient</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;outseta-api-client&#039;</span><span style="color: #000000">).</span><span style="color: #001080">default</span><span style="color: #000000">;</span>
+</code></pre>
+				<p>Additionally, NodeJS requires a polyfill for <code>fetch</code>:</p>
+				<pre><code class="language-javascript"><span style="color: #001080">globalThis</span><span style="color: #000000">.</span><span style="color: #001080">fetch</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;node-fetch&#039;</span><span style="color: #000000">);</span>
+<span style="color: #0000FF">var</span><span style="color: #000000"> </span><span style="color: #001080">OutsetaApiClient</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;outseta-api-client&#039;</span><span style="color: #000000">).</span><span style="color: #001080">default</span><span style="color: #000000">;</span>
 </code></pre>
 				<a href="#initialization" id="initialization" style="color: inherit; text-decoration: none;">
 					<h3>Initialization</h3>
@@ -123,17 +128,6 @@
 				<pre><code class="language-typescript"><span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">client</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">OutsetaApiClient</span><span style="color: #000000">({</span>
 <span style="color: #000000">  </span><span style="color: #001080">subdomain:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;test-company&#039;</span><span style="color: #000000">,</span>
 <span style="color: #000000">  </span><span style="color: #001080">accessToken:</span><span style="color: #000000"> </span><span style="color: #001080">jwt_user_token</span>
-<span style="color: #000000">});</span>
-</code></pre>
-				<a href="#initialization-in-nodejs" id="initialization-in-nodejs" style="color: inherit; text-decoration: none;">
-					<h4>Initialization in NodeJS</h4>
-				</a>
-				<pre><code class="language-javascript"><span style="color: #001080">globalThis</span><span style="color: #000000">.</span><span style="color: #001080">fetch</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;node-fetch&#039;</span><span style="color: #000000">);</span>
-<span style="color: #0000FF">var</span><span style="color: #000000"> </span><span style="color: #001080">OutsetaApiClient</span><span style="color: #000000"> = </span><span style="color: #795E26">require</span><span style="color: #000000">(</span><span style="color: #A31515">&#039;outseta-api-client&#039;</span><span style="color: #000000">).</span><span style="color: #001080">default</span><span style="color: #000000">;</span>
-
-<span style="color: #0000FF">const</span><span style="color: #000000"> </span><span style="color: #0070C1">outseta</span><span style="color: #000000"> = </span><span style="color: #0000FF">new</span><span style="color: #000000"> </span><span style="color: #795E26">OutsetaApiClient</span><span style="color: #000000">({</span>
-<span style="color: #000000">  </span><span style="color: #001080">subdomain:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;mycompany&#039;</span>
-<span style="color: #000000">  </span><span style="color: #008000">// Use either API keys or an access token here, just the same as above</span>
 <span style="color: #000000">});</span>
 </code></pre>
 				<a href="#resources-amp-documentation" id="resources-amp-documentation" style="color: inherit; text-decoration: none;">
