@@ -34,11 +34,19 @@ Yarn:
 yarn add outseta-api-client
 ```
 ### Importing
+ES6 import:
 ```typescript
 import OutsetaApiClient from 'outseta-api-client';
 ```
-or
+
+CommonJS require:
 ```javascript
+var OutsetaApiClient = require('outseta-api-client').default;
+```
+
+Additionally, NodeJS requires a polyfill for `fetch`:
+```javascript
+globalThis.fetch = require('node-fetch');
 var OutsetaApiClient = require('outseta-api-client').default;
 ```
 
@@ -65,17 +73,6 @@ const client = new OutsetaApiClient({
 const client = new OutsetaApiClient({
   subdomain: 'test-company',
   accessToken: jwt_user_token
-});
-```
-
-#### Initialization in NodeJS
-```javascript
-globalThis.fetch = require('node-fetch');
-var OutsetaApiClient = require('outseta-api-client').default;
-
-const outseta = new OutsetaApiClient({
-  subdomain: 'mycompany'
-  // Use either API keys or an access token here, just the same as above
 });
 ```
 
