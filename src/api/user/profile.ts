@@ -22,12 +22,19 @@ export class Profile {
    * console.log(response);
    * ```
    *
+   * @param options.fields Not all fields on the model are returned by default - you can request specific fields with a
+   *   string that looks something like '*,Account.*'. Note: the shape of the returned object may not match the model in
+   *   this library if this string does not start with '*' as shown.
    * @returns The response body.
    * @throws [Response](https://developer.mozilla.org/en-US/docs/Web/API/Response) If the server returns a
    *  non-"OK" status, the whole response object will be thrown.
    */
-  public async get(): Promise<Person> {
+  public async get(options: {
+    fields?: string
+  } = {}): Promise<Person> {
     const request = new Request(this.store, 'profile').authenticateAsUser();
+    if (options.fields) request.withParams({ fields: options.fields });
+
     const response = await request.get();
 
     if (!response.ok) throw response;

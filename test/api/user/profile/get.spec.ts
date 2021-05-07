@@ -49,6 +49,27 @@ describe('api', () => {
           expect(response.Email).toBe('demo@tiltcamp.com');
         });
 
+        it('handles request with fields', async () => {
+          const responseHandler: ResponseHandler = (request) => {
+            expect(request.requestHeaders['authorization']).toBe('bearer example_token');
+            expect(request.queryParams).toEqual({ fields: 'Uid' });
+            expect(request.requestBody).toBeNull();
+            expect(request.requestHeaders['content-type']).toBe('application/json');
+
+            return [
+              200,
+              {'Content-Type': 'application/json'},
+              JSON.stringify(exampleResponse)
+            ];
+          };
+          server = new Pretender(function () {
+            this.get('https://test-company.outseta.com/api/v1/profile', responseHandler);
+          });
+
+          const response = await profile.get({ fields: 'Uid' });
+          expect(response.Uid).toBe('DQ2DyknW');
+        });
+
         it('throws failed request', async () => {
           const responseHandler: ResponseHandler = (request) => {
             expect(request.requestHeaders['authorization']).toBe('bearer example_token');
