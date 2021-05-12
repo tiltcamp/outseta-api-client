@@ -102,6 +102,7 @@ const exampleResponse = {
   "PasswordMustChange": false,
   "PhoneMobile": "4084841547",
   "PhoneWork": "4122144785",
+  "ProfileImageS3Url": "https://s3.amazonaws.com/outseta-production/0000/user-image.jpg",
   "Title": "Engineer",
   "Timezone": null,
   "Language": null,
