@@ -7,6 +7,7 @@ export interface Person {
   Email: string;
   FirstName?: string;
   LastName?: string;
+  ProfileImageS3Url?: string;
   MailingAddress?: Address;
   PasswordMustChange?: boolean;
   PhoneMobile?: string;
