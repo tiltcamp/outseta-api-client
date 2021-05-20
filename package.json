@@ -11,7 +11,7 @@
   "scripts": {
     "lint": "npx eslint ./src ./test --ext .ts,.js --max-warnings 0",
     "build:cjs": "npx tsc --project tsconfig.cjs.json",
-    "build:esm": "npx tsc --project tsconfig.esm.json && npx renamer --find '/\\.js$/' --replace '.mjs' './dist/**/*.js'",
+    "build:esm": "npx rollup -c",
     "build": "rm -rf dist/ && npm run build:esm && npm run build:cjs",
     "build:docs": "npx typedoc",
     "test": "npx karma start karma.conf.js --single-run --browsers=ChromeHeadless",
@@ -44,7 +44,8 @@
     "karma-jasmine-html-reporter": "^1.5.4",
     "karma-typescript": "^5.5.1",
     "pretender": "^3.4.3",
-    "renamer": "^2.0.1",
+    "rollup": "^2.48.0",
+    "rollup-plugin-typescript2": "^0.30.0",
     "typedoc": "^0.20.36",
     "typescript": "^4.2.4"
   }
